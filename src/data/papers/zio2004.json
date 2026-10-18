@@ -1,0 +1,623 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2004",
+  "year": 2004,
+  "title": "ZIO 2004",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2004/zio2004/zio2004-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2004/zio2004/zio2004-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio04001-editorial/47611"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio04002-editorial/44591"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio04003-editorial/44808"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio04004-editorial/67044"
+    },
+    {
+      "problem": 5,
+      "url": "https://discuss.codechef.com/t/zio04005-editorial/45785"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 75,
+    "markingSchemeVerified": false,
+    "scoring": null,
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "The question paper carries 75 marks, broken up into five questions of 15 marks each.",
+      "Attempt all questions. There are no optional ques-tions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets."
+    ],
+    "notes": [
+      "Most problems in this paper accept any one of several valid answers or have diagrams as answers, so only problem 2 is checked automatically. For the others, compare your answer with the official solution and mark yourself."
+    ],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key. Answers are not unique or are diagrams/proofs: the app shows the official solution and asks you to mark yourself."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Two words are neighbours if you can go from one to the other by removing one letter, adding one letter or modifying one letter. For example “blow” is a neighbour of “bow” (removing one letter), “below” (adding one letter) and “brow” (modifying one letter). Given a set of words, the aim is to find the longest sequence of words without repetitions where each pair of consecutive words in the sequence are neighbours. There may be many sequences of maximum length. It is sufficient to identify any one."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, given the words {below, blow, bow, bowl, brow, crow, rot, row}, the longest such sequence is of length six. Actually, there are two sequences of length six in this set: “crow, row, brow, blow, bow, bowl” and “rot, row, brow, blow, bow, bowl”. For each of the following sets of words, write out any one such sequence of maximum length."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "{be, bed, bet, bud, but, dig, do, dog, dug, get, go, god, got}",
+          "answerType": "text",
+          "officialAnswer": "but–bud–bed–be–bet–get–got–god–go–do–dog–dug–dig (other orderings at the two ends are also valid; see the official solution)",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "{fat, fate, fight, fit, fright, gait, gate, light, mite, quit, quite, right, sat, sigh, sight, sit, site, suite, writ, write}",
+          "answerType": "text",
+          "officialAnswer": "quit–quite–suite–site–sit–sat–fat–fate–gate (fit may replace sat; see the official solution)",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "{age, bat, batch, bath, bathe, bather, batter, cache, cat, catch, catcher, fat, fate, father, fresh, garb, garbage, heathen, later, lather, mash, mate, matt, matter, rash, rat, thrash, thresh, trash}",
+          "answerType": "text",
+          "officialAnswer": "later–lather–father–bather–bathe–bath–bat–cat–rat–fat–fate–mate–matt (rat–cat is also valid in the middle)",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "figure",
+          "src": "figures/zio2004-s1.png",
+          "alt": "Official solution to problem 1 (several equally long sequences are valid).",
+          "caption": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "An ancient Indian manuscript gives the following recipe to convert any whole number $N >$ 1 into a sequence of $a$’s and $b$’s."
+        },
+        {
+          "type": "paragraph",
+          "text": "Starting with $N$, repeat the following steps. Stop when you reach the number 1."
+        },
+        {
+          "type": "paragraph",
+          "text": "(a) If the number is even, divide it by 2 and write the letter $a$."
+        },
+        {
+          "type": "paragraph",
+          "text": "(b) If the number is odd, add 1 to it, divide the result by 2 and write the letter $b$."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, if we start with $N$ = 26, we obtain the sequence $abbaa$, as follows:"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "Step",
+              "Current number",
+              "Next number",
+              "Write out",
+              "Explanation"
+            ],
+            [
+              "1.",
+              "26",
+              "13",
+              "$a$",
+              "26 is even, 26 ÷ 2 = 13"
+            ],
+            [
+              "2.",
+              "13",
+              "7",
+              "$b$",
+              "13 is odd, (13 + 1) ÷ 2 = 7"
+            ],
+            [
+              "3.",
+              "7",
+              "4",
+              "$b$",
+              "7 is odd, (7 + 1) ÷ 2 = 4"
+            ],
+            [
+              "4.",
+              "4",
+              "2",
+              "$a$",
+              "4 is even, 4 ÷ 2 = 2"
+            ],
+            [
+              "5.",
+              "2",
+              "1",
+              "$a$",
+              "2 is even, 2 ÷ 2 = 1"
+            ],
+            [
+              "6.",
+              "1",
+              "–",
+              "–",
+              "Stop when we reach 1"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Reading the fourth column from top to bottom, we get the sequence generated by the number 26, namely $abbaa$."
+        },
+        {
+          "type": "paragraph",
+          "text": "This recipe converts each whole number larger than 1 to a unique sequence of $a$’s and $b$’s. The problem is to invert the recipe and determine for each of the following sequences of $a$’s and $b$’s, the corresponding whole number that yields that sequence when the recipe is applied to it. For instance, for $abbaa$, the answer is 26."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "$bbaaba$",
+          "answerType": "integer",
+          "officialAnswer": "45",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "$babbabba$",
+          "answerType": "integer",
+          "officialAnswer": "147",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "$ababaaabaa$",
+          "answerType": "integer",
+          "officialAnswer": "886",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A collection of cities are connected by a network of ordinary two-way roads. Not all pairs of cities are directly connected, but it is possible to go from any city to any other city by taking a sequence of roads."
+        },
+        {
+          "type": "paragraph",
+          "text": "The government has decided to upgrade some of these roads to expressways. The goal is to upgrade enough roads so that any pair of cities is connected by a sequence of expressways. However, the government also wants to keep the cost of this operation low, so it wants to minimize the total length of road that is upgraded to expressway. Given a collection of cities and the roads between them, along with the length of each road, determine which roads should be upgraded to meet the government objective."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, consider the network of roads on the right connecting five cities A, B, C, D and E. Each line represents a road and the number next to the line represents the length of the road."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2004-p3-ex1.png",
+          "alt": "A road network on five cities A to E. Roads: A–B length 6, A–C 5, A–D 4, B–D 7, B–E 10, C–D 8, D–E 9.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "The shortest collection of roads to upgrade to expressways in this network is shown on the right:"
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2004-p3-ex2.png",
+          "alt": "The shortest collection of roads to upgrade in the example network: A–B, A–C, A–D, D–E.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Find the shortest collection of roads to convert to expressways in the following networks. There may be more than one solution possible. It is sufficient to provide any one valid solution."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2004-p3a.png",
+              "alt": "Network (a): cities A to F with roads and their lengths.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": "See the official solution diagram.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2004-p3b.png",
+              "alt": "Network (b): cities A to H with roads and their lengths.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": "See the official solution diagram.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2004-p3c.png",
+              "alt": "Network (c): cities A to K with roads and their lengths.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": "See the official solution diagram.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "figure",
+          "src": "figures/zio2004-s3.png",
+          "alt": "Official solution to problem 3: the shortest collections of roads for networks (a), (b) and (c).",
+          "caption": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In a warehouse, there are a number of empty rectangular cartons of different sizes. The cartons are open at the top, so smaller cartons can be stacked inside bigger cartons. One carton can be stacked inside another one provided each of its sides is less than or equal to the corresponding side of the other—for instance, a 10 × 8 carton can be stacked inside a 9 × 12 carton or a 10 × 10 carton, but not inside a 9 × 9 carton. Notice that you are allowed to rotate the cartons before stacking them."
+        },
+        {
+          "type": "paragraph",
+          "text": "The heights of the cartons do not matter when stacking one inside the other. There is no limit to how many cartons can be stacked one inside the other."
+        },
+        {
+          "type": "paragraph",
+          "text": "You are given a collection of cartons and their sizes. You have to decide how to stack them one inside the other so that they occupy the minimum floor area."
+        },
+        {
+          "type": "paragraph",
+          "text": "Example: You have five cartons labelled $A$, $B$, $C$, $D$ and $E$ as follows:"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "$A$ : 10 × 13",
+              "$B$ : 11 × 9",
+              "$C$ : 12 × 8",
+              "$D$ : 7 × 6",
+              "$E$ : 13 × 7"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "One possible stacking is $D$ inside $B$ inside $A$, with $C$ and $E$ separate. This occupies floor area $A$ + $C$ + $E$ = 130 + 96 + 91 = 317. Another possible stacking is $D$ inside $C$ inside $A$, with $B$ and $E$ separate. This occupies floor area $A$ + $B$ + $E$ = 130 + 99 + 91 = 320. Thus, the first arrangement is better."
+        },
+        {
+          "type": "paragraph",
+          "text": "For each of the following lists of boxes, determine the stacking arrangement that occupies the minimum floor area. In your answer, list out the way the cartons should be stacked. For example, here is how the solution looks for the example above:"
+        },
+        {
+          "type": "paragraph",
+          "text": "$D$ in $B$ in $A$ ; $C$ ; $E$"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "$A$ : 10 × 11",
+                  "$B$ : 9 × 12",
+                  "$C$ : 8 × 13",
+                  "$D$ : 11 × 9",
+                  "$E$ : 7 × 12"
+                ],
+                [
+                  "$F$ : 11 × 11",
+                  "$G$ : 12 × 10",
+                  "$H$ : 9 × 14",
+                  "$I$ : 15 × 8",
+                  ""
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": "See the official solution.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "$A$ : 18 × 8",
+                  "$B$ : 9 × 15",
+                  "$C$ : 10 × 11",
+                  "$D$ : 21 × 9",
+                  "$E$ : 10 × 17"
+                ],
+                [
+                  "$F$ : 7 × 16",
+                  "$G$ : 8 × 13",
+                  "$H$ : 11 × 9",
+                  "$I$ : 10 × 10",
+                  ""
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": "See the official solution.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "$A$ : 25 × 18",
+                  "$B$ : 17 × 30",
+                  "$C$ : 33 × 15",
+                  "$D$ : 16 × 25",
+                  "$E$ : 15 × 30"
+                ],
+                [
+                  "$F$ : 31 × 14",
+                  "$G$ : 19 × 27",
+                  "$H$ : 18 × 30",
+                  "$I$ : 33 × 17",
+                  "$J$ : 19 × 30"
+                ],
+                [
+                  "$K$ : 18 × 33",
+                  "$L$ : 24 × 15",
+                  "$M$ : 8 × 30",
+                  "",
+                  ""
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": "See the official solution.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "figure",
+          "src": "figures/zio2004-s4.png",
+          "alt": "Official solution to problem 4: the stacking diagrams and valid packings for (a), (b) and (c).",
+          "caption": null,
+          "source": null
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "number": 5,
+      "title": "Problem 5",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We go back a long time ago to a galaxy far, far away. The planets Aleph and Gimmel are connected by teleports that permit instantaneous, interplanetary transportation of people between the two planets."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each teleport on one planet has a single one-way connection to a teleport on the other planet. Every teleport has exactly one such outgoing connection but may have any number of incoming connections—in fact, it may have no incoming connections at all. For instance, teleports $A$, $B$ and $C$ on Aleph may have outgoing connections to teleports $X$, $Y$ and $Z$ on Gimmel, respectively, but in the reverse direction teleport $X$’s outgoing connection may be to to teleport $B$, while teleports $Y$ and $Z$ on Gimmel both have outgoing connections to teleport $A$. Thus, on Aleph, $A$ has two incoming connections while $C$ has none."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each teleport can work in one of two modes, Receiving and Sending. A teleport in Receiving mode can only be used for inward transportation while a teleport in Sending mode can only be used for outward transportation. For instance, suppose that $A$ has an outgoing connection to $X$ and incoming connections from $Y$ and $Z$. If the mode of $A$ is set to Receiving, it can receive people from both $Y$ and $Z$, but it cannot send out people to $X$. On the other hand, if mode of $A$ is set to Sending, it can send people to $X$, but it cannot receive people from $Y$ or $Z$. A connection from teleport $A$ on one planet to teleport $B$ on the other planet can be used only if the mode of $A$ is Sending and the mode of $B$ is Receiving."
+        },
+        {
+          "type": "paragraph",
+          "text": "The goal is to set the mode of each teleport to either Receiving or Sending so that all teleports remain usable. In other words, we want the following conditions to be satisfied:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "If teleport $X$ is set to Sending mode, then the teleport to which $X$ has an outgoing connection is set to Receiving mode.",
+            "If teleport $X$ is set to Receiving mode, then there is at least one teleport $Y$ with an outgoing connection to $X$ such that $Y$ is set to Sending mode."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "There may be more than one consistent mode setting. It is sufficient to find any one. Example: Aleph has four teleports $A_{1}$, . . . , $A_{4}$. Gimmel has five teleports $G_{1}$, . . . , $G_{5}$. The connections are:"
+        },
+        {
+          "type": "paragraph",
+          "text": "$A_{1}$ → $G_{3}$, $A_{2}$ → $G_{5}$, $A_{3}$ → $G_{2}$, $A_{4}$ → $G_{5}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "$G_{1}$ → $A_{4}$, $G_{2}$ → $A_{4}$, $G_{3}$ → $A_{4}$, $G_{4}$ → $A_{1}$, $G_{5}$ → $A_{3}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here is a consistent setting of the modes ($R$ indicates Receiving mode, $S$ indicates Sending mode)."
+        },
+        {
+          "type": "paragraph",
+          "text": "$A_{1}$ = $R$, $A_{2}$ = $S$, $A_{3}$ = $S$, $A_{4}$ = $R$"
+        },
+        {
+          "type": "paragraph",
+          "text": "$G_{1}$ = $S$, $G_{2}$ = $R$, $G_{3}$ = $S$, $G_{4}$ = $S$, $G_{5}$ = $R$"
+        },
+        {
+          "type": "paragraph",
+          "text": "Determine a consistent mode setting for each of the following collections of teleports."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p5a",
+          "label": "a",
+          "prompt": "Aleph has seven teleports $A_{1}$, . . . , $A_{7}$. Gimmel has four teleports $G_{1}$, . . . , $G_{4}$. $A_{1}$ → $G_{1}$, $A_{2}$ → $G_{2}$, $A_{3}$ → $G_{3}$, $A_{4}$ → $G_{3}$, $A_{5}$ → $G_{1}$, $A_{6}$ → $G_{2}$, $A_{7}$ → $G_{4}$.\n$G_{1}$ → $A_{5}$, $G_{2}$ → $A_{7}$, $G_{3}$ → $A_{4}$, $G_{4}$ → $A_{6}$.",
+          "answerType": "text",
+          "officialAnswer": "See the official solution.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5b",
+          "label": "b",
+          "prompt": "Aleph has five teleports $A_{1}$, . . . , $A_{5}$. Gimmel has eight teleports $G_{1}$, . . . , $G_{8}$.\n$A_{1}$ → $G_{5}$, $A_{2}$ → $G_{2}$, $A_{3}$ → $G_{4}$, $A_{4}$ → $G_{1}$, $A_{5}$ → $G_{8}$.\n$G_{1}$ → $A_{3}$, $G_{2}$ → $A_{2}$, $G_{3}$ → $A_{5}$, $G_{4}$ → $A_{4}$, $G_{5}$ → $A_{1}$, $G_{6}$ → $A_{5}$, $G_{7}$ → $A_{2}$, $G_{8}$ → $A_{2}$.",
+          "answerType": "text",
+          "officialAnswer": "See the official solution.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5c",
+          "label": "c",
+          "prompt": "Aleph has six teleports $A_{1}$, . . . , $A_{6}$. Gimmel has nine teleports $G_{1}$, . . . , $G_{9}$.\n$A_{1}$ → $G_{9}$, $A_{2}$ → $G_{4}$, $A_{3}$ → $G_{5}$, $A_{4}$ → $G_{5}$, $A_{5}$ → $G_{8}$, $A_{6}$ → $G_{7}$.\n$G_{1}$ → $A_{5}$, $G_{2}$ → $A_{1}$, $G_{3}$ → $A_{5}$, $G_{4}$ → $A_{4}$, $G_{5}$ → $A_{5}$, $G_{6}$ → $A_{4}$, $G_{7}$ → $A_{6}$, $G_{8}$ → $A_{1}$, $G_{9}$ → $A_{2}$.",
+          "answerType": "text",
+          "officialAnswer": "See the official solution.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "figure",
+          "src": "figures/zio2004-s5.png",
+          "alt": "Official solution to problem 5: a consistent mode setting for each case.",
+          "caption": null,
+          "source": null
+        }
+      ]
+    }
+  ]
+}

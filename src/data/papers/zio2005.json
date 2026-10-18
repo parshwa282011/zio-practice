@@ -1,0 +1,918 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2005",
+  "year": 2005,
+  "title": "ZIO 2005",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2005/zio2005/zio2005-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2005/zio2005/zio2005-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio05001-editorial/45048"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio05002-editorial/49168"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio05003-editorial/65753"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio05004-editorial/47822"
+    },
+    {
+      "problem": 5,
+      "url": "https://discuss.codechef.com/t/zio05005-editorial/52589"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 75,
+    "markingSchemeVerified": false,
+    "scoring": null,
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "The question paper carries 75 marks, broken up into five questions of 15 marks each.",
+      "Attempt all questions. There are no optional ques-tions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets."
+    ],
+    "notes": [
+      "Problem 4: the key notes that other feasible schedules yield the same number of bonus marks, so only the bonus marks are checked automatically."
+    ],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key. Marking scheme for this year is not stated in the paper, so marks are not calculated."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The director of Hind Circus has decided to add a new performance called the monkey dance to his show. The monkey dance is danced simultaneously by $N$ monkeys."
+        },
+        {
+          "type": "paragraph",
+          "text": "There are $N$ circles drawn on the ground. There are $N$ arrows drawn between the circles in such a way that for each circle, exactly one arrow begins at that circle and exactly one arrow ends at that circle. No arrow can both begin and end at the same circle."
+        },
+        {
+          "type": "paragraph",
+          "text": "When the show begins, each monkey sits on a different circle. At each whistle of the ringmaster, all the monkeys simultaneously jump from one circle to the next, following the arrow leading out of the current circle. This is one step of the dance. The dance ends when all the monkeys have simultaneously returned to the circles where they initially started."
+        },
+        {
+          "type": "paragraph",
+          "text": "The director wishes the dance to last as many steps as possible. This can be achieved by drawing the arrows intelligently."
+        },
+        {
+          "type": "paragraph",
+          "text": "For each of the three values of $N$ given below, what is the maximum number of steps that the monkey dance can be made to last by drawing arrows appropriately?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "9",
+          "answerType": "integer",
+          "officialAnswer": "20",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "12",
+          "answerType": "integer",
+          "officialAnswer": "60",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "15",
+          "answerType": "integer",
+          "officialAnswer": "105",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A bus company operates a number of routes connecting different bus stops in the city. Buses run in both directions along each route. The bus company hires a supervisor who has to periodically check that the signboards and waiting areas at each bus stop are in good condition."
+        },
+        {
+          "type": "paragraph",
+          "text": "The supervisor needs to set up a central office at one of the bus stops. He would like to locate this office at a bus stop from where the maximum number of stops he has to travel to reach any other bus stop is minimized."
+        },
+        {
+          "type": "paragraph",
+          "text": "For simplicity, the bus stops are identified by numbers rather than names. Bus routes are described by the sequence of bus stops that they pass through. Suppose, for example that we had the following set of bus stops and bus routes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bus stops 1,2,. . . ,6"
+        },
+        {
+          "type": "paragraph",
+          "text": "Route A 1—2—3"
+        },
+        {
+          "type": "paragraph",
+          "text": "Route B 2—4—7"
+        },
+        {
+          "type": "paragraph",
+          "text": "Route C 2—4—5—6"
+        },
+        {
+          "type": "paragraph",
+          "text": "In this case the ideal location for the supervisor’s office is bus stop 4, because every other bus stop is at most two stops away. Notice that from bus stop 2, the supervisor can reach every other bus stop without changing buses, but bus stop 4 is better than bus stop 2 because from bus stop 2 it takes three stops to reach bus stop 6. The supervisor does not care about how many time he has to change buses; he only wants to minimize the maximum number of stops to every other bus stop."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the three problems below, you are given a set of bus stops and bus routes. Your task is to identify the ideal location for the supervisor’s central office in each case."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "Bus stops 1,2,. . . ,15\nRoute A 5—4—2—1—6—8—14—15\nRoute B 3—2—1—6—7—9—11—12\nRoute C 10—9—7—6—8—13",
+          "answerType": "integer",
+          "officialAnswer": "6",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "Bus stops 1,2,. . . ,20\nRoute A 9—4—2—1—15—16—17—18—19—20\nRoute B 10—4—2—1—3\nRoute C 1—2—5—11\nRoute D 12—13—6—3—8\nRoute E 14—6—3—7",
+          "answerType": "integer",
+          "officialAnswer": "15",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "Bus stops 1,2,. . . ,24\nRoute A 3—1—2—24\nRoute B 1—4—5—6—7—10—14—15—17\nRoute C 16—15—14—13—11\nRoute D 12—13—14—10—7—8\nRoute E 9—7—6—19—22\nRoute F 23—19—6—18—21\nRoute G 20—18—6—5—4",
+          "answerType": "integer",
+          "officialAnswer": "6",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There is a unique sequence of positive numbers that starts with the number 1 at the first position and has the following properties."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Each value in the sequence is greater than or equal to every value that appears earlier in the sequence.",
+            "If the value at position $k$ in the sequence is $m$, then the number $k$ appears exactly $m$ times in the sequence."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The first few numbers in this sequence are"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "Position",
+              ":",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "· · ·"
+            ],
+            [
+              "Sequence value",
+              ":",
+              "1",
+              "2",
+              "2",
+              "3",
+              "3",
+              "4",
+              "4",
+              "4",
+              "5",
+              "5",
+              "5",
+              "6",
+              "· · ·"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Notice, for instance, that the value at position 4 in the sequence is 3, so 4 itself appears 3 times in the sequence."
+        },
+        {
+          "type": "paragraph",
+          "text": "What is the value that appears at each of the following positions in this sequence?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "411",
+          "answerType": "integer",
+          "officialAnswer": "50",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "1000",
+          "answerType": "integer",
+          "officialAnswer": "86",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "1245",
+          "answerType": "integer",
+          "officialAnswer": "98",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A teacher assigns homework at the beginning of the first day of class. Each homework problem carries one mark, plus a bonus if submitted within a specified number of days. Each homework problem takes exactly one day to complete."
+        },
+        {
+          "type": "paragraph",
+          "text": "The deadline for earning the bonus and the number of bonus marks are different for each homework problem. For instance, if a problem has a deadline of 6 days and carries bonus 10 marks, then it earns 10 bonus marks provided it is submitted before the end of the 6th day."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose there are seven problems with deadlines and bonuses as follows:"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "Problem name",
+              "$a$",
+              "$b$",
+              "$c$",
+              "$d$",
+              "$e$",
+              "$f$",
+              "$g$"
+            ],
+            [
+              "Deadline for bonus",
+              "1",
+              "1",
+              "3",
+              "3",
+              "2",
+              "2",
+              "6"
+            ],
+            [
+              "Bonus marks",
+              "6",
+              "7",
+              "2",
+              "1",
+              "4",
+              "5",
+              "1"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Then the maximum number of bonus marks one can obtain is 15, which can be achieved by completing the problems in the sequence $b, f, c, a, g, e, d$. Note that there are also other sequences that achieve the same effect."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your task is to find a schedule to complete all homework problems so as to maximize bonus marks for the following three sets of data."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Problem name",
+                  "$a$",
+                  "$b$",
+                  "$c$",
+                  "$d$",
+                  "$e$",
+                  "$f$",
+                  "$g$",
+                  "$h$",
+                  "$i$",
+                  "$j$",
+                  "$k$",
+                  "$\\ell$"
+                ],
+                [
+                  "Deadline for bonus",
+                  "9",
+                  "4",
+                  "1",
+                  "4",
+                  "2",
+                  "3",
+                  "6",
+                  "3",
+                  "2",
+                  "5",
+                  "5",
+                  "8"
+                ],
+                [
+                  "Bonus marks",
+                  "2",
+                  "6",
+                  "2",
+                  "5",
+                  "3",
+                  "3",
+                  "5",
+                  "7",
+                  "4",
+                  "6",
+                  "4",
+                  "6"
+                ]
+              ]
+            }
+          ],
+          "fields": [
+            {
+              "id": "bonus",
+              "label": "Bonus marks earned"
+            },
+            {
+              "id": "schedule",
+              "label": "Schedule (letters in order)",
+              "graded": false
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "bonus": "41",
+            "schedule": "i h b d j g l a c e f k"
+          },
+          "comparison": "exact",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Problem name",
+                  "$a$",
+                  "$b$",
+                  "$c$",
+                  "$d$",
+                  "$e$",
+                  "$f$",
+                  "$g$",
+                  "$h$",
+                  "$i$",
+                  "$j$",
+                  "$k$",
+                  "$\\ell$",
+                  "$m$",
+                  "$n$",
+                  "$o$"
+                ],
+                [
+                  "Deadline for bonus",
+                  "2",
+                  "4",
+                  "5",
+                  "2",
+                  "6",
+                  "8",
+                  "3",
+                  "9",
+                  "4",
+                  "9",
+                  "2",
+                  "5",
+                  "6",
+                  "7",
+                  "9"
+                ],
+                [
+                  "Bonus marks",
+                  "4",
+                  "3",
+                  "5",
+                  "3",
+                  "7",
+                  "7",
+                  "4",
+                  "8",
+                  "5",
+                  "6",
+                  "6",
+                  "4",
+                  "5",
+                  "6",
+                  "2"
+                ]
+              ]
+            }
+          ],
+          "fields": [
+            {
+              "id": "bonus",
+              "label": "Bonus marks earned"
+            },
+            {
+              "id": "schedule",
+              "label": "Schedule (letters in order)",
+              "graded": false
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "bonus": "55",
+            "schedule": "k i c e m n f h j a d g b l o"
+          },
+          "comparison": "exact",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Problem name",
+                  "$a$",
+                  "$b$",
+                  "$c$",
+                  "$d$",
+                  "$e$",
+                  "$f$",
+                  "$g$",
+                  "$h$",
+                  "$i$",
+                  "$j$",
+                  "$k$",
+                  "$\\ell$",
+                  "$m$",
+                  "$n$",
+                  "$o$"
+                ],
+                [
+                  "Deadline for bonus",
+                  "6",
+                  "2",
+                  "3",
+                  "14",
+                  "10",
+                  "4",
+                  "5",
+                  "5",
+                  "7",
+                  "8",
+                  "6",
+                  "7",
+                  "8",
+                  "3",
+                  "9"
+                ],
+                [
+                  "Bonus marks",
+                  "5",
+                  "4",
+                  "3",
+                  "2",
+                  "2",
+                  "3",
+                  "4",
+                  "1",
+                  "6",
+                  "7",
+                  "3",
+                  "4",
+                  "7",
+                  "6",
+                  "6"
+                ]
+              ]
+            }
+          ],
+          "fields": [
+            {
+              "id": "bonus",
+              "label": "Bonus marks earned"
+            },
+            {
+              "id": "schedule",
+              "label": "Schedule (letters in order)",
+              "graded": false
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "bonus": "53",
+            "schedule": "b n g a i l m j o e d c f h k"
+          },
+          "comparison": "exact",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "number": 5,
+      "title": "Problem 5",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A skier wants to ski down from the top of a mountain to its base. There are several possible routes, using different slopes en route, and passing through some flat areas. For each slope, there is a maximum advisable speed. The effort required to ski down a slope depends upon the length of the slope and the speed of skiing and is given by the following formula: $e$ = $d$ × (60 − $s$) if $s$ ≤ 50, and $e$ = $d$ × ($s$ − 40) if $s >$ 50, where $e$ is the effort required, $d$ is the distance travelled, and $s$ is the speed of travel. Travelling across a flat area requires no effort."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the problems below, you are given a map of the mountain slopes—that is, the list of flat areas and details about the slopes connecting these areas. Note that one can only ski downwards on a slope. For each slope, you are given the flat areas that it connects, the length of the slope and the maximum advisable speed for it."
+        },
+        {
+          "type": "paragraph",
+          "text": "You have to determine the minimum total effort that the skier has to expend in order to reach the mountain base, while staying within the maximum advisable speed at every slope."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p5a",
+          "label": "a",
+          "prompt": "There are 7 flat areas and 9 slopes connecting them. The flat areas are numbered from 1 to 7 with flat area 1 being at the top and flat area 7 at the bottom. The data for the 9 slopes is:",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Slope No",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9"
+                ],
+                [
+                  "From flat",
+                  "1",
+                  "1",
+                  "1",
+                  "2",
+                  "3",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                [
+                  "To flat",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "5",
+                  "6",
+                  "6",
+                  "7",
+                  "7"
+                ],
+                [
+                  "Max speed",
+                  "60",
+                  "40",
+                  "20",
+                  "40",
+                  "60",
+                  "30",
+                  "20",
+                  "30",
+                  "30"
+                ],
+                [
+                  "Length",
+                  "15",
+                  "10",
+                  "05",
+                  "20",
+                  "30",
+                  "10",
+                  "05",
+                  "10",
+                  "10"
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "700",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5b",
+          "label": "b",
+          "prompt": "There are 9 flat areas and 12 slopes connecting them. The flat areas are numbered from 1 to 9 with flat area 1 being at the top and flat area 9 at the bottom. The data for the 12 slopes is:",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Slope No",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12"
+                ],
+                [
+                  "From flat",
+                  "1",
+                  "1",
+                  "2",
+                  "2",
+                  "3",
+                  "3",
+                  "4",
+                  "5",
+                  "5",
+                  "6",
+                  "7",
+                  "8"
+                ],
+                [
+                  "To flat",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "5",
+                  "6",
+                  "7",
+                  "7",
+                  "8",
+                  "8",
+                  "9",
+                  "9"
+                ],
+                [
+                  "Max speed",
+                  "50",
+                  "40",
+                  "40",
+                  "50",
+                  "50",
+                  "40",
+                  "30",
+                  "60",
+                  "40",
+                  "40",
+                  "40",
+                  "20"
+                ],
+                [
+                  "Length",
+                  "15",
+                  "25",
+                  "30",
+                  "25",
+                  "20",
+                  "10",
+                  "10",
+                  "10",
+                  "05",
+                  "20",
+                  "10",
+                  "20"
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "700",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5c",
+          "label": "c",
+          "prompt": "There are 11 flat areas and 16 slopes connecting them. The flat areas are numbered from 1 to 11 with flat area 1 being at the top and flat area 11 at the bottom. The data for the 16 slopes is:",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Slope No",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15",
+                  "16"
+                ],
+                [
+                  "From flat",
+                  "1",
+                  "1",
+                  "2",
+                  "2",
+                  "3",
+                  "3",
+                  "4",
+                  "4",
+                  "5",
+                  "5",
+                  "6",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10"
+                ],
+                [
+                  "To flat",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "8",
+                  "9",
+                  "9",
+                  "10",
+                  "11",
+                  "11",
+                  "11",
+                  "11"
+                ],
+                [
+                  "Max speed",
+                  "60",
+                  "30",
+                  "50",
+                  "60",
+                  "50",
+                  "40",
+                  "30",
+                  "50",
+                  "60",
+                  "40",
+                  "40",
+                  "50",
+                  "40",
+                  "20",
+                  "40",
+                  "30"
+                ],
+                [
+                  "Length",
+                  "10",
+                  "20",
+                  "20",
+                  "10",
+                  "10",
+                  "10",
+                  "10",
+                  "30",
+                  "30",
+                  "20",
+                  "20",
+                  "40",
+                  "20",
+                  "10",
+                  "20",
+                  "10"
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "900",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

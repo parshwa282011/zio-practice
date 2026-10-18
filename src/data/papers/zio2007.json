@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2007",
+  "year": 2007,
+  "title": "ZIO 2007",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2007/zio2007/zio2007-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2007/zio2007/zio2007-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio07001-editorial/44805"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio07002-editorial/44814"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio07003-editorial/69707"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio07004-editorial/64538"
+    },
+    {
+      "problem": 5,
+      "url": "https://discuss.codechef.com/t/zio07005-editorial/66708"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 100,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "Calculators, log tables and other aids are not permit-ted.",
+      "The question paper carries 100 marks, broken up into five questions of 20 marks each. Each question has three parts. If you solve all three parts correctly, you get 20 marks for that question. Otherwise, you get 5 marks for each part that you solve correctly.",
+      "Attempt all questions. There are no optional ques-tions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the An-swer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Suppose we take a sheet of paper and fold it in half lengthwise, putting the right side over the left. When we unfold the paper, there will be a centre crease like a valley, which we write as ∨."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suppose we fold it lengthwise twice—that is, we fold it lengthwise in half, right over left, and then fold the folded sheet lengthwise in half again, right over left. When we unfold this doubly folded sheet, we see three equally spaced creases, some like hills ∧, some like valleys ∨. The actual pattern we see is ∨ ∨ ∧."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2007-p1-folds.png",
+          "alt": "Four sketches of a folded paper strip, captioned: One fold; One fold, unfolded (a single valley crease); Two folds; Two folds, unfolded (three creases).",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "If we fold the paper three times in a row and unfold, the pattern of hills and valleys is ∨ ∨ ∧ ∨ ∨ ∧ ∧."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "How many valleys are there if we fold the paper 10 times and unfold?",
+          "answerType": "integer",
+          "officialAnswer": "512",
+          "comparison": "compact",
+          "inputMap": {
+            "v": "∨",
+            "V": "∨",
+            "^": "∧"
+          },
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "Write down the pattern of hills and valleys of the first ten creases if we fold the paper 15 times and unfold.",
+          "answerType": "text",
+          "officialAnswer": "∨∨∧∨∨∧∧∨∨∨",
+          "comparison": "compact",
+          "inputMap": {
+            "v": "∨",
+            "V": "∨",
+            "^": "∧"
+          },
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "Write down the pattern of hills and valleys of the last ten creases if we fold the paper 18 times and unfold.",
+          "answerType": "text",
+          "officialAnswer": "∧∧∧∨∨∧∧∨∧∧",
+          "comparison": "compact",
+          "inputMap": {
+            "v": "∨",
+            "V": "∨",
+            "^": "∧"
+          },
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This is a game played by two players. The game starts with two piles of coins. The two players play alternately. In each move, a player can either remove one coin from one of the piles or one coin from both the piles. The player who removes the last coin loses the game."
+        },
+        {
+          "type": "paragraph",
+          "text": "Call the player who moves first Player 1 and the other player Player 2. Depending on how many coins are in the two piles initially, one of the two players is guaranteed to win the game if he plays intelligently, no matter how the other player moves. For example, if there are 6 coins in both piles at the beginning of the game, Player 2 can always win. On the other hand, if one pile has 7 coins and the other has 8 coins, Player 1 can always win."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "Suppose we have 20 coins in one pile. In the other pile, Player 1 is allowed to choose the number of coins to start with. He has to pick a number greater than or equal to 16. With this restriction, what is the smallest value for which Player 1 is guaranteed to win the game?",
+          "answerType": "integer",
+          "officialAnswer": "17",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "Suppose we have 32 coins in one pile. In the other pile, Player 2 is allowed to choose the number of coins to start with. He has to pick a number less than or equal to 51. With this restriction, what is the largest value for which Player 2 is guaranteed to win the game?",
+          "answerType": "integer",
+          "officialAnswer": "50",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "Suppose we have 26 coins in one pile. In the other pile, Player 1 is allowed to choose the number of coins to start with. He has to pick a number greater than or equal to 15 and less than or equal to 25. Among these, for how many values is Player 1 is guaranteed to win the game?",
+          "answerType": "integer",
+          "officialAnswer": "6",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Each floor in an IT office is arranged in a rectangular array of $M$ ×$N$ cubicles. Cubicles on floor $F$ are identified by coordinates (1, 1$, F$ ) to ($M, N, F$ ). There are connections between a cubicle and its neighbours on the floor. Each cubicle is also connected vertically to the corresponding cubicle one floor above and one floor below. Thus, from a given cubicle ($i, j, k$) on floor $k$, an employee can go across to one of its four neighbours ($i$+1$, j, k$), ($i$−1$, j, k$), ($i, j$+1$, k$), ($i, j$−1$, k$) on the same floor. He can also go up one floor to reach the cubicle ($i, j, k$+1) or down one floor to reach the cubicle ($i, j, k$−1)."
+        },
+        {
+          "type": "paragraph",
+          "text": "It takes 2 units of effort for an employee to cross to a neighbouring cubicle on the same floor. It takes 1 unit of effort to go to the corresponding cubicle one floor below. It costs 3 units of effort for an employee to go to the corresponding cubicle one floor up. A group of employees want to meet to discuss something. They would like to meet in a cubicle located so that their overall effort to reach the meeting place is minimized. The cubicle where they meet can be anywhere in the building —it need not be one in which one of them sits. For instance, suppose that there are 5 employees who sit in cubicles with coordinates (28,3,17), (8,36,48), (6,36,31), (50,24,15) and (12,28,32). Then, the best cubicle for them to meet is the one at (12,28,17)."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the three problems below, you are given the list of cubicles where a group of employees sit. Your task is to identify the coordinates of the optimum cubicle for them to meet."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "13 people seated in cubicles\n(36,90,7), (77,69,7), (75,22,7), (43,30,7), (75,62,7), (70,23,7), (76,30,7),\n(25,28,7), (95,56,7), (3,25,7), (51,98,7), (2,11,7), (46,46,7).",
+          "answerType": "text",
+          "officialAnswer": "(51,30,7)",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "25 people seated in cubicles\n(51,1,73), (61,1,33), (1,1,34), (46,1,38), (23,1,94),\n(91,1,89), (11,1,89), (10,1,70), (37,1,73), (96,1,93),\n(44,1,50), (16,1,81), (50,1,28), (50,1,84), (55,1,60),\n(48,1,97), (3,1,62), (92,1,84), (27,1,22), (100,1,51),\n(59,1,31), (8,1,39), (55,1,47), (50,1,1), (33,1,45).",
+          "answerType": "text",
+          "officialAnswer": "(48,1,38)",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "21 people seated in cubicles\n(18,72,69), (12,81,43), (40,19,33), (40,60,48), (2,78,66),\n(14,78,84), (70,25,3), (48,59,43), (29,4,10), (12,96,1),\n(89,13,74), (57,26,54), (100,32,39), (99,38,65), (13,40,43),\n(79,20,20), (28,91,12), (98,38,37), (40,34,41), (16,46,36), (18,1,16).",
+          "answerType": "text",
+          "officialAnswer": "(40,38,20)",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A train with $n$ carriages labelled 1, 2, 3$, . . . n$, in that order, is standing on a railway track. The railway track has a short siding that can accommodate upto two carriages."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2007-p4-siding.png",
+          "alt": "A train of carriages 1, 2, 3, …, n on a track with a short siding branching off it.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "As you move the train past the siding from left to right, you can do one of the following at each step."
+        },
+        {
+          "type": "paragraph",
+          "text": "(i) Move a carriage from the left side to the right side directly."
+        },
+        {
+          "type": "paragraph",
+          "text": "(ii) Move one or two carriages into the siding, only if the siding is currently empty. (iii) Move all the carriages out of siding to the right side."
+        },
+        {
+          "type": "paragraph",
+          "text": "Depending on the sequence of operations you perform, the carriages in the train may be reordered. For instance, if you start with five carriages 1, 2, 3, 4, 5, you can reorder this as 1, 4, 2, 3, 5 by keeping 4 in the siding, sending 2 and 3 to the right, then moving 4 out of the siding and finally moving 1 to the right. Similarly, you can generate the order 1, 3, 4, 2, 5 by keeping 3, 4 in the siding when you move 2 to the right."
+        },
+        {
+          "type": "paragraph",
+          "text": "Note that you cannot add a carriage to the siding if it is not empty, even if there is only one carriage currently in the siding. Similarly, if there are two carriages in the siding, you cannot remove only one of them and move it to the right—you must remove both. Thus, for example, you cannot generate the order 3, 1, 4, 2, 5. Since 2 is adjacent to 5, 3, 4 must have gone into the siding together, but they have come out separated by 1, which is not permitted."
+        },
+        {
+          "type": "paragraph",
+          "text": "Overall, if one tries out all possible ways of using the siding while moving a train with five carriages, there are 24 different ways in which the carriages can be reordered."
+        },
+        {
+          "type": "paragraph",
+          "text": "How many different reorderings can you generate if you have a train with:"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "8 carriages",
+          "answerType": "integer",
+          "officialAnswer": "258",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "9 carriages",
+          "answerType": "integer",
+          "officialAnswer": "569",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "10 carriages",
+          "answerType": "integer",
+          "officialAnswer": "1255",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "number": 5,
+      "title": "Problem 5",
+      "sourcePages": [
+        6
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "After the rains, the roads in Siruseri are a mess. In particular, the expressway that is currently under construction has degenerated into a collection of potholes. The municipality wants to repair the expressway to at least provide a level walking path for pedestrians to cross the road."
+        },
+        {
+          "type": "paragraph",
+          "text": "They have identified a section of the road where they want to lay this walking path. The section has been marked out as a grid of squares. The path will run from the top left square to the bottom right square. The path they want to build will be a connected set of squares—each square in the path will be connected to another square on the path that is above it, below it, to its left or to its right."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each square that the authorities have marked out, there is a large pothole. Constructing the path involves filling the pothole in each square along the path. The municipality would like to build the path in such a way that the total work involved in filling potholes is minimized."
+        },
+        {
+          "type": "paragraph",
+          "text": "The segment of road where the path is to be built is represented as a grid of numbers, corresponding to the squares marked out on the road. Each number in the grid gives the size of the pothole in that square. For instance, suppose the road segment corresponds to the grid on the left below. Then, the path along which the total size of potholes is minimized is shown on the right (the path is given by the boxed numbers). The total size of potholes along this path is 22."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2007-p5-example.png",
+          "alt": "Left: the 3 × 5 grid 1 8 2 1 1 / 2 1 1 7 8 / 1 5 7 9 5. Right: the same grid with the minimum path boxed: 1, 2, 1, 1 along the top and 8 and 5 on the right, totalling 22.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "In the three problems below, you are given a description of the road segment as a grid of numbers. You have to find a path that minimizes the total size of potholes that have to be filled to build a path from the top left corner to the bottom right corner. Your answer should be the total size of the potholes filled along this path."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p5a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "8",
+                  "11",
+                  "4",
+                  "6",
+                  "14",
+                  "14"
+                ],
+                [
+                  "27",
+                  "26",
+                  "21",
+                  "5",
+                  "19",
+                  "11"
+                ],
+                [
+                  "9",
+                  "2",
+                  "4",
+                  "5",
+                  "18",
+                  "23"
+                ],
+                [
+                  "12",
+                  "10",
+                  "15",
+                  "28",
+                  "29",
+                  "7"
+                ],
+                [
+                  "20",
+                  "2",
+                  "8",
+                  "16",
+                  "3",
+                  "17"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "101",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "4",
+                  "2",
+                  "3",
+                  "3",
+                  "2",
+                  "5",
+                  "4",
+                  "5"
+                ],
+                [
+                  "1",
+                  "3",
+                  "5",
+                  "5",
+                  "5",
+                  "5",
+                  "5",
+                  "5"
+                ],
+                [
+                  "5",
+                  "4",
+                  "4",
+                  "1",
+                  "4",
+                  "5",
+                  "3",
+                  "3"
+                ],
+                [
+                  "1",
+                  "3",
+                  "2",
+                  "3",
+                  "5",
+                  "4",
+                  "5",
+                  "5"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "37",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "15",
+                  "21",
+                  "29",
+                  "15",
+                  "28",
+                  "39"
+                ],
+                [
+                  "27",
+                  "37",
+                  "34",
+                  "21",
+                  "17",
+                  "30"
+                ],
+                [
+                  "28",
+                  "14",
+                  "30",
+                  "13",
+                  "38",
+                  "34"
+                ],
+                [
+                  "25",
+                  "13",
+                  "31",
+                  "38",
+                  "23",
+                  "40"
+                ],
+                [
+                  "16",
+                  "21",
+                  "20",
+                  "28",
+                  "14",
+                  "4"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "184",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

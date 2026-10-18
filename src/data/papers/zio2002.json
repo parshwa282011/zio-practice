@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2002",
+  "year": 2002,
+  "title": "ZIO 2002",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2002/zio2002/part-a-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2002/zio2002/part-a-solutions.txt",
+  "editorialUrls": [],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": null,
+    "markingSchemeVerified": false,
+    "scoring": null,
+    "instructions": [
+      "Time: 3 hours (the paper was set on February 10, 2002).",
+      "Attempt all questions."
+    ],
+    "notes": [
+      "This paper asks for algorithms, proofs and explanations, so it cannot be scored automatically. Write your own answer, then compare it with the model solution and mark yourself."
+    ],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key. Answers are not unique or are diagrams/proofs: the app shows the official solution and asks you to mark yourself."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        1
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Consider a plate stacked with several disks, each of a different diameter (they could all be, for instance, dosas or chapatis of different sizes). We want to arrange these disks in decreasing order according to their diameter so that the widest disk is at the bottom of the pile and every disk is smaller than the disks below it."
+        },
+        {
+          "type": "paragraph",
+          "text": "The only operation available for manipulating the disks is to pick up a stack of them from the top of the pile and invert that stack. (This corresponds to lifting up a stack dosas or chapatis between two big spoons and flipping the stack.)"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "Describe a precise method (algorithm) to sort the disks using this flip operation.",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "What initial arrangement of $n$ disks will force us to use the “flip” operation the maximum number of times before the entire pile is stacked up correctly?",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "code",
+          "text": "1. (a) Find the largest disk and flip the top of the stack upto\n       and including this disk.  This will take the largest disk\n       to the top of the pile.  Then flip the entire stack to get\n       the largest disk to the bottom.\n\n       At step k+1, inductively the k largest disks are arranged\n       in order at the bottom of the stack.  Pick the largest\n       disk above these k disks, flip the stack above this disk\n       to take it to the top and then flip the top n-k disks to\n       bring it to position k+1 from the bottom.\n\n   (b) Let the disks be numbered 1,2,...,n, where disk 1 is\n       smaller than disk 2 is smaller than ... disk n.  In the\n       worst case it takes two flips for each of the disks n, n-1,\n       n-2, ...,3.  After disks 3 to n are in the correct\n       position, in the worst case 1 and 2 are inverted so we\n       need one more flip.  So, in the worst case, we need\n       2(n-2)+1 = 2n-3 flips.\n\n       For 2 disks, the worst case is   2\n                                        1\n       Call this arrangement s2\n\n       For 3 disks, the worst case is to get to s2 after 3 comes\n       to the bottom.  We would like to take 2 flips to get 3 to\n       the bottom, so, working backwards,\n\n       2         3         1\n       1   <-    1    <-   3  = s3\n       3         2         2\n\n       For 4 disks, we want s1 above 4 after flipping twice to\n       get 4 to the bottom, so s4 is the last sequence of the\n       following\n\n       1         4         3\n       3   <-    2    <-   2  = s4\n       2         3         4\n       4         1         1\n\n       For k+1 disks, we want sk above disk k+1 after flipping\n       twice to get k to the bottom, so s(k+1) is obtained as\n       follows: (Notation: reading a sequence from top to bottom,\n       head is the top element, tail is the rest, last is the\n       bottom element, init is all but the bottom, flip is a\n       function that inverts a list):\n\n       sk          (k+1)       flip (init(flip sk)) = tail sk\n       :      <-     :      <-    (k+1)                (k+1)\n       (k+1)      flip sk       last (flip sk)        head sk"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        1
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A new test for tuberculosis is found to be 80% accurate—if a person has the disease, the test is positive 80% of the time and if a person does not have the disease, the test is negative 80% of the time. A person is picked at random from a group in which 10% of the people actually have tuberculosis."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "If the randomly selected person’s test result is positive, what is the probability that he has tuberculosis?",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "If the randomly selected person’s test result is negative, what is the probability that he has tuberculosis?",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "code",
+          "text": "2. Formally:\n\n   Conditional probability (Bayes):\n\n       Pr(A given B) = Pr(A and B) / Pr (B)\n\n   (a) B is \"test is positive\", A is \"has TB\"\n\n       Pr (A and B) is (80/100)*(10/100) = 8/100\n       Pr (B) is Pr(yes TB, test positive) + Pr(no TB, test positive)\n                = (10/100)*(80/100)        + (90/100)*(20/100)\n                = 26/100\n\n       So Pr(A given B) is 8/26 = 4/13\n\n   (a) B is \"test is negative\", A is \"has TB\"\n\n       Using similar computation as in (a)\n\n       Pr (A and B) is 2/100\n       Pr (B) is 74/100\n       Pr(A given B) 2/74 = 1/37\n\n   Informally:\n\n       In 100 people, 10 have TB, 90 do not.\n       For the 10 who do, 8 test positive, 2 do not.\n       For the 90 who don't, 18 test positive, 72 do not.\n\n   (a) 8 of 26 people who test positive have TB\n   (b) 2 of 74 people who test negative have TB"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        1
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In a normal pan balance (as used by, say, a vegetable vendor) the item to be bought is balanced against a known combination of weights. The weights may be applied on either side of the pan—for instance, to weigh 1500 g of onions, the vendor may either place the onions in one pan and a 1000 g and 500 g weight in the other, or place the onions along with a 500 g weight in one pan and a 2000 g weight in the other pan. We would like to be able to weigh all quantities between 1 g and 4000 g to the nearest gram using such a balance. One way to do this is to have 12 weights weighing 1 g, 2 g, 4 g, 8 g, 16 g,. . . , 2048 g."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "Design a smaller set of weights to achieve the same objective.",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "In general, to weigh items between 1 g and $n$ g to the nearest gram, what is the smallest sequence of weights we can use (in terms of $n$)?",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "code",
+          "text": "3. Think of one pan as the 'positive' pan and the other as the\n   'negative' pan.  If we put w1 in the positive pan and w2 in\n   the negative pan, the net weight is w1 - w2.  Thus, if we use\n   weights w1, w2, ..., wn, we can write out the net weight as a\n   \"ternary\" n-digit number using digits +1/0/-1.\n\n   From this, it follows that the optimal set of weights\n   corresponds to powers of 3.\n\n   (a) 1, 3, 9, 27, 81, 243, 729, 2187, 720 (the last weight is\n       4000-3280, where 3280 is the sum of the previous 8 weights).\n\n\n   (b) In general, we would use 1, 3, 9, ..., log_3(n),\n       n-(1+3+..+log_3(n))"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        2
+      ],
+      "content": [],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "Let $A$ be a matrix of integers. Suppose we first arrange each row in ascending order and then arrange each column in ascending order. Show that the rows remain in ascending order after rearranging the columns.",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "Let $A$ be an $n$ × $n$ matrix of integers such that each row and each column is arranged in ascending order. we are told that a number $k$ appears in $A$ and we would like to find out its position—that is, the row $i$ and column $j$ such that $A$($i, j$) = $k$.\n(i) Show that we can do this by examining at most 2$n$ values in $A$.\n(ii) In what position should $k$ be to force us to look at 2$n$ values in $A$?",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "code",
+          "text": "4. (a) Look at A after rearranging the columns.\n\n       Consider any pair of adjacent columns k-1 and k.  We show\n       that for each row j, A(j,k-1) is smaller than A(j,k).\n\n       The first entry A(1,k) is bigger than A(1,k-1).  This is\n       because A(1,k) dominates at least one entry in column k-1\n       (the one that was originally to the left of it) and so\n       dominates A(1,k-1), the minimum element in column k-1.\n\n       Now consider A(2,k).  We can argue that A(2,k) dominates\n       at least two entries in column k-1 and hence dominates\n       A(2,k-1), the second smallest entry in column k-1.\n\n       Suppose A(2,k) dominates only one entry in column k-1 (it\n       dominates at least one, the one originally to its left).\n       Then, the element originally to the left of A(2,k) is the\n       element currently at A(1,k-1).  This means that A(1,k)\n       originally had another element A(j,k-1) to its left, not\n       A(1,k-1).  But then, A(2,k) > A(1,k) > A(j,k-1) >\n       A(1,k-1), which contradicts the assumption that A(2,k)\n       dominates only one entry in column k-1.\n\n       In a similar manner, we can show that for each j, A(j,k)\n       dominates at least j entries in column k-1 and so\n       dominates A(j,k-1).\n\n       Since for each row j and each column k, A(j,k) is bigger\n       than A(j,k-1), it follows that all the rows are still in\n       ascending order.\n\n   (b)(i) Check k against the top right corner element A(1,n)\n\n          Case 1: If k is smaller than A(1,n) then k cannot\n          appear in the last column (since A(1,n) is the smallest\n          entry in that column) so we have to search for A in\n          rows 1 to n, columns 1 to n-1.\n\n          Case 2: If k is bigger than A(1,n) then k cannot appear\n          in the first row (since A(1,n) is the largest entry in\n          that row) so we have to search for A in rows 2 to n,\n          columns 1 to n.\n\n          In the next step, we check k against the top right\n          corner of the remaining matrix of interest (the top\n          right corner is A(1,n-1) if Case 1 holds and A(2,n) if\n          Case 2 holds) and repeat the earlier analysis.\n\n          With each step we reduce the matrix of interest by\n          pruning either one row or one column.  Since we started\n          with n rows and n columns, within 2n steps (actually\n          2(n-1) steps) we would have pruned the matrix down to a\n          single row and column, i.e. a single element.\n\n     (ii) Since the search proceeds from the top right to the\n          bottom left, the search goes on longest if the element\n          is at the bottom left corner, A(n,1)."
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "number": 5,
+      "title": "Problem 5",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We have $n$ balls that look identical but each of them has a different weight. We have a balance in which we can weigh one ball against another ball."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p5a",
+          "label": "a",
+          "prompt": "Describe an efficient method to find the heaviest ball. How many weighings does the method require, in terms of $n$?",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5b",
+          "label": "b",
+          "prompt": "One way to find the second heaviest ball is to first find the heaviest ball using the method from part (a), remove it from the collection, and then find the heaviest among the remaining balls using the same method. Describe a more efficient method to find the second heaviest ball. How many weighings does the improved method require, in terms of $n$?",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "code",
+          "text": "5. (a) There are two natural methods:\n\n       The first is to pick up a pair of balls, weigh them,\n       retain the heavier.  Then, pick up each of the other balls\n       in turn, weigh them against the current \"champion\" and\n       retain the heavier one as the new \"champion\".  The ball\n       that remains at the end is the heaviest.\n\n       The second method is to organize a knockout tournament.\n       Pair up all the balls and retain the heavier one from each\n       pair.  Then, pair up the winners of the first round and do\n       the same.  Repeat until a single winner is found.\n\n       Both methods require n-1 weighings.\n\n   (b) The tournament solution to (a) helps us find the second\n       heaviest ball more efficiently than by naively repeating\n       the procedure for (a).\n\n       In the overall tournament, the second heaviest ball would\n       have beaten every ball other than the heaviest one.  So,\n       we only have to find the heaviest among the log n balls\n       that \"lost\" to the heaviest ball to find the second\n       heaviest."
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "number": 6,
+      "title": "Problem 6",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We have a bucket full of marbles, some of which are black and some of which are white. We also have a big sack with an unlimited supply of black marbles."
+        },
+        {
+          "type": "paragraph",
+          "text": "We keep repeating the following step:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "We close our eyes and pick out two marbles from the bucket at random.",
+            "If both marbles are of the same colour, we throw away both of them and put a fresh black marble from the sack into the bucket.",
+            "If the marbles are not of the same colour, we throw away the black marble and replace the white marble back in the bucket."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "With each step, the number of marbles in the bucket decreases by one. Eventually, we are left with a single marble in the bucket. What is the relationship, if any, between the colour of the last marble and the contents of the bucket that we started with?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p6-answer",
+          "label": "",
+          "prompt": "What is the relationship between the colour of the last marble and the starting contents of the bucket?",
+          "answerType": "text",
+          "officialAnswer": "See the model solution below.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ],
+      "solution": [
+        {
+          "type": "code",
+          "text": "6. In each round, the number of black balls can either decrease\n   by 1 (if we pick up black-black or black-white) or increase by\n   1 (if we pick up white-white) so not much information can be\n   gleaned from analysing the black ball count.\n\n   However, notice that white balls are eliminated in pairs.\n   Thus, the parity (even/odd) of the white balls in the bag is\n   an invariant.  Eventually, we have a single ball (odd).  Thus,\n   the last ball is white if only if the bag originally had an\n   odd number of white balls."
+        }
+      ]
+    }
+  ]
+}

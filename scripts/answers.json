@@ -1,0 +1,1024 @@
+{
+  "_format": "Transcribed from the official IARCS answer keys (see sources.json). Each year: scoring/metadata plus answers per problem. An answer is a string, {value, accept[]}, or {fields:{id:value}}.",
+  "2023": {
+    "maximumMarks": 80,
+    "durationMinutes": null,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "notes": [
+      "Problem 1: the official key also accepts the interpretation in which the final score cannot be negative (23, 121, 411)."
+    ],
+    "answers": {
+      "1": [
+        {
+          "value": "30",
+          "accept": [
+            "23"
+          ]
+        },
+        {
+          "value": "136",
+          "accept": [
+            "121"
+          ]
+        },
+        {
+          "value": "441",
+          "accept": [
+            "411"
+          ]
+        }
+      ],
+      "2": [
+        "53",
+        "33750",
+        "5437218"
+      ],
+      "3": [
+        "3",
+        "70",
+        "344960"
+      ],
+      "4": [
+        "181",
+        "12599",
+        "4388"
+      ]
+    }
+  },
+  "2022": {
+    "maximumMarks": 80,
+    "durationMinutes": null,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "4",
+        "6",
+        "6"
+      ],
+      "2": [
+        "46",
+        "42",
+        "16796"
+      ],
+      "3": [
+        "127",
+        "40",
+        "236"
+      ],
+      "4": [
+        "2",
+        "20",
+        "864"
+      ]
+    }
+  },
+  "2021": {
+    "maximumMarks": 80,
+    "durationMinutes": null,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "65",
+        "15163",
+        "97229"
+      ],
+      "2": [
+        "2",
+        "4",
+        "5"
+      ],
+      "3": [
+        "121",
+        "2662",
+        "162151"
+      ],
+      "4": [
+        "3",
+        "7",
+        "24"
+      ]
+    }
+  },
+  "2020": {
+    "maximumMarks": 80,
+    "durationMinutes": null,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "41",
+        "221",
+        "1105"
+      ],
+      "2": [
+        "4",
+        "9",
+        "19"
+      ],
+      "3": [
+        "45",
+        "28",
+        "77"
+      ],
+      "4": [
+        "11",
+        "23",
+        "104"
+      ]
+    }
+  },
+  "2019": {
+    "maximumMarks": 80,
+    "durationMinutes": null,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "69",
+        "105",
+        "133"
+      ],
+      "2": [
+        "8",
+        "7",
+        "11"
+      ],
+      "3": [
+        "198",
+        "520",
+        "1363"
+      ],
+      "4": [
+        "144",
+        "8192",
+        "1638400"
+      ]
+    }
+  },
+  "2018": {
+    "maximumMarks": 80,
+    "durationMinutes": null,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "74",
+        "67",
+        "65"
+      ],
+      "2": [
+        "3",
+        "2",
+        "4"
+      ],
+      "3": [
+        "20",
+        "16",
+        "96"
+      ],
+      "4": [
+        "49",
+        "261",
+        "1531"
+      ]
+    }
+  },
+  "2017": {
+    "maximumMarks": 80,
+    "durationMinutes": null,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "60",
+        "14",
+        "30"
+      ],
+      "2": [
+        "104",
+        "199",
+        "593"
+      ],
+      "3": [
+        "15",
+        "10",
+        "145"
+      ],
+      "4": [
+        "21",
+        "144",
+        "154"
+      ]
+    }
+  },
+  "2016": {
+    "maximumMarks": 80,
+    "durationMinutes": null,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "75",
+        "175",
+        "399"
+      ],
+      "2": [
+        "40",
+        "52",
+        "96"
+      ],
+      "3": [
+        "71",
+        "461",
+        "3447"
+      ],
+      "4": [
+        "13",
+        "10",
+        "12"
+      ]
+    }
+  },
+  "2015": {
+    "maximumMarks": 80,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "notes": [
+      "Problem 4 was ambiguous. The key gives two interpretations, 4(i) and 4(ii), and takes the better score of the two; both answers are accepted here."
+    ],
+    "answers": {
+      "1": [
+        "7300000000",
+        "5322222",
+        "9666666666"
+      ],
+      "2": [
+        "90",
+        "146",
+        "585"
+      ],
+      "3": [
+        "123",
+        "72",
+        "107"
+      ],
+      "4": [
+        {
+          "value": "10",
+          "accept": [
+            "8"
+          ]
+        },
+        "9",
+        {
+          "value": "12",
+          "accept": [
+            "10"
+          ]
+        }
+      ]
+    }
+  },
+  "2014": {
+    "maximumMarks": 80,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "fields": {
+      "2": [
+        {
+          "id": "first",
+          "label": "Final city from the first starting city"
+        },
+        {
+          "id": "second",
+          "label": "Final city from the second starting city"
+        }
+      ]
+    },
+    "answers": {
+      "1": [
+        "88",
+        "120",
+        "115"
+      ],
+      "2": [
+        {
+          "fields": {
+            "first": "7",
+            "second": "1"
+          }
+        },
+        {
+          "fields": {
+            "first": "11",
+            "second": "1"
+          }
+        },
+        {
+          "fields": {
+            "first": "4",
+            "second": "11"
+          }
+        }
+      ],
+      "3": [
+        "36",
+        "84",
+        {
+          "value": "08",
+          "accept": [
+            "8"
+          ]
+        }
+      ],
+      "4": [
+        "34",
+        "281",
+        "212"
+      ]
+    }
+  },
+  "2013": {
+    "maximumMarks": 80,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "40",
+        "22",
+        "18"
+      ],
+      "2": [
+        "36",
+        "65",
+        "48"
+      ],
+      "3": [
+        "30",
+        "8",
+        "17"
+      ],
+      "4": [
+        "18",
+        "120",
+        "240"
+      ]
+    }
+  },
+  "2012": {
+    "maximumMarks": 80,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "fields": {
+      "1": [
+        {
+          "id": "minN",
+          "label": "Min N"
+        },
+        {
+          "id": "maxN",
+          "label": "Max N"
+        },
+        {
+          "id": "colour",
+          "label": "Colour of last ball (Black/White/Either)"
+        }
+      ],
+      "3": [
+        {
+          "id": "red",
+          "label": "Number of red cells"
+        },
+        {
+          "id": "smallest",
+          "label": "Smallest number among red cells"
+        }
+      ]
+    },
+    "comparison": {
+      "2": "compact",
+      "4": "compact"
+    },
+    "partial": {
+      "1": [
+        {
+          "fields": [
+            "minN",
+            "maxN"
+          ],
+          "marks": 2
+        },
+        {
+          "fields": [
+            "colour"
+          ],
+          "marks": 2
+        }
+      ],
+      "3": [
+        {
+          "fields": [
+            "red"
+          ],
+          "marks": 2
+        },
+        {
+          "fields": [
+            "smallest"
+          ],
+          "marks": 2
+        }
+      ]
+    },
+    "answers": {
+      "1": [
+        {
+          "fields": {
+            "minN": "28",
+            "maxN": "28",
+            "colour": "White"
+          }
+        },
+        {
+          "fields": {
+            "minN": "57",
+            "maxN": "57",
+            "colour": "Black"
+          }
+        },
+        {
+          "fields": {
+            "minN": "160",
+            "maxN": "160",
+            "colour": "White"
+          }
+        }
+      ],
+      "2": [
+        "2 1 3 3",
+        "3 4 1 1 2",
+        "2 1 1 7 2 1"
+      ],
+      "3": [
+        {
+          "fields": {
+            "red": "9",
+            "smallest": "40"
+          }
+        },
+        {
+          "fields": {
+            "red": "9",
+            "smallest": "93"
+          }
+        },
+        {
+          "fields": {
+            "red": "8",
+            "smallest": "78"
+          }
+        }
+      ],
+      "4": [
+        "47 8 22 12 95 11 86",
+        "54 50 6 39 63 98 34 66 52",
+        "28 12 40 33 22 47 95 86 11 8 78"
+      ]
+    }
+  },
+  "2011": {
+    "maximumMarks": 80,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "comparison": {
+      "2": "compact",
+      "4": "compact"
+    },
+    "answers": {
+      "1": [
+        "17",
+        "51",
+        "48"
+      ],
+      "2": [
+        "41352",
+        "6574213",
+        "579326841"
+      ],
+      "3": [
+        "37",
+        "45",
+        "54"
+      ],
+      "4": [
+        "00110111",
+        "000111011011",
+        "001111011101011"
+      ]
+    }
+  },
+  "2010": {
+    "maximumMarks": 80,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "691",
+        "1233",
+        "1405"
+      ],
+      "2": [
+        "14",
+        "15",
+        "17"
+      ],
+      "3": [
+        "3",
+        "0",
+        "2"
+      ],
+      "4": [
+        "20",
+        "33",
+        "63"
+      ]
+    }
+  },
+  "2009": {
+    "maximumMarks": 80,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "227",
+        "1071",
+        "5038"
+      ],
+      "2": [
+        "29",
+        "9",
+        "20"
+      ],
+      "3": [
+        "22",
+        "45",
+        "38"
+      ],
+      "4": [
+        "7",
+        "11",
+        "7"
+      ]
+    }
+  },
+  "2008": {
+    "maximumMarks": 100,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 25
+    },
+    "markingSchemeVerified": true,
+    "answers": {
+      "1": [
+        "1101001",
+        "011101100",
+        "546",
+        "868"
+      ],
+      "2": [
+        "7",
+        "6",
+        "5",
+        "8"
+      ],
+      "3": [
+        "41",
+        "63",
+        "41",
+        "231"
+      ],
+      "4": [
+        "127",
+        "214",
+        "116",
+        "157"
+      ]
+    }
+  },
+  "2007": {
+    "maximumMarks": 100,
+    "durationMinutes": 180,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "markingSchemeVerified": true,
+    "comparison": {
+      "1": "compact",
+      "3": "compact"
+    },
+    "inputMap": {
+      "1": {
+        "v": "∨",
+        "V": "∨",
+        "^": "∧"
+      }
+    },
+    "answers": {
+      "1": [
+        "512",
+        "∨∨∧∨∨∧∧∨∨∨",
+        "∧∧∧∨∨∧∧∨∧∧"
+      ],
+      "2": [
+        "17",
+        "50",
+        "6"
+      ],
+      "3": [
+        "(51,30,7)",
+        "(48,1,38)",
+        "(40,38,20)"
+      ],
+      "4": [
+        "258",
+        "569",
+        "1255"
+      ],
+      "5": [
+        "101",
+        "37",
+        "184"
+      ]
+    }
+  },
+  "2006": {
+    "maximumMarks": 60,
+    "durationMinutes": 120,
+    "scoring": null,
+    "markingSchemeVerified": false,
+    "answers": {
+      "1": [
+        "4",
+        "4",
+        "6"
+      ],
+      "2": [
+        "10",
+        "7",
+        "11"
+      ],
+      "3": [
+        "258",
+        "1255",
+        "6105"
+      ],
+      "4": [
+        "51",
+        "56",
+        "39"
+      ]
+    }
+  },
+  "2005": {
+    "maximumMarks": 75,
+    "durationMinutes": 180,
+    "scoring": null,
+    "markingSchemeVerified": false,
+    "notes": [
+      "Problem 4: the key notes that other feasible schedules yield the same number of bonus marks, so only the bonus marks are checked automatically."
+    ],
+    "fields": {
+      "4": [
+        {
+          "id": "bonus",
+          "label": "Bonus marks earned"
+        },
+        {
+          "id": "schedule",
+          "label": "Schedule (letters in order)",
+          "graded": false
+        }
+      ]
+    },
+    "comparison": {
+      "4": "exact"
+    },
+    "answers": {
+      "1": [
+        "20",
+        "60",
+        "105"
+      ],
+      "2": [
+        "6",
+        "15",
+        "6"
+      ],
+      "3": [
+        "50",
+        "86",
+        "98"
+      ],
+      "4": [
+        {
+          "fields": {
+            "bonus": "41",
+            "schedule": "i h b d j g l a c e f k"
+          }
+        },
+        {
+          "fields": {
+            "bonus": "55",
+            "schedule": "k i c e m n f h j a d g b l o"
+          }
+        },
+        {
+          "fields": {
+            "bonus": "53",
+            "schedule": "b n g a i l m j o e d c f h k"
+          }
+        }
+      ],
+      "5": [
+        "700",
+        "700",
+        "900"
+      ]
+    }
+  },
+  "2004": {
+    "maximumMarks": 75,
+    "durationMinutes": 180,
+    "scoring": null,
+    "markingSchemeVerified": false,
+    "notes": [
+      "Most problems in this paper accept any one of several valid answers or have diagrams as answers, so only problem 2 is checked automatically. For the others, compare your answer with the official solution and mark yourself."
+    ],
+    "answers": {
+      "1": [
+        {
+          "manual": "but–bud–bed–be–bet–get–got–god–go–do–dog–dug–dig (other orderings at the two ends are also valid; see the official solution)"
+        },
+        {
+          "manual": "quit–quite–suite–site–sit–sat–fat–fate–gate (fit may replace sat; see the official solution)"
+        },
+        {
+          "manual": "later–lather–father–bather–bathe–bath–bat–cat–rat–fat–fate–mate–matt (rat–cat is also valid in the middle)"
+        }
+      ],
+      "2": [
+        "45",
+        "147",
+        "886"
+      ],
+      "3": [
+        {
+          "manual": "See the official solution diagram."
+        },
+        {
+          "manual": "See the official solution diagram."
+        },
+        {
+          "manual": "See the official solution diagram."
+        }
+      ],
+      "4": [
+        {
+          "manual": "See the official solution."
+        },
+        {
+          "manual": "See the official solution."
+        },
+        {
+          "manual": "See the official solution."
+        }
+      ],
+      "5": [
+        {
+          "manual": "See the official solution."
+        },
+        {
+          "manual": "See the official solution."
+        },
+        {
+          "manual": "See the official solution."
+        }
+      ]
+    }
+  },
+  "2003": {
+    "maximumMarks": 75,
+    "durationMinutes": 150,
+    "scoring": null,
+    "markingSchemeVerified": false,
+    "notes": [
+      "This paper has negative marking for problem 3 and several answers that are not unique, so it is not scored automatically. Compare your answers with the official solution."
+    ],
+    "fields": {
+      "1": [
+        {
+          "id": "grouping",
+          "label": "Grouping",
+          "graded": false
+        },
+        {
+          "id": "weight",
+          "label": "Weight"
+        }
+      ],
+      "4": [
+        {
+          "id": "contents",
+          "label": "Sack contents",
+          "graded": false
+        },
+        {
+          "id": "value",
+          "label": "Total value"
+        }
+      ]
+    },
+    "answers": {
+      "1": [
+        {
+          "fields": {
+            "grouping": "(12,108), (24,103), (25,83), (65,77), (66,69)",
+            "weight": "142"
+          }
+        },
+        {
+          "fields": {
+            "grouping": "(-23,247), (-16,161), (72,152), (75,112), (77,83)",
+            "weight": "224"
+          }
+        },
+        {
+          "fields": {
+            "grouping": "(2,88), (19,81), (28,76), (41,69), (59,61)",
+            "weight": "120"
+          }
+        }
+      ],
+      "2": [
+        {
+          "manual": "A number is good precisely when it is a multiple of 4."
+        }
+      ],
+      "3": [
+        {
+          "manual": "1 is compatible with B; 2 is compatible with C; 3 and A are not compatible with any sequence."
+        }
+      ],
+      "4": [
+        {
+          "fields": {
+            "contents": "10 kg of B, 10 kg of C",
+            "value": "2833.33"
+          },
+          "accept": {
+            "value": [
+              "2833.3",
+              "2833.333",
+              "2833 1/3",
+              "8500/3"
+            ]
+          }
+        },
+        {
+          "fields": {
+            "contents": "10 kg of B, 9 kg of D, 11 kg divided in any way between A and C",
+            "value": "3920"
+          }
+        },
+        {
+          "fields": {
+            "contents": "10 kg of B, 15 kg of C, 5 kg of D",
+            "value": "3075"
+          }
+        }
+      ],
+      "5": [
+        "116",
+        "119",
+        "97"
+      ]
+    }
+  },
+  "2002": {
+    "maximumMarks": null,
+    "durationMinutes": 180,
+    "scoring": null,
+    "markingSchemeVerified": false,
+    "instructions": [
+      "Time: 3 hours (the paper was set on February 10, 2002).",
+      "Attempt all questions."
+    ],
+    "notes": [
+      "This paper asks for algorithms, proofs and explanations, so it cannot be scored automatically. Write your own answer, then compare it with the model solution and mark yourself."
+    ],
+    "answers": {
+      "1": [
+        {
+          "manual": "See the model solution below."
+        },
+        {
+          "manual": "See the model solution below."
+        }
+      ],
+      "2": [
+        {
+          "manual": "See the model solution below."
+        },
+        {
+          "manual": "See the model solution below."
+        }
+      ],
+      "3": [
+        {
+          "manual": "See the model solution below."
+        },
+        {
+          "manual": "See the model solution below."
+        }
+      ],
+      "4": [
+        {
+          "manual": "See the model solution below."
+        },
+        {
+          "manual": "See the model solution below."
+        }
+      ],
+      "5": [
+        {
+          "manual": "See the model solution below."
+        },
+        {
+          "manual": "See the model solution below."
+        }
+      ],
+      "6": [
+        {
+          "manual": "See the model solution below."
+        }
+      ]
+    }
+  }
+}

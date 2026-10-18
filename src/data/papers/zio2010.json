@@ -1,0 +1,584 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2010",
+  "year": 2010,
+  "title": "ZIO 2010",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2010/zio2010/zio2010-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2010/zio2010/zio2010-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio10001-editorial/65581"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio10002-editorial/46104"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio10003-editorial/51165"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio10004-editorial/51653"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "Calculators, log tables and other aids are not permitted.",
+      "The question paper carries 80 marks, broken up into four questions of 20 marks each. Each question has three parts. If you solve all three parts correctly, you get 20 marks for that question. Otherwise, you get 5 marks for each part that you solve correctly.",
+      "Attempt all questions. There are no optional questions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the Answer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Sales have slumped at the Zionoi noodle factory and the management may need to terminate the contracts of some employees. Every employee has one immediate boss. The seniormost person in the company is the president, who has no boss. For legal reasons, if an employee’s contract is not terminated, then his or her boss’s contract cannot be terminated either. For how many different sets of employees can the management legally terminate contracts? Note that one possibility that has to be counted explicitly is that no employees’ contracts are terminated (that is, the set of employees whose contract is terminated is the empty set)."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose there are four employees, organised as follows. Each arrow points from an employee to his or her boss."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2010-p1-example.png",
+          "alt": "Organisation chart: employees 2 and 3 report to employee 1; employee 4 reports to employee 3. Arrows point from an employee to his or her boss.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Here, there are 7 different ways to terminate contracts for a set of employees, as follows:"
+        },
+        {
+          "type": "math",
+          "tex": "\\left[\\{1,2,3,4\\},\\ \\{\\},\\ \\{4\\},\\ \\{2\\},\\ \\{3,4\\},\\ \\{2,4\\},\\ \\{2,3,4\\}\\right]",
+          "fallback": "[{1, 2, 3, 4}, {}, {4}, {2}, {3, 4}, {2, 4}, {2, 3, 4}]"
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, compute the number of different sets of employees whose contracts can be legally terminated by the management."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2010-p1a.png",
+              "alt": "Organisation chart (a) with 14 employees. Arrows point from each employee to his or her boss; employee 1 is the president.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "691",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2010-p1b.png",
+              "alt": "Organisation chart (b) with 16 employees. Arrows point from each employee to his or her boss; employee 1 is the president.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "1233",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2010-p1c.png",
+              "alt": "Organisation chart (c) with 16 employees. Arrows point from each employee to his or her boss; employee 1 is the president.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "1405",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This is a game played with a sequence of tiles, each labelled with two numbers. You start at the first tile in the sequence and choose one number from each tile that you stop at, according to the following rules:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "At tile $i$, if you pick up the smaller number, you move on to the next tile, $i$+1, in the sequence.",
+            "At tile $i$, if you pick up the larger number, you skip the next tile and move to tile $i$+2 in the sequence."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The game ends when your next move takes you beyond the end of the sequence. Your score is the sum of all the numbers you have picked up. Your goal is to maximise your score."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose you have a sequence of four tiles as follows:"
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2010-p2-example.png",
+          "alt": "Four tiles: Tile 1 shows 1 and 2 (2 circled), Tile 2 shows 1 and 3, Tile 3 shows 1 and −1 (1 circled), Tile 4 shows −2 and −3.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Then, the maximum score you can achieve is 3, by choosing the numbers that are circled."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, compute the maximum score that you can achieve by picking up numbers according to the rules given above."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2010-p2a.png",
+              "alt": "Ten tiles, each labelled with two numbers. Tile 1: 2 −2; Tile 2: −3 −2; Tile 3: −3 −1; Tile 4: 1 2; Tile 5: 1 −5; Tile 6: 4 −2; Tile 7: −4 −5; Tile 8: 4 −5; Tile 9: −2 −5; Tile 10: 5 4.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "14",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2010-p2b.png",
+              "alt": "Twelve tiles, each labelled with two numbers. Tile 1: 1 −1; Tile 2: −3 1; Tile 3: 4 −1; Tile 4: −3 4; Tile 5: 1 2; Tile 6: 4 3; Tile 7: 3 −4; Tile 8: 4 1; Tile 9: 4 2; Tile 10: −1 1; Tile 11: −2 −1; Tile 12: −3 −4.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "15",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2010-p2c.png",
+              "alt": "Fourteen tiles, each labelled with two numbers. Tile 1: −1 −5; Tile 2: 1 −1; Tile 3: −3 5; Tile 4: −5 2; Tile 5: −2 −4; Tile 6: 4 −4; Tile 7: −2 5; Tile 8: −3 −2; Tile 9: −3 4; Tile 10: 3 −5; Tile 11: 3 −5; Tile 12: −1 5; Tile 13: 1 −1; Tile 14: 3 4.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "17",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Consider the following definitions of $f$ , $g$, $h$, and $q$, where “$n$ mod $k$” denotes the remainder obtained when $n$ is divided by $k$."
+        },
+        {
+          "type": "math",
+          "tex": "f(n)=\\begin{cases} 1, & \\text{if } n=4\\\\ 3f(((2n+2) \\bmod 11)-1), & \\text{otherwise}\\end{cases}",
+          "fallback": "f(n) = 1 if n = 4; otherwise f(n) = 3 f(((2n + 2) mod 11) − 1)"
+        },
+        {
+          "type": "math",
+          "tex": "g(n)=y \\bmod 10,\\ \\text{where } y=\\begin{cases} 1, & \\text{if } n=0\\\\ g(n-1)+f(g(n-1))+f(n-1)+h(n-1), & \\text{otherwise}\\end{cases}",
+          "fallback": "g(n) = y mod 10, where y = 1 if n = 0; otherwise y = g(n−1) + f(g(n−1)) + f(n−1) + h(n−1)"
+        },
+        {
+          "type": "math",
+          "tex": "h(n)=y \\bmod 10,\\ \\text{where } y=\\begin{cases} 1, & \\text{if } n=0\\\\ h(n-1)+g(n-1)+h(n-1)+q(f(n-1) \\bmod 10), & \\text{otherwise}\\end{cases}",
+          "fallback": "h(n) = y mod 10, where y = 1 if n = 0; otherwise y = h(n−1) + g(n−1) + h(n−1) + q(f(n−1) mod 10)"
+        },
+        {
+          "type": "math",
+          "tex": "q(n)=\\begin{cases} 1, & \\text{if } n=7\\\\ f(n)+q(3n \\bmod 10), & \\text{otherwise}\\end{cases}",
+          "fallback": "q(n) = 1 if n = 7; otherwise q(n) = f(n) + q(3n mod 10)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Evaluate the following:"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "$g$(4)",
+          "answerType": "integer",
+          "officialAnswer": "3",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "$g$(7)",
+          "answerType": "integer",
+          "officialAnswer": "0",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "$h$(6)",
+          "answerType": "integer",
+          "officialAnswer": "2",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You need to back up computer data for offices situated along a single street. You decide to pair off the offices. For each pair of offices you run a network cable between the two buildings so that they can back up each others’ data."
+        },
+        {
+          "type": "paragraph",
+          "text": "However, your local telecommunications company will only give you $K$ network cables, which means you can only arrange backups for $K$ pairs of offices (2$K$ offices in total). No office may belong to more than one pair (that is, these 2$K$ offices must all be different). Furthermore, the telecommunications company charges by the kilometre. This means that you need to choose these $K$ pairs of offices so that you use as little cable as possible."
+        },
+        {
+          "type": "paragraph",
+          "text": "As an example, suppose you are provided two cables ($K$ = 2) to connect five offices positioned along the street as follows—the distances are in kilometres from the beginning of the street."
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "Office",
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            [
+              "Distance",
+              "1",
+              "3",
+              "4",
+              "6",
+              "12"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "The best pairing in this example is created by linking the first and second offices together, and linking the third and fourth offices together, as shown in the picture below."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2010-p4-line.png",
+          "alt": "Number line with offices A, B, C, D and E marked. Offices A and B are joined by a cable, and C and D are joined by a cable.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "This uses two cables as required, where the first cable has length 3 − 1 = 2, and the second cable has length 6 − 4 = 2. This pairing requires a total cable length of 4, which is the smallest possible."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, compute the minimum cable length required to connect $K$ pairs of offices."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "$K$ = 3",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Office",
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I"
+                ],
+                [
+                  "Distance",
+                  "1",
+                  "12",
+                  "17",
+                  "20",
+                  "26",
+                  "40",
+                  "50",
+                  "59",
+                  "69"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "20",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "$K$ = 5",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Office",
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J",
+                  "K",
+                  "L"
+                ],
+                [
+                  "Distance",
+                  "8",
+                  "11",
+                  "13",
+                  "17",
+                  "27",
+                  "40",
+                  "54",
+                  "67",
+                  "79",
+                  "95",
+                  "103",
+                  "107"
+                ],
+                [
+                  "Office",
+                  "M",
+                  "N",
+                  "O",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "Distance",
+                  "113",
+                  "124",
+                  "137",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "33",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "$K$ = 6",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Office",
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J",
+                  "K",
+                  "L"
+                ],
+                [
+                  "Distance",
+                  "5",
+                  "22",
+                  "40",
+                  "58",
+                  "70",
+                  "76",
+                  "87",
+                  "107",
+                  "127",
+                  "136",
+                  "150",
+                  "169"
+                ],
+                [
+                  "Office",
+                  "M",
+                  "N",
+                  "O",
+                  "P",
+                  "Q",
+                  "R",
+                  "S",
+                  "T",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "Distance",
+                  "186",
+                  "206",
+                  "213",
+                  "220",
+                  "227",
+                  "235",
+                  "254",
+                  "272",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "63",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

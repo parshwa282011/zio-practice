@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZIO Practice – past Zonal Informatics Olympiad papers</title>
+    <meta name="description" content="Practise past Zonal Informatics Olympiad (ZIO) papers in a focused test interface. Everything runs in your browser; nothing is uploaded." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash of the wrong theme.
+      (function () {
+        var pref = 'system';
+        try { pref = localStorage.getItem('zio.theme') || 'system'; } catch (e) {}
+        var dark = pref === 'dark' || (pref === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme-pref', pref);
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="app"></div>
+    <noscript><p style="padding:2rem;font-family:sans-serif">ZIO Practice needs JavaScript to run. Nothing is sent to any server.</p></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

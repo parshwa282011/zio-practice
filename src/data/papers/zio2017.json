@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2017",
+  "year": 2017,
+  "title": "ZIO 2017",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2017/zio2017/zio2017-question-paper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2017/zio2017/zio2017-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio17001-editorial/49071"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio17002-editorial/52156"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio17003-editorial/48993"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio17004-editorial/48901"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": null,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The question paper carries 80 marks, broken up into four problems of 20 marks each. Each problem has three Test Cases. If you solve all three Test Cases correctly, you get 20 marks for that problem. Otherwise, you get 5 marks for each Test Case that you solve correctly.",
+      "All the 4 × 3 = 12 Test Cases appear as separate Ques-tions in the right panel (“Question Palette”). The first three Questions correspond to the three Test Cases of Problem 1, the next three correspond to the three Test Cases of Problem 2 and so on. A question icon turning green in the Question Palette, does not mean that it is correct. It just denotes that you have attempted it. All the questions will be evaluated later.",
+      "Attempt all questions. There are no optional questions.",
+      "There are no negative marks.",
+      "All expected answers are integers. Type in only the in-teger. So, if your answer is “162”, enter only “162”. Not “0162”, or “162.0”, etc.",
+      "Remember to save each answer. Only your final saved answers will be considered.",
+      "Near the top-right corner, you should be able to see a calculator icon. Clicking it pops up a calculator which you may use."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In this task you will give a sequence of numbers $S$ of length $N$ . Every element will be greater than or equal to 1. We write $S$[$i$] to refer to the $i^{\\text{th}}$ element of the sequence. For example $S$ = (1, 2, 3, 4, 5, 4) is of length 6 and $S$[2] = 2, $S$[6] = 4 and so on. You will also be given a number $T$ , called the target. We would like to find four elements of the sequence $S$ whose sum is $T$ . More precisely, we would like to find four numbers $i$, $j$, $k$, $\\ell$ with 1 ≤ $i < j < k < \\ell$ ≤ $N$ such that $T$ = $S$[$i$] + $S$[$j$] + $S$[$k$] + $S$[$\\ell$ ]."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance with $S$ as above, for $T$ = 13, we can take $i$ = 2, $j$ = 3, $k$ = 4 and $\\ell$ = 6. It can also be generated with $i$ = 1, $j$ = 3, $k$ = 4 and $\\ell$ = 5 as well as $i$ = 1, $j$ = 3, $k$ = 5 and $\\ell$ = 6. You can verify that these are only three ways to pick four positions summing upto 13."
+        },
+        {
+          "type": "paragraph",
+          "text": "If $T$ = 16 then there is a unique way to do this which is to take $i$ = 3, $j$ = 4, $k$ = 5 and $\\ell$ = 6. Finally, $T$ = 9 cannot be written as the sum of 4 elements of the sequence $S$ and thus the number of ways in this case is 0."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the following $S$ and $T$ find the number of ways of expressing $T$ as the sum of four elements of $S$."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "$S$ = (2, 1, 1, 1, 2, 1, 2, 2, 1) and $T$ = 6",
+          "answerType": "integer",
+          "officialAnswer": "60",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "$S$ = (2, 1, 2, 1, 3, 3, 1, 2, 1) and $T$ = 9",
+          "answerType": "integer",
+          "officialAnswer": "14",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "$S$ = (1, 3, 2, 1, 1, 3, 4, 2, 2) and $T$ = 8",
+          "answerType": "integer",
+          "officialAnswer": "30",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        2,
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A group of $N$ people are on a hiking trip. It starts raining heavily and the group starts looking for places where they can be protected from the rain. There are 2 enclosures nearby where people can find shelter. Let’s call them $A$ and $B$. Enclosure $A$ can accommodate $X$ people, and Enclosure $B$ can accommodate $Y$ people. It is guaranteed that ($X$ + $Y$ ) ≥ $N$ , and so everyone can be accommodated."
+        },
+        {
+          "type": "paragraph",
+          "text": "The people are numbered from 1 to $N$ . We know how far each person is from each enclosure. More specifically, for person $i$, $Adist$[$i$] denotes how far the $i^{\\text{th}}$ person is from $A$ and $Bdist$[$i$] denotes how far the $i^{\\text{th}}$ person is from $B$."
+        },
+        {
+          "type": "paragraph",
+          "text": "The group has genuine camaraderie, so they decide that they want to minimize the total distance traveled by their group members altogether to reach their respective enclosures. Note that this may mean that some individuals don’t end up at the enclosure which is closest to them—the aim is to minimize the sum of the distances traveled by the members of the group."
+        },
+        {
+          "type": "paragraph",
+          "text": "Given $N$ , $X$, $Y$ and the distances, your aim is to compute this minimum value. For example, if $N$ = 4, $X$ = 2, $Y$ = 2, and the distances are"
+        },
+        {
+          "type": "paragraph",
+          "text": "$Adist$[1] = 10, $Bdist$[1] = 12"
+        },
+        {
+          "type": "paragraph",
+          "text": "$Adist$[2] = 23, $Bdist$[2] = 20"
+        },
+        {
+          "type": "paragraph",
+          "text": "$Adist$[3] = 15, $Bdist$[3] = 8"
+        },
+        {
+          "type": "paragraph",
+          "text": "$Adist$[4] = 5, $Bdist$[4] = 20"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then the optimal strategy would be for 1 and 4 to go to $A$ and for 2 and 3 to go to $B$. In this case the total distance traveled is"
+        },
+        {
+          "type": "paragraph",
+          "text": "$Adist$[1] + $Adist$[4] + $Bdist$[2] + $Bdist$[3] = 10 + 5 + 20 + 8 = 43."
+        },
+        {
+          "type": "paragraph",
+          "text": "You can check that they cannot do any better."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compute the corresponding minimum values for the following 3 inputs."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "$N$ = 8, $X$ = 3, $Y$ = 10\n$Adist$[1] = 4, $Bdist$[1] = 6\n$Adist$[2] = 13, $Bdist$[2] = 8\n$Adist$[3] = 12, $Bdist$[3] = 21\n$Adist$[4] = 7, $Bdist$[4] = 9\n$Adist$[5] = 51, $Bdist$[5] = 37\n$Adist$[6] = 20, $Bdist$[6] = 25\n$Adist$[7] = 5, $Bdist$[7] = 17\n$Adist$[8] = 8, $Bdist$[8] = 7",
+          "answerType": "integer",
+          "officialAnswer": "104",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "$N$ = 12, $X$ = 6, $Y$ = 6\n$Adist$[1] = 10, $Bdist$[1] = 4\n$Adist$[2] = 13, $Bdist$[2] = 12\n$Adist$[3] = 13, $Bdist$[3] = 27\n$Adist$[4] = 54, $Bdist$[4] = 52\n$Adist$[5] = 6, $Bdist$[5] = 9\n$Adist$[6] = 15, $Bdist$[6] = 11\n$Adist$[7] = 21, $Bdist$[7] = 26\n$Adist$[8] = 26, $Bdist$[8] = 14\n$Adist$[9] = 37, $Bdist$[9] = 33\n$Adist$[10] = 4, $Bdist$[10] = 3\n$Adist$[11] = 11, $Bdist$[11] = 11\n$Adist$[12] = 20, $Bdist$[12] = 17",
+          "answerType": "integer",
+          "officialAnswer": "199",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "$N$ = 20, $X$ = 5, $Y$ = 18\n$Adist$[1] = 3, $Bdist$[1][$B$] = 1\n$Adist$[2] = 11, $Bdist$[2] = 19\n$Adist$[3] = 20, $Bdist$[3] = 24\n$Adist$[4] = 31, $Bdist$[4] = 13\n$Adist$[5] = 72, $Bdist$[5] = 102\n$Adist$[6] = 13, $Bdist$[6] = 51\n$Adist$[7] = 36, $Bdist$[7] = 38\n$Adist$[8] = 41, $Bdist$[8] = 40\n$Adist$[9] = 4, $Bdist$[9] = 9\n$Adist$[10] = 59, $Bdist$[10] = 47\n$Adist$[11] = 19, $Bdist$[11] = 21\n$Adist$[12] = 3, $Bdist$[12] = 49\n$Adist$[13] = 28, $Bdist$[13] = 32\n$Adist$[14] = 23, $Bdist$[14] = 29\n$Adist$[15] = 62, $Bdist$[15] = 62\n$Adist$[16] = 62, $Bdist$[16] = 59\n$Adist$[17] = 37, $Bdist$[17] = 34\n$Adist$[18] = 20, $Bdist$[18] = 20\n$Adist$[19] = 21, $Bdist$[19] = 17\n$Adist$[20] = 51, $Bdist$[20] = 54",
+          "answerType": "integer",
+          "officialAnswer": "593",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A group of $N$ children, who are numbered 1, 2$, . . . , N$ , want to play hide and seek. In a single round of hide and seek, there will one seeker, and $N$ − 1 hiders. Children like to hide and not seek and each child has her own idea of how many times she would like to hide. You will be given for each child $i$, a number $H$[$i$] denoting the number of rounds she would like to be a hider. She will be satisfied only if she gets to be a hider in at least $H$[$i$] rounds."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose $N$ = 4, and $H$[1] = 1, $H$[2] = 3, $H$[3] = 2 and $H$[4] = 1. Here is one way to satisfy them all. In Round 1, Child 1 is the seeker, and in Rounds 2 and 3, Child 4 is the seeker. Then Child 1 has been a hider in 2 Rounds, Child 2 has been a hider in 3 Rounds, Child 3 has been a hider in 3 Rounds, and Child 4 has been a hider in 1 Round. Thus, they are all satisfied. You can check it is not possible to satisfy all of them in fewer than 3 Rounds."
+        },
+        {
+          "type": "paragraph",
+          "text": "You aim is to determine the least number of rounds that needs to be played so that every child is satisfied. For the example in the previous paragraph, the answer is 3. Determine the minimum number of rounds needed in the following 3 cases:"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "$N$ = 7\n$H$[1] = 6, $H$[2] = 13, $H$[3] = 9, $H$[4] = 5, $H$[5] = 15, $H$[6] = 8, $H$[7] = 9.",
+          "answerType": "integer",
+          "officialAnswer": "15",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "$N$ = 12\n$H$[1] = 6, $H$[2] = 7, $H$[3] = 7, $H$[4] = 8, $H$[5] = 9, $H$[6] = 9, $H$[7] = 9, $H$[8] = 9, $H$[9] = 9, $H$[10] = 9, $H$[11] = 9, $H$[12] = 9.",
+          "answerType": "integer",
+          "officialAnswer": "10",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "$N$ = 15\n$H$[1] = 131, $H$[2] = 135, $H$[3] = 130, $H$[4] = 138, $H$[5] = 132, $H$[6] = 140, $H$[7] = 137, $H$[8] = 133, $H$[9] = 131, $H$[10] = 137, $H$[11] = 138, $H$[12] = 132, $H$[13] = 135, $H$[14] = 136, $H$[15] = 134.",
+          "answerType": "integer",
+          "officialAnswer": "145",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A binary string is a sequence of bits, i.e., a sequence 0s and 1s. For example, 01010 is a binary string of length 5."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suppose $A$ and $B$ are two binary strings. Then $A$+$B$ is the string which is obtained by pasting $B$ at the end of $A$. This is called the concatenation of $A$ with $B$. For example, if $A$ = 111 and $B$ = 0000na, then $A$ + $B$ = 1110000 and $A$ + $A$ = 111111."
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "For a binary string $A$, $A^{k}$ is $A$ concatenated with itself $k$ times.",
+              "i.e.",
+              "$A^{k}$ ="
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "$A$ + $A$ + · · · + $A$. For example, if $A$ = 1011, then $A^{1}$ = 1011, $A^{2}$ = 10111011"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "︸",
+              "︷︷",
+              "︸"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "$k$ times"
+        },
+        {
+          "type": "paragraph",
+          "text": "and $A^{3}$ = 101110111011."
+        },
+        {
+          "type": "paragraph",
+          "text": "In this problem we are interested in binary strings of the form $0011^{k}$. We call a binary string Good if it is $0011^{k}$ for some $k$ ≥ 1. For example, 0011 is Good, 00110011 is Good, 001100110011 is also Good and so on. But 001100111 is not Good. Neither is 11001100. Note that the empty string, i.e., the sequence with no bits, is not $Good$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suppose $B$ is binary string. By dropping the bits in some of the positions in $B$ we get a substring of $B$. For example, suppose $B$ = 0101100. Then, dropping the bits in positions 2 and 6 results in the bit string 00110. Dropping the bits in positions 2 and 7 also yields the string 00110. On the other hand dropping the bits in positions 2, 4 and 5 yields the string 0000."
+        },
+        {
+          "type": "paragraph",
+          "text": "Given a binary string $B$, your aim is to find the number of ways of dropping some bits from $B$ so that the resulting substring is Good."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose $B$ = 10011. Then we can drop the first bit and the resulting string is 0011 which is Good. You can verify that there is no other way to drop bits from $B$ to get a Good string. The answer is hence 1. For the string 00011 there are 3 ways: drop the bit at position 1 to get 0011 or at position 2 to get 0011 or drop the bit at position 3 to get 0011. Hence, then answer in this case is 3."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your task is to report the correct answer for the following 3 strings."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "$B$ = 001001101",
+          "answerType": "integer",
+          "officialAnswer": "21",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "$B$ = 100110101010011",
+          "answerType": "integer",
+          "officialAnswer": "144",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "$B$ = 01011000101001001",
+          "answerType": "integer",
+          "officialAnswer": "154",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

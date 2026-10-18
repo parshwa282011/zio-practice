@@ -1,0 +1,749 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2008",
+  "year": 2008,
+  "title": "ZIO 2008",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2008/zio2008/zio2008-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2008/zio2008/zio2008-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio08001-editorial/66364"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio08002-editorial/54375"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio08003-editorial/55171"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio08004-editorial/59804"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 100,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 25
+    },
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "Calculators, log tables and other aids are not permit-ted.",
+      "The question paper carries 100 marks, broken up into four questions of 25 marks each. Each question has four parts. If you solve all four parts correctly, you get 25 marks for that question. Otherwise, you get 5 marks for each part that you solve correctly.",
+      "Attempt all questions. There are no optional ques-tions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the An-swer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "When we write integers in base 2 using binary digits (bits) 0 and 1, we may have to flip all the bits when moving from the encoding for an integer $K$ to the encoding for $K$+1. For instance, if we use 4 bits, consider the change when going from the encoding for 7 (0111) to the encoding for 8 (1000)."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Gray code is a special binary encoding of integers in which going from the encoding for $K$ to the encoding of $K$+1 always requires flipping exactly one bit. GrayCode($n$), the Gray code over $n$ bits, can be thought of as a list of $2^{n}$ binary numbers, each of $n$ bits, so that the first binary number in the list encodes the integer 0, the second encodes the integer 1, . . . , the last encodes the integer $2^{n}$ − 1."
+        },
+        {
+          "type": "paragraph",
+          "text": "We define GrayCode(n) inductively, as follows:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "GrayCode(1) = [0, 1] — that is, 0 in binary encodes the integer 0, and 1 in binary encodes the integer 1.",
+            "Assuming that we have built up GrayCode(n) to denote integers between 0 and $2^{n}$ − 1, we define GrayCode(n+1) as follows:"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "(a) Prefix each binary number in GrayCode(n) by 0. This generates the first half of GrayCode(n+1)."
+        },
+        {
+          "type": "paragraph",
+          "text": "(b) Reverse the list GrayCode(n) and prefix each number in the reversed list by 1. This generates the second half of GrayCode(n+1)."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance,"
+        },
+        {
+          "type": "code",
+          "text": "GrayCode(1) = [0, 1]\nGrayCode(2) = 0.GrayCode(1) followed by 1.(reverse(GrayCode(1)))\n            = 0.[0,1] followed by 1.[1,0]\n            = [00,01] followed by [11,10]\n            = [00,01,11,10]\nGrayCode(3) = 0.[00,01,11,10] followed by 1.[10,11,01,00]\n            = [000,001,011,010,110,111,101,100]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Thus, the 3 bit Gray code for 4 is 110 and the 3 bit Gray code for 6 is 101."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compute the following."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "What is the 7 bit Gray code for the integer 78?",
+          "answerType": "integer",
+          "officialAnswer": "1101001",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "What is the 9 bit Gray code for the integer 183?",
+          "answerType": "integer",
+          "officialAnswer": "011101100",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "What integer is represented by the 10 bit Gray code 1100110011?",
+          "answerType": "integer",
+          "officialAnswer": "546",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1d",
+          "label": "d",
+          "prompt": "What integer is represented by the 10 bit Gray code 1011010110?",
+          "answerType": "integer",
+          "officialAnswer": "868",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Anjali has enrolled for a part-time Masters programme where she can complete courses at her own pace. Each course takes a full semester to complete. She can take as many or as few courses as she wants in each semester."
+        },
+        {
+          "type": "paragraph",
+          "text": "However, some courses are prerequisites for other courses. If course $A$ is a prerequisite for course $B$, she cannot take course $B$ until she finishes course $A$. She can take course $B$ the semester after she finishes course $A$, or any time after that, but not before. The constraint that $A$ is a prerequisite for $B$ is either described as “Course $A$ before course $B$” or “Course $B$ after course $A$”."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suppose she has to take four courses, {$A, B, C, D$} and the constraints are “$A$ before $B$”, “$B$ after $C$” and “$D$ after $B$”. Then, the minimum number of semesters in which she can complete these courses is three—she can do $A$ and $C$ in the first semester, $B$ in the second and $D$ in the third."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the cases below, you are given the constraints for the courses Anjali plans to take. The courses are numbered 1,2,. . . ,10. In each case, you have to compute the minimum number of semesters she needs to complete these courses, given the constraints."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "4 before 5\n2 after 5\n4 before 2\n6 after 7\n1 after 2\n2 before 3\n3 after 4\n7 before 2\n1 before 8\n10 after 2\n3 before 1\n1 after 6\n10 before 9\n8 before 9\n9 after 1",
+          "answerType": "integer",
+          "officialAnswer": "7",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "6 before 9\n3 after 8\n2 after 6\n1 before 5\n3 after 2\n4 before 7\n2 after 9\n8 before 1\n4 after 3\n10 before 4\n9 before 8\n2 before 10\n1 before 4\n7 after 1\n4 after 8\n3 after 9",
+          "answerType": "integer",
+          "officialAnswer": "6",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "4 before 6\n9 before 8\n2 after 4\n3 after 5\n7 after 3\n5 before 4\n9 after 3\n10 after 6\n2 before 1\n7 before 1\n3 before 10\n1 after 8\n2 before 10",
+          "answerType": "integer",
+          "officialAnswer": "5",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2d",
+          "label": "d",
+          "prompt": "4 before 10\n3 after 4\n2 after 1\n10 after 7\n3 before 2\n4 before 1\n3 after 9\n5 before 6\n8 after 1\n2 before 6\n9 before 8\n5 after 2\n10 before 8\n6 before 7\n8 after 5",
+          "answerType": "integer",
+          "officialAnswer": "8",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A wire fence has uniformly spaced poles connected by wire mesh. The fence has been newly painted. We have signs saying Wet Paint to be hung on the fence. Each sign is to be hung using a rope that spans either one or two gaps between fence poles. The signs have to all be used and have to be hung in such a way that no pole has more than one rope attached to it and the ropes for sign boards do not overlap."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, if we have five poles, numbered 1,2,. . . ,5 and two sign boards, we can hang the two sign boards in five ways:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Board 1 hangs between",
+            "Board 2 hangs between"
+          ],
+          "rows": [
+            [
+              "Poles 1 and 2",
+              "Poles 3 and 4"
+            ],
+            [
+              "Poles 1 and 2",
+              "Poles 3 and 5"
+            ],
+            [
+              "Poles 1 and 2",
+              "Poles 4 and 5"
+            ],
+            [
+              "Poles 1 and 3",
+              "Poles 4 and 5"
+            ],
+            [
+              "Poles 2 and 3",
+              "Poles 4 and 5"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "In this case, we cannot hang a sign board between poles 2 and 4 because, to hang the second board, we would either have to reuse a pole or let the ropes overlap."
+        },
+        {
+          "type": "paragraph",
+          "text": "In general, given $N$ poles and $K$ sign boards, we want to count the number of different ways that we can hang up all $K$ sign boards from the $N$ poles following the constraints above. For instance, with $N$ = 5 and $K$ = 2, the answer is 5, as shown above. We assume the boards are identical, so we don’t count rearrangements in which the boards are shuffled around but the sets of poles used are the same."
+        },
+        {
+          "type": "paragraph",
+          "text": "How many different arrangements are possible for each of the following?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "$N$ = 8 poles and $K$ = 2 sign boards.",
+          "answerType": "integer",
+          "officialAnswer": "41",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "$N$ = 9 poles and $K$ = 3 sign boards.",
+          "answerType": "integer",
+          "officialAnswer": "63",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "$N$ = 10 poles and $K$ = 4 sign boards.",
+          "answerType": "integer",
+          "officialAnswer": "41",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3d",
+          "label": "d",
+          "prompt": "$N$ = 11 poles and $K$ = 3 sign boards.",
+          "answerType": "integer",
+          "officialAnswer": "231",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Manish and Akhil are squabbling over a field they have inherited from their father. The field is a rectangular grid of square plots, each with some mango trees."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manish, the older son, knows that the mangos are less sweet and juicy towards the top left of the grid. He suggests the following arrangement to Akhil. Manish will choose for Akhil an L-shaped section of plots that includes at least the top row and left most column and Manish will inherit the rest of the field."
+        },
+        {
+          "type": "paragraph",
+          "text": "To induce Akhil to accept this offer, Manish promises that Akhil’s L-shaped piece will have at least half the trees in the overall field. Clearly, Manish will choose Akhil’s share so that the number of trees that Akhil gets is minimized, subject to the condition. For instance, suppose the field is made of a grid with 4 rows and 4 columns and the number of trees in each square of the grid are as follows:"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "3",
+              "4",
+              "7",
+              "5"
+            ],
+            [
+              "6",
+              "6",
+              "8",
+              "4"
+            ],
+            [
+              "7",
+              "6",
+              "6",
+              "4"
+            ],
+            [
+              "6",
+              "6",
+              "1",
+              "1"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Then, Manish’s best option is to give Akhil one of the following L-shaped segments"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "3",
+              "4",
+              "7",
+              "5"
+            ],
+            [
+              "6",
+              "6",
+              "8",
+              "4"
+            ],
+            [
+              "7",
+              "",
+              "",
+              ""
+            ],
+            [
+              "6",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "caption": "First option"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "3",
+              "4",
+              "7",
+              "5"
+            ],
+            [
+              "6",
+              "6",
+              "",
+              ""
+            ],
+            [
+              "7",
+              "6",
+              "",
+              ""
+            ],
+            [
+              "6",
+              "6",
+              "",
+              ""
+            ]
+          ],
+          "caption": "Second option"
+        },
+        {
+          "type": "paragraph",
+          "text": "In either case, Akhil will get 56 trees out of the total 80 trees. Manish cannot find a better deal for himself under the circumstances."
+        },
+        {
+          "type": "paragraph",
+          "text": "For each of the following grids, compute the number of trees that Manish will be forced to give Akhil in his L-shaped portion."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "12",
+                  "3",
+                  "3",
+                  "5",
+                  "8",
+                  "7"
+                ],
+                [
+                  "10",
+                  "12",
+                  "7",
+                  "12",
+                  "1",
+                  "5"
+                ],
+                [
+                  "1",
+                  "9",
+                  "3",
+                  "6",
+                  "3",
+                  "9"
+                ],
+                [
+                  "3",
+                  "3",
+                  "11",
+                  "11",
+                  "3",
+                  "7"
+                ],
+                [
+                  "9",
+                  "7",
+                  "10",
+                  "5",
+                  "8",
+                  "7"
+                ],
+                [
+                  "6",
+                  "4",
+                  "4",
+                  "5",
+                  "4",
+                  "9"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "127",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "12",
+                  "15",
+                  "15",
+                  "9",
+                  "2",
+                  "14",
+                  "13"
+                ],
+                [
+                  "8",
+                  "10",
+                  "5",
+                  "1",
+                  "6",
+                  "5",
+                  "6"
+                ],
+                [
+                  "9",
+                  "15",
+                  "11",
+                  "11",
+                  "7",
+                  "13",
+                  "6"
+                ],
+                [
+                  "10",
+                  "6",
+                  "4",
+                  "5",
+                  "7",
+                  "15",
+                  "3"
+                ],
+                [
+                  "3",
+                  "15",
+                  "6",
+                  "3",
+                  "6",
+                  "2",
+                  "5"
+                ],
+                [
+                  "3",
+                  "13",
+                  "9",
+                  "7",
+                  "13",
+                  "8",
+                  "11"
+                ],
+                [
+                  "13",
+                  "6",
+                  "4",
+                  "7",
+                  "2",
+                  "7",
+                  "6"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "214",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "4",
+                  "3",
+                  "8",
+                  "3",
+                  "2",
+                  "3",
+                  "3"
+                ],
+                [
+                  "5",
+                  "4",
+                  "3",
+                  "7",
+                  "6",
+                  "3",
+                  "8"
+                ],
+                [
+                  "7",
+                  "8",
+                  "1",
+                  "5",
+                  "7",
+                  "4",
+                  "4"
+                ],
+                [
+                  "6",
+                  "1",
+                  "1",
+                  "7",
+                  "5",
+                  "2",
+                  "2"
+                ],
+                [
+                  "3",
+                  "3",
+                  "6",
+                  "2",
+                  "2",
+                  "6",
+                  "1"
+                ],
+                [
+                  "6",
+                  "8",
+                  "1",
+                  "7",
+                  "7",
+                  "8",
+                  "8"
+                ],
+                [
+                  "8",
+                  "4",
+                  "7",
+                  "3",
+                  "2",
+                  "6",
+                  "2"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "116",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4d",
+          "label": "d",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "8",
+                  "4",
+                  "2",
+                  "2",
+                  "7",
+                  "9",
+                  "5"
+                ],
+                [
+                  "1",
+                  "6",
+                  "5",
+                  "10",
+                  "7",
+                  "1",
+                  "10"
+                ],
+                [
+                  "9",
+                  "7",
+                  "9",
+                  "10",
+                  "1",
+                  "10",
+                  "8"
+                ],
+                [
+                  "1",
+                  "4",
+                  "9",
+                  "8",
+                  "9",
+                  "7",
+                  "5"
+                ],
+                [
+                  "9",
+                  "9",
+                  "5",
+                  "7",
+                  "6",
+                  "2",
+                  "6"
+                ],
+                [
+                  "7",
+                  "1",
+                  "10",
+                  "9",
+                  "8",
+                  "3",
+                  "1"
+                ],
+                [
+                  "9",
+                  "5",
+                  "2",
+                  "8",
+                  "4",
+                  "7",
+                  "3"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "157",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

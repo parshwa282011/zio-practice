@@ -1,0 +1,516 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2003",
+  "year": 2003,
+  "title": "ZIO 2003",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2003/zio2003/zio2003-question-paper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2003/zio2003/zio2003-solutions.pdf",
+  "editorialUrls": [],
+  "metadata": {
+    "durationMinutes": 150,
+    "maximumMarks": 75,
+    "markingSchemeVerified": false,
+    "scoring": null,
+    "instructions": [
+      "The duration of the examination is 2^{1}_{2} hours.",
+      "The question paper carries 75 marks, broken up into five questions of 15 marks each.",
+      "Attempt all questions. There are no optional ques-tions.",
+      "Question 3 has negative marking. No other question has negative marking.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets."
+    ],
+    "notes": [
+      "This paper has negative marking for problem 3 and several answers that are not unique, so it is not scored automatically. Compare your answers with the official solution."
+    ],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key. Answers are not unique or are diagrams/proofs: the app shows the official solution and asks you to mark yourself."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We are given $n$ integers $x_{1}, x_{2}, ..., x_{n}$, where $n$ is even. Suppose we group these $n$ numbers into $n/$2 pairs and add up each of the pairs. The weight of this grouping is the maximum of these sums."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, if the input numbers are 5, 7, 8, -2, 6, 4, 5, 2 and if they are paired up as (5,-2), (7,4), (5,6), (2,8) then the sums of the 4 pairs are 3, 11, 11, and 10. The weight is the maximum of {3, 11, 11, 10} and is thus 11."
+        },
+        {
+          "type": "paragraph",
+          "text": "For each of the following sets of integers, find a way of grouping them into pairs so that the weight is minimized. In your answer, list out the grouping and then indicate the weight."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "103, 24, 77, 65, 12, 108, 69, 25, 66, 83",
+          "fields": [
+            {
+              "id": "grouping",
+              "label": "Grouping",
+              "graded": false
+            },
+            {
+              "id": "weight",
+              "label": "Weight"
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "grouping": "(12,108), (24,103), (25,83), (65,77), (66,69)",
+            "weight": "142"
+          },
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "83, 112, -16, 72, 161, 75, 152, -23, 77, 247",
+          "fields": [
+            {
+              "id": "grouping",
+              "label": "Grouping",
+              "graded": false
+            },
+            {
+              "id": "weight",
+              "label": "Weight"
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "grouping": "(-23,247), (-16,161), (72,152), (75,112), (77,83)",
+            "weight": "224"
+          },
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "19, 81, 2, 41, 61, 59, 28, 69, 76, 88",
+          "fields": [
+            {
+              "id": "grouping",
+              "label": "Grouping",
+              "graded": false
+            },
+            {
+              "id": "weight",
+              "label": "Weight"
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "grouping": "(2,88), (19,81), (28,76), (41,69), (59,61)",
+            "weight": "120"
+          },
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We start with a two digit positive integer and construct a sequence of two digit numbers as follows. Let the current number be $x$. If 2$x$ is less than 100, then the next number in the sequence is 2$x$. Otherwise the next number in the sequence is 2$x$ − 100."
+        },
+        {
+          "type": "paragraph",
+          "text": "A number is said to be good if we can start with the number and get back to the same number later in the sequence. A number that is not good is said to be bad."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, 20 is a good number, because the sequence starting with 20 is 20, 40, 80, 60, 20. So, after four steps, we get back to 20. However 10 is bad because starting from 10 we get the sequence 10, 20, 40, 80, 60, 20, . . . in which 10 never reappears. What is the common property that is shared by the set of good numbers?"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2-answer",
+          "label": "",
+          "prompt": "What property do all the good numbers share?",
+          "answerType": "text",
+          "officialAnswer": "A number is good precisely when it is a multiple of 4.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We are passing a sequence of plates from Atul to Zenobia. Each plate has a number painted on it and no two plates have the same number. We have a table in front of us on which we can temporarily store a single stack of plates. At each step, we are allowed to do one of the following:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Take a plate from Atul and pass it on immediately to Zenobia.",
+            "Take a plate from Atul and put it on top of the stack on the table.",
+            "If there is at least one plate in the stack on the table, take the topmost plate off the stack and pass it on to Zenobia."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "In this process, we can rearrange the plates that Atul gives us before passing them on to Zenobia. For instance, if the sequence of numbers on the plates given to us by Atul is 1,2,3,4, we can pass them onto Zenobia in the sequence 2,4,3,1 as follows:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Take plate 1 from Atul and start a stack on the table.",
+            "Pass plate 2 directly from Atul to Zenobia.",
+            "Take plate 3 from Atul and stack it on top of plate 1.",
+            "Pass plate 4 directly from Atul to Zenobia.",
+            "Take plate 3 off the stack and pass it to Zenobia.",
+            "Take plate 1 off the stack and pass it to Zenobia."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We say that an input sequence is compatible with an output sequence if it is possible to rearrange this input sequence to produce the output sequence. For instance, we just showed that the input sequence 1,2,3,4 is compatible with the output sequence 2,4,3,1. Consider the following input and output sequences of plates."
+        },
+        {
+          "type": "paragraph",
+          "text": "Consider the following input and output sequences of plates."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Input sequences",
+            "Output sequences"
+          ],
+          "rows": [
+            [
+              "(1) 5,8,10,3,2,9,7,6,4,1",
+              "(A) 6,2,7,4,5,8,3,10,9,4"
+            ],
+            [
+              "(2) 10,1,9,6,5,4,2,8,3,7",
+              "(B) 3,9,7,2,10,6,1,4,8,5"
+            ],
+            [
+              "(3) 7,6,2,5,3,4,8,10,4,9",
+              "(C) 9,5,6,1,2,4,10,7,3,8"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Indicate the compatible pairs from the sets {1,2,3} and {A,B,C}. Note that it is possible for one input sequence to be compatible with more than one output sequence and vice versa. Also, there could be input sequences in {1,2,3} that are not compatible with any output sequence from {A,B,C} and vice versa. (Note: If you mark an inputoutput pair as compatible when it is not, you get negative marks!)"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3-answer",
+          "label": "",
+          "prompt": "List the compatible (input, output) pairs.",
+          "answerType": "text",
+          "officialAnswer": "1 is compatible with B; 2 is compatible with C; 3 and A are not compatible with any sequence.",
+          "comparison": "manual",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A thief breaks into a shop selling exotic powdered spices (masalas). He has a sack with him in which he can carry away spices weighing upto $W$ kg. For each spice, the thief knows how much of that spice powder is available in the shop and the total value of that spice powder. The problem is for the thief to decide how much of each spice to steal so that he maximizes the value of the spices that he carries away."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, suppose that the thief can carry away 20 kg (that is, $W$ = 20) and there are three spices available—turmeric, cloves and mustard. There are 18 kg of turmeric with a total value of Rs 2400, 10 kg of cloves with a total value of Rs 1500 and 15 kg of mustard with a total value of Rs 1800. We can represent these values by the following table:"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "turmeric",
+              "cloves",
+              "mustard",
+              "",
+              ""
+            ],
+            [
+              "$W$ = 20",
+              "amount",
+              "18",
+              "10",
+              "15"
+            ],
+            [
+              "value",
+              "2400",
+              "1500",
+              "1800",
+              ""
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If the thief fills his sack with all 18 kg of turmeric and 2 kg of mustard, he will walk away with spices worth Rs 2400 + $\\frac{2}{15} \\times 1800$ = Rs 2400 + 240 = Rs 2640."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here are three situations in which the thief finds himself. Calculate the maximum value he can steal in each case. In your answer, give the breakup of what the thief carries away in his sack and the total value."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "$W$ = 20",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "A",
+                  "B",
+                  "C",
+                  ""
+                ],
+                [
+                  "amount",
+                  "15",
+                  "10",
+                  "18"
+                ],
+                [
+                  "value",
+                  "1800",
+                  "1500",
+                  "2400"
+                ]
+              ]
+            }
+          ],
+          "fields": [
+            {
+              "id": "contents",
+              "label": "Sack contents",
+              "graded": false
+            },
+            {
+              "id": "value",
+              "label": "Total value"
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "contents": "10 kg of B, 10 kg of C",
+            "value": "2833.33"
+          },
+          "acceptedAnswers": {
+            "value": [
+              "2833.3",
+              "2833.333",
+              "2833 1/3",
+              "8500/3"
+            ]
+          },
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "$W$ = 30",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  ""
+                ],
+                [
+                  "amount",
+                  "25",
+                  "10",
+                  "15",
+                  "9"
+                ],
+                [
+                  "value",
+                  "3000",
+                  "1400",
+                  "1800",
+                  "1200"
+                ]
+              ]
+            }
+          ],
+          "fields": [
+            {
+              "id": "contents",
+              "label": "Sack contents",
+              "graded": false
+            },
+            {
+              "id": "value",
+              "label": "Total value"
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "contents": "10 kg of B, 9 kg of D, 11 kg divided in any way between A and C",
+            "value": "3920"
+          },
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "$W$ = 30",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  ""
+                ],
+                [
+                  "amount",
+                  "25",
+                  "10",
+                  "15",
+                  "20"
+                ],
+                [
+                  "value",
+                  "2250",
+                  "1100",
+                  "1500",
+                  "1900"
+                ]
+              ]
+            }
+          ],
+          "fields": [
+            {
+              "id": "contents",
+              "label": "Sack contents",
+              "graded": false
+            },
+            {
+              "id": "value",
+              "label": "Total value"
+            }
+          ],
+          "answerType": "text",
+          "officialAnswer": {
+            "contents": "10 kg of B, 15 kg of C, 5 kg of D",
+            "value": "3075"
+          },
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "number": 5,
+      "title": "Problem 5",
+      "sourcePages": [
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Komal, Narain and Robert all work in the same office. All the roads in the city where they live are one-way and their route from home to office must take this into account. Here is a map of the city. The letters K, N and R mark the homes of Komal, Narain and Robert, respectively, and O marks the office where they work. The direction in which each road can be used is indicated by an arrow. For each person, calculate how many different routes that person can take from home to office."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2003-p5-map.png",
+          "alt": "Map of the city: a grid of one-way roads with arrows showing the allowed direction. The homes of Komal (K), Narain (N) and Robert (R) and the office (O) are marked; O is at the bottom right.",
+          "caption": null,
+          "source": null
+        }
+      ],
+      "parts": [
+        {
+          "id": "p5a",
+          "label": "a",
+          "prompt": "Komal (starting at K)",
+          "answerType": "integer",
+          "officialAnswer": "116",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5b",
+          "label": "b",
+          "prompt": "Narain (starting at N)",
+          "answerType": "integer",
+          "officialAnswer": "119",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p5c",
+          "label": "c",
+          "prompt": "Robert (starting at R)",
+          "answerType": "integer",
+          "officialAnswer": "97",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

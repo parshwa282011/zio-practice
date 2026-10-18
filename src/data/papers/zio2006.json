@@ -1,0 +1,724 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2006",
+  "year": 2006,
+  "title": "ZIO 2006",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2006/zio2006/zio2006-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2006/zio2006/zio2006-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio06001-editorial/45588"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio06002-editorial/52108"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio06003-editorial/48956"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio06004-editorial/65779"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 120,
+    "maximumMarks": 60,
+    "markingSchemeVerified": false,
+    "scoring": null,
+    "instructions": [
+      "The duration of the examination is 2 hours.",
+      "The question paper carries 60 marks, broken up into four questions of 15 marks each.",
+      "Attempt all questions. There are no optional ques-tions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the An-swer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key. Marking scheme for this year is not stated in the paper, so marks are not calculated."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Every day, Shambhu buys and sells shares on the stock market. On some days he makes a profit, on other days he loses money. His father thinks he is wasting his time doing this instead of taking up a proper job. Shambhu wants to convince his father that he is making a good living buying and selling shares. He has noted down his daily earnings over the past few days—this is sometimes a positive number, or a profit, and sometimes a negative number, or a loss. From this sequence of profits and losses, he would like to identify an interval during this period over which his net profit is maximum, so that he can prove to his father that he is earning a lot of money."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, suppose Shambhu’s daily earnings over six days are as follows:"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "Day",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            [
+              "Amount",
+              "-1",
+              "3",
+              "-1",
+              "2",
+              "-2",
+              "1"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Then, his most profitable interval during these six days is from day 2 to day 4, during which his net profit is 3 − 1 + 2 = 4."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, identify the most profitable interval for Shambhu and write down the net profit he earns over this interval."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "Number of days: 15",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Day",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15"
+                ],
+                [
+                  "Amount",
+                  "-1",
+                  "3",
+                  "-2",
+                  "2",
+                  "-2",
+                  "1",
+                  "-1",
+                  "2",
+                  "-4",
+                  "2",
+                  "-1",
+                  "3",
+                  "-2",
+                  "1",
+                  "-1"
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "4",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "Number of days: 25",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Day",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15"
+                ],
+                [
+                  "Amount",
+                  "-2",
+                  "4",
+                  "-3",
+                  "3",
+                  "-2",
+                  "1",
+                  "-2",
+                  "2",
+                  "-3",
+                  "3",
+                  "-1",
+                  "1",
+                  "-2",
+                  "1",
+                  "-2"
+                ],
+                [
+                  "Day",
+                  "16",
+                  "17",
+                  "18",
+                  "19",
+                  "20",
+                  "21",
+                  "22",
+                  "23",
+                  "24",
+                  "25",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "Amount",
+                  "4",
+                  "-3",
+                  "2",
+                  "-1",
+                  "2",
+                  "-3",
+                  "2",
+                  "-2",
+                  "3",
+                  "-3",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "4",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "Number of days: 30",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Day",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15",
+                  "16"
+                ],
+                [
+                  "Amount",
+                  "-1",
+                  "4",
+                  "-4",
+                  "4",
+                  "-3",
+                  "3",
+                  "-4",
+                  "2",
+                  "-2",
+                  "4",
+                  "-3",
+                  "1",
+                  "-4",
+                  "4",
+                  "-3",
+                  "4"
+                ],
+                [
+                  "Day",
+                  "17",
+                  "18",
+                  "19",
+                  "20",
+                  "21",
+                  "22",
+                  "23",
+                  "24",
+                  "25",
+                  "26",
+                  "27",
+                  "28",
+                  "29",
+                  "30",
+                  "",
+                  ""
+                ],
+                [
+                  "Amount",
+                  "-3",
+                  "2",
+                  "-1",
+                  "1",
+                  "-4",
+                  "5",
+                  "-5",
+                  "3",
+                  "1",
+                  "-1",
+                  "-3",
+                  "3",
+                  "-2",
+                  "5",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "6",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Here is a game involving a collection of pairs of numbers. You can start the game at any pair in the collection. In each step, you are allowed two types of moves:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Reduce the first component of the pair, keeping the second one fixed, so that you reach another pair in the collection.",
+            "Reduce the second component of the pair, keeping the first one fixed, so that you reach another pair in the collection."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Your objective is to take as many steps as possible by selecting a suitable starting point and making an appropriate move at each step."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, suppose the collection of pairs is {(70,48), (70,84), (48,84), (48,33), (48,48), (84,61), (61,70), (70,94)}. Then, starting at (70,94) you can take 4 steps by the following sequence of moves: (70,94) → (70,84) → (48,84) → (48,48) → (48,33). This is the maximum number of steps possible given this collection of pairs."
+        },
+        {
+          "type": "paragraph",
+          "text": "For each collection of pairs of numbers given below, calculate the maximum number of steps you can make in the game."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "{(87,115), (115,56), (208,242), (115,87), (182,242), (147,242), (147,147), (147,182), (242,56), (208,147), (182,208), (56,115), (147,208), (115,208), (87,56), (115,115), (182,56), (182,115), (147,115), (56,182)}",
+          "answerType": "integer",
+          "officialAnswer": "10",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "{(127,92), (73,127), (65,127), (152,92), (65,153), (73,73), (127,109), (65,109), (127,41), (152,65), (153,92), (41,65), (127,152), (41,109), (153,73), (92,92), (152,73), (153,127), (65,73), (92,109), (109,92), (109,127), (73,153), (41,127), (109,73)}",
+          "answerType": "integer",
+          "officialAnswer": "7",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "{(84,36), (54,41), (36,41), (97,75), (35,35), (64,36), (97,97), (64,84), (54,97), (54,64), (36,75), (54,35), (41,35), (64,75), (84,54), (84,41), (35,54), (35,84), (75,41), (41,75), (35,75), (87,84), (64,97), (35,87), (36,87), (97,84), (41,41), (84,64), (84,75), (87,36)}",
+          "answerType": "integer",
+          "officialAnswer": "11",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You have to tile a room that is two units wide and $N$ units long. You have with you two types of tiles: a rectangle that is one unit wide and two units long, and an L-shaped tile covering three square units. Here are pictures of the two types of tiles."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2006-p3-tiles.png",
+          "alt": "The two tile types: a 1 × 2 rectangle and an L-shaped tile covering three squares.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "You are allowed to rotate the tiles when you lay them. You have an infinite supply of both types of tiles. Your objective is to calculate the number of different ways of tiling the room using these tiles."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, a 2 × 3 room can be tiled in 5 different ways, as follows:"
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2006-p3-ways.png",
+          "alt": "The five ways to tile a 2 × 3 room.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Notice that a tiling can use both types of tiles. Consider, for instance, the following tiling of a 2 × 4 room."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2006-p3-example.png",
+          "alt": "A tiling of a 2 × 4 room using both an L-shaped tile and rectangular tiles.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Calculate the number of different ways of tiling rooms of the following sizes."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "2 × 8",
+          "answerType": "integer",
+          "officialAnswer": "258",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "2 × 10",
+          "answerType": "integer",
+          "officialAnswer": "1255",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "2 × 12",
+          "answerType": "integer",
+          "officialAnswer": "6105",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Mona is travelling to Mars for the first time. She has to buy Martian dollars for her expenses on Mars. Her bank in India has a branch on Mars and she has an arrangement with them by which she can buy Martian dollars whenever she wants from the Mars branch and have the corresponding amount deducted in rupees from her account in India."
+        },
+        {
+          "type": "paragraph",
+          "text": "She will spend a fixed number of Martian dollars every day. At the beginning of every day, she decides whether she needs to buy more Martian dollars for the day. She must ensure that she always has enough Martian dollars to meet the day’s expenses. The exchange rate fluctuates, so sometimes she buys surplus Martian dollars to take care of future days’ expenses. However, since it is not safe to carry too much cash, there is a ceiling on how many Martian dollars she can have with her at any time. Assuming that she knows in advance the exchange rates for each day that she will be on Mars, she would like to calculate an optimum strategy for buying Martian dollars so that her overall cost in rupees is minimized."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose Mona spends 6 days on Mars with daily expenses of 1 Martian dollar per day and she is allowed to have at most 6 Martian dollars with her at any time. Further, suppose that the exchange rate over these 6 days is as follows:"
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "Day:",
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ],
+            [
+              "Exchange Rate:",
+              "6",
+              "6",
+              "7",
+              "7",
+              "7",
+              "5"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Then, her minimum overall cost is 35 rupees. To achieve this, she can buy 5 dollars on day 1 at a cost of 30 rupees. This takes her through till the end of day 5. On the sixth day, she buys one more dollar for 5 rupees to meet her expenses on that day. Notice that if she had bought the maximum possible amount, 6 dollars, on the first day, she would have spent 36 rupees overall."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, calculate the minimum amount that Mona has to spend in rupees to meet her expenses on Mars."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "Number of Days: 10\nDaily Expenses: 1 Martian dollar per day\nMaximum cash she can have at any time: 4 Martian dollars\nDaily exchange rate:",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Day:",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10"
+                ],
+                [
+                  "Exchange Rate:",
+                  "6",
+                  "6",
+                  "7",
+                  "7",
+                  "7",
+                  "5",
+                  "4",
+                  "6",
+                  "5",
+                  "7"
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "51",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "Number of Days: 15\nDaily Expenses: 2 Martian dollars per day\nMaximum cash she can have at any time: 5 Martian dollars\nDaily exchange rate:",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Day:",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15"
+                ],
+                [
+                  "Exchange Rate:",
+                  "5",
+                  "1",
+                  "4",
+                  "2",
+                  "4",
+                  "2",
+                  "1",
+                  "3",
+                  "4",
+                  "4",
+                  "1",
+                  "5",
+                  "2",
+                  "3",
+                  "3"
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "56",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "Number of Days: 20\nDaily Expenses: 1 Martian dollar per day\nMaximum cash she can have at any time: 4 Martian dollars\nDaily exchange rate:",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "Day:",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15"
+                ],
+                [
+                  "Exchange Rate:",
+                  "4",
+                  "2",
+                  "1",
+                  "1",
+                  "3",
+                  "1",
+                  "6",
+                  "3",
+                  "4",
+                  "5",
+                  "5",
+                  "4",
+                  "1",
+                  "5",
+                  "4"
+                ],
+                [
+                  "Day:",
+                  "16",
+                  "17",
+                  "18",
+                  "19",
+                  "20",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "Exchange Rate:",
+                  "6",
+                  "6",
+                  "4",
+                  "3",
+                  "1",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "39",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

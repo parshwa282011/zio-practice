@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2013",
+  "year": 2013,
+  "title": "ZIO 2013",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2013/zio2013/zio2013-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2013/zio2013/zio2013-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio13001-editorial/45592"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio13002-editorial/50614"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio13003-editorial/59463"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio13004-editorial/54374"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "Calculators, log tables and other aids are not permitted.",
+      "The question paper carries 80 marks, broken up into four questions of 20 marks each. Each question has three parts. If you solve all three parts correctly, you get 20 marks for that question. Otherwise, you get 5 marks for each part that you solve correctly.",
+      "Attempt all questions. There are no optional questions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the Answer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You have $N$ registers, numbered 1 to $N$ , each of which can hold an integer value. You are given the initial values of the registers, which have the property that every number from 1 to $N$ occurs exactly once among the $N$ registers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each register has a “reset button”: pressing the reset button on register $i$ changes its value to $i$. In one move you can pick any subset of the registers (say, registers 3, 5, and 9) and simultaneously press all their reset buttons. However you must ensure that every number from 1 to $N$ continues to occur exactly once amongst the $N$ registers. The cost of a move that resets $m$ registers simultaneously is $m^{2}$. You can perform a sequence of such moves one after the other, and the total cost is the sum of the costs of the individual moves."
+        },
+        {
+          "type": "paragraph",
+          "text": "Register $i$ is said to be stable if it contains the value $i$. Given a target $K$, where $K$ ≤ $N$ , the goal is to perform a sequence of moves at the end of which at least $K$ registers are stable. Find the minimum possible cost for achieving this."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose $N$ = 6 and $K$ = 3 and the initial values of registers 1 to 6 are, in order, 1, 5, 6, 3, 2, 4. In one move, you can reset registers 2 and 5. At this point registers 1, 2, and 5 are stable, so we can stop. The cost of this sequence of moves is $2^{2}$ = 4, and you can check that this is the minimum possible cost."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the cases below, you are given the initial contents of the $N$ registers and the value of $K$. You have to compute the minimum cost of a sequence of moves that results in at least $K$ registers becoming stable."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "$K$ = 7,",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Register",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11"
+              ],
+              "rows": [
+                [
+                  "Initial value",
+                  "11",
+                  "3",
+                  "6",
+                  "9",
+                  "8",
+                  "4",
+                  "1",
+                  "5",
+                  "10",
+                  "2",
+                  "7"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "40",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "$K$ = 7,",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Register",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13"
+              ],
+              "rows": [
+                [
+                  "Initial value",
+                  "13",
+                  "11",
+                  "4",
+                  "8",
+                  "1",
+                  "12",
+                  "9",
+                  "3",
+                  "5",
+                  "6",
+                  "2",
+                  "10",
+                  "7"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "22",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "$K$ = 6,",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Register",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14"
+              ],
+              "rows": [
+                [
+                  "Initial value",
+                  "13",
+                  "2",
+                  "4",
+                  "12",
+                  "8",
+                  "11",
+                  "14",
+                  "9",
+                  "5",
+                  "6",
+                  "10",
+                  "3",
+                  "7",
+                  "1"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "18",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You are given a sequence of integers. You are allowed to pick some contiguous segment of this sequence (that is, a segment without any gaps), and multiply the length of this segment by the minimum number in the segment. What is the maximum value that you can generate in this manner?"
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose the given sequence is 7, 2, 8, 10. If you pick the entire sequence, the length is 4 and the minimum number is 2, so the product is 8. If you pick the segment 8, 10, the length is 2 and the minimum number is 8, so the product is 16. This is the maximum value you can generate for this sequence. Note that you cannot pick 7, 8, 10, since it is not a contiguous segment."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the cases below, you are given a sequence of values and you have to determine the maximum value that you can generate by picking a contiguous segment and multiplying its length by the minimum number in the segment."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "5, 14, 8, 7, 6, 10, 10, 4, 2, 5, 30",
+          "answerType": "integer",
+          "officialAnswer": "36",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "24, 22, 16, 18, 6, 7, 17, 16, 5, 20, 8, 19, 16",
+          "answerType": "integer",
+          "officialAnswer": "65",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "15, 30, 23, 1, 47, 23, 3, 8, 9, 10, 19, 21, 13, 5, 4",
+          "answerType": "integer",
+          "officialAnswer": "48",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Your shop sells several different types of dolls. Each doll has a suggested price, and no two types of doll have the same price. You would like to fix an actual selling price for each doll so that dolls of different types are as different in price as possible. Due to some government regulations, you can only modify the suggested price within a fixed band of ±$K$—in other words, if the suggested price is $p$, you can pick any selling price in the range {$p$ − $K, p$ − $K$ + 1$, . . . , p$ + $K$ − 1$, p$ + $K$}. Of course, the selling price must always be non-negative."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, suppose there are four types of dolls with suggested prices 130, 210, 70 and 90 and you are allowed to modify prices within a band of 20. Then, you can adjust the prices to 150, 210, 50 and 100, respectively, so that the minimum difference in price between any two types of dolls is 50. (For the second doll, you could have picked any price between 200 and 230.) You can check that this is the largest separation that you can achieve given the constraint."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the cases below, you are given a sequence of prices and the value of $K$. You have to determine the maximum separation that you can achieve between all pairs in the sequence if you are allowed to modify each price by upto ±$K$."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "$K$ = 13. Sequence: 144, 152, 214, 72, 256, 3, 39, 117, 238, 280.",
+          "answerType": "integer",
+          "officialAnswer": "30",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "$K$ = 10. Sequence: 10, 48, 57, 32, 61, 74, 33, 45, 99, 81, 19, 24, 101.",
+          "answerType": "integer",
+          "officialAnswer": "8",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "$K$ = 20. Sequence: 10, 19, 154, 67, 83, 39, 54, 110, 124, 99, 139, 170.",
+          "answerType": "integer",
+          "officialAnswer": "17",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Your weekend is ruined because your parents have reminded you of a number of chores to be completed. You can only do one chore at a time and some of them depend on others: for instance, you can make your bed only after you pick up all the books on the bed and put them away. Rather than start on the chores, you begin to calculate the number of ways you could reorder them to get them done, while ensuring that you do not violate any dependencies."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose you have four tasks to complete—for convenience, we assume the tasks are numbered from 1 to 4. Suppose that task 4 depends on both task 2 and task 3, and task 2 depends on task 1. One possible sequence in which we can complete the given tasks is [3,1,2,4] — in this sequence, no task is attempted before any of the other tasks that it depends on. The sequence [3,2,1,4] would not be allowed because task 2 depends on task 1 but task 2 is scheduled before task 1. In this example, you can check that there exactly three possible sequences compatible with the dependencies: [3,1,2,4], [1,2,3,4] and [1,3,2,4]."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the cases below, you have $N$ tasks numbered 1 to $N$ with some dependencies between the tasks. You have to calculate the number of ways you can reorder all $N$ tasks into a sequence that does not violate any dependencies."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Task Number",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ],
+              "rows": [
+                [
+                  "Depends on",
+                  "-",
+                  "1",
+                  "2",
+                  "1",
+                  "4",
+                  "3,5",
+                  "6",
+                  "7",
+                  "6",
+                  "8,9"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "18",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Task Number",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13"
+              ],
+              "rows": [
+                [
+                  "Depends on",
+                  "-",
+                  "1",
+                  "2",
+                  "-",
+                  "4",
+                  "3,5",
+                  "6",
+                  "7",
+                  "6",
+                  "9",
+                  "8,10",
+                  "11",
+                  "11"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "120",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Task Number",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15"
+              ],
+              "rows": [
+                [
+                  "Depends on",
+                  "-",
+                  "-",
+                  "-",
+                  "1,2,3",
+                  "4",
+                  "4",
+                  "5,6",
+                  "7",
+                  "8",
+                  "9",
+                  "7",
+                  "11",
+                  "12",
+                  "10,13",
+                  "14"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "240",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

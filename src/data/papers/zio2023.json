@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2023",
+  "year": 2023,
+  "title": "ZIO 2023",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2023/zio2023/zio2023-question-paper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2023/zio2023/zio2023-solutions.pdf",
+  "editorialUrls": [],
+  "metadata": {
+    "durationMinutes": null,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The question paper carries 80 marks, broken up into four problems of 20 marks each. Each problem has three Test Cases. If you solve all three Test Cases cor-rectly, you get 20 marks for that problem. Otherwise, you get 5 marks for each Test Case that you solve cor-rectly.",
+      "All the 4 × 3 = 12 Test Cases appear as separate Ques-tions in the right panel (“Question Palette”). The first three Questions correspond to the three Test Cases of Problem 1, the next three correspond to the three Test Cases of Problem 2 and so on. A question icon turning green in the Question Palette, does not mean that it is correct. It just denotes that you have attempted it. All the questions will be evaluated later.",
+      "Attempt all questions. There are no optional questions.",
+      "There are no negative marks.",
+      "All expected answers are integers. Type in only the in-teger. So, if your answer is “162”, enter only “162”. Not “0162”, or “162.0”, etc.",
+      "Remember to save each answer. Only your final saved answers will be considered.",
+      "Near the top-right corner, you should be able to see a calculator icon. Clicking it pops up a calculator which you may use."
+    ],
+    "notes": [
+      "Problem 1: the official key also accepts the interpretation in which the final score cannot be negative (23, 121, 411)."
+    ],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There is an exam with $N$ problems. For each problem, a participant can either choose to answer the problem, or skip the problem. If the participant chooses to answer the problem and gets it correct, the participant is awarded $X$ points. If the participant chooses to answer the problem but answers it incorrectly, 1 point is deducted from their score. If the participant skipped the problem, there is no change to their score. For each of the following values of $N$ and $X$, compute the number of distinct scores the participant could obtain in the exam:"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "$N$ = 7, $X$ = 4",
+          "answerType": "integer",
+          "officialAnswer": "30",
+          "acceptedAnswers": [
+            "23"
+          ],
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "$N$ = 15, $X$ = 18",
+          "answerType": "integer",
+          "officialAnswer": "136",
+          "acceptedAnswers": [
+            "121"
+          ],
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "$N$ = 30, $X$ = 20",
+          "answerType": "integer",
+          "officialAnswer": "441",
+          "acceptedAnswers": [
+            "411"
+          ],
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There are $N$ students standing in a line. Every student has a badge with a number from 1 to $M$ . Different students can have the same badge number, and they can also have different badge numbers. For all 1 ≤ $i$ ≤ $N$ , the $i^{\\text{th}}$ number in array $A$ represents the badge number of the $i^{\\text{th}}$ student from the left of the line."
+        },
+        {
+          "type": "paragraph",
+          "text": "You want to choose any subset of these students, such that there are exactly $K$ distinct badge numbers amongst the chosen students. Note that it is guaranteed that $K$ ≤ $M$ . Note: A subset is any (not necessarily contiguous) selection of the students from the line. Two subsets are considered different if there exists a student $i$ who is present in one subset but not in the other."
+        },
+        {
+          "type": "paragraph",
+          "text": "For each of the following values of $N$ , $M$ and $A$, calculate the number of subsets of students you can choose such that there are exactly $K$ distinct badge numbers amongst the chosen students."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "$N$ = 12, $M$ = 4, $K$ = 1, $A$ = [1, 2, 1, 2, 1, 3, 2, 2, 3, 3, 1, 1]",
+          "answerType": "integer",
+          "officialAnswer": "53",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "$N$ = 20, $M$ = 5, $K$ = 3, $A$ = [2, 2, 5, 5, 3, 3, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 1, 1, 4, 4]",
+          "answerType": "integer",
+          "officialAnswer": "33750",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "$N$ = 25, $M$ = 10, $K$ = 6, $A$ = [10, 8, 4, 1, 4, 10, 9, 3, 9, 2, 1, 7, 7, 1, 8, 6, 8, 10, 8, 4, 7, 10, 9, 5, 8]",
+          "answerType": "integer",
+          "officialAnswer": "5437218",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A permutation is a sequence of $N$ integers from 1 to $N$ containing each integer exactly once. For example, [1, 3, 2, 4, 5] and [4, 2, 3, 1] are permutations, but [1, 3] and [2, 3, 4, 5] are not."
+        },
+        {
+          "type": "paragraph",
+          "text": "There is a permutation $P$ of length $N$ . You are not given the permutation, but you are given, for all 1 ≤ $l$ ≤ $r$ ≤ $N$ , the index of the minimum element among $P_{l}, P_{l+1}, . . . , P_{r}$. The data is displayed in a triangle-like table. For example:"
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2023-p3-example.png",
+          "alt": "Triangular table for N = 3. Rows l = 1..3, columns r = 1..3: row 1 reads 1 2 2, row 2 reads 2 2, row 3 reads 3.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "The element in the $l^{\\text{th}}$ row and $r^{\\text{th}}$ column of the table represents the index of the minimum element among $P_{l}, P_{l+1}, . . . , P_{r}$. For the above table, [2, 1, 3] is a valid permutation that could be used to construct it:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "When $l$ = 1 and $r$ = 1, there is only one element so minimum is at index 1.",
+            "When $l$ = 1 and $r$ = 2, $P_{1}$ = 2 and $P_{2}$ = 1, so minimum is at index 2.",
+            "When $l$ = 1 and $r$ = 3, $P_{1}$ = 2, $P_{2}$ = 1 and $P_{3}$ = 3, so minimum is at index 2.",
+            "When $l$ = 2 and $r$ = 2, there is only one element so minimum is at index 2.",
+            "When $l$ = 2 and $r$ = 3, $P_{2}$ = 1 and $P_{3}$ = 3, so minimum element is at index 2.",
+            "When $l$ = 3 and $r$ = 3, there is only one element so minimum is at index 3."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "However, this is not the only valid permutation. For example, [3, 1, 2] is also a valid permutation that could have been used to construct the table. Given a table, you are asked to find how many permutations could have been used to construct it. (In the previous example, the answer is 2, as those are the only two permutations that could have been used to construct the table.)"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "$N$ = 4",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2023-p3a.png",
+              "alt": "Triangular table for N = 4.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "3",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "$N$ = 8",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2023-p3b.png",
+              "alt": "Triangular table for N = 8.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "70",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "$N$ = 15",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2023-p3c.png",
+              "alt": "Triangular table for N = 15.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "344960",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        6
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There are $N$ stones, numbered from 1 to $N$ . You are sequentially given $M$ relations. Each relation is of the form “Stone $A_{i}$ weighs $X_{i}$ units more than Stone $B_{i}$”."
+        },
+        {
+          "type": "paragraph",
+          "text": "After each relation is added, you want to find an assignment of positive integer weights to each of the $N$ stones such that all relations added so far are satisfied. Note that this is cumulative; once the third constraint is added, you must satisfy all of the first three constraints. Out of all valid assignments, pick the one with the lowest total sum of weights across all stones. Your answer for this step is the sum of weights in the assignment. It is guaranteed that there will always be at least one valid assignment of weights."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your answer for the overall problem is the sum of weights over all steps."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, say that $N$ = 3, $M$ = 2, $A$ = [1, 2], $B$ = [2, 3], $X$ = [5, 6]. The first relation is “Stone 1 weighs 5 units more than Stone 2”. The optimal assignment satisfying this relation is for Stone 1 to have weight 6 and Stones 2 and 3 to have weight 1, for a total of 8. Note that the stones cannot have weight 0."
+        },
+        {
+          "type": "paragraph",
+          "text": "The second relation is “Stone 2 weighs 6 units more than Stone 3”. The optimal assignment satisfying both relations is Stone 1 weight 12, Stone 2 weight 7, Stone 3 weight 1, for a total of 20. Summing both steps, the answer is 8 + 20 = 28."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "$N$ = 10, $M$ = 6,\n$A$ = [6, 5, 1, 2, 3, 3],\n$B$ = [2, 9, 10, 5, 2, 8],\n$X$ = [5, 4, 4, 1, 4, 2]",
+          "answerType": "integer",
+          "officialAnswer": "181",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "$N$ = 23, $M$ = 22,\n$A$ = [11, 20, 12, 8, 20, 21, 5, 14, 7, 14, 21, 20, 23, 23, 23, 16, 11, 15, 11, 17, 11, 18],\n$B$ = [20, 12, 8, 13, 21, 5, 14, 7, 4, 19, 2, 23, 3, 9, 16, 1, 15, 10, 17, 6, 18, 22],\n$X$ = [16, 15, 16, 14, 13, 24, 18, 8, 17, 18, 12, 25, 21, 21, 12, 10, 23, 21, 3, 4, 12, 13]",
+          "answerType": "integer",
+          "officialAnswer": "12599",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "$N$ = 30, $M$ = 32\n$A$ = [18, 28, 27, 2, 21, 20, 12, 7, 13, 11, 30, 10, 2, 16, 7, 21, 16, 20, 6, 11, 16, 20, 15, 18, 11, 6, 27, 1, 2, 28, 2, 4] $B$ = [5, 3, 18, 1, 22, 29, 25, 9, 5, 8, 29, 12, 17, 19, 13, 26, 1, 10, 10, 14, 23, 29, 12, 21, 24, 3, 15, 8, 3, 12, 5, 3] $X$ = [2, 5, 5, 2, 2, 5, 5, 2, 1, 1, 5, 5, 3, 5, 1, 2, 4, 4, 4, 3, 2, 5, 1, 5, 4, 3, 13, 2, 5, 11, 4, 2]",
+          "answerType": "integer",
+          "officialAnswer": "4388",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

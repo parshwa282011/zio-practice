@@ -1,0 +1,739 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2015",
+  "year": 2015,
+  "title": "ZIO 2015",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2015/zio2015/zio2015-question-paper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2015/zio2015/zio2015-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio15001-editorial/48576"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio15002-editorial/48582"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio15003-editorial/57527"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio15004-editorial/64521"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "Calculators, log tables and other aids are not permitted.",
+      "The question paper carries 80 marks, broken up into four questions of 20 marks each. Each question has three parts. If you solve all three parts correctly, you get 20 marks for that question. Otherwise, you get 5 marks for each part that you solve correctly.",
+      "Attempt all questions. There are no optional questions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the Answer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [
+      "Problem 4 was ambiguous. The key gives two interpretations, 4(i) and 4(ii), and takes the better score of the two; both answers are accepted here."
+    ],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "ScamJet Inc. would like to advertise a festival sale where they plan to sell a number of their seats for just one rupee."
+        },
+        {
+          "type": "paragraph",
+          "text": "ScamJet Inc. has hired Ms. Rama to put up a big board at the main airport at Siruseri announcing the number of cheap tickets. Ms. Rama is meticulous about way she bills her customers and charges a specific amount for each symbol she writes."
+        },
+        {
+          "type": "paragraph",
+          "text": "You are given her current rate for writing any of the digits 0, 1, 2, . . . , 9 (since painting any number only involves these symbols). Unfortunately for ScamJet, and fortunately for the passengers of Siruseri, the contract to Ms. Rama did not specify the number of free tickets, but only that the cost of writing the sign should not exceed $B$ rupees. Ms. Rama, being a good citizen of Siruseri, would like to write as large a number as possible while ensuring that the cost of writing falls within $B$ rupees."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suppose the charges of writing the different digits, in rupees, are as follows:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Digit",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "rows": [
+            [
+              "Charges",
+              "1",
+              "1",
+              "2",
+              "2",
+              "3",
+              "1",
+              "1",
+              "1",
+              "3",
+              "4"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Let the budget $B$ be 6. Then the following are some numbers that can be written within the budget: 9, 91, 111111, 333, 456. You can verify that the largest integer that can be painted within the budget is 777777."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your task is the calculate the largest value that Ms. Rama may paint for the charges and budgets in the three instances below."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "$B$ = 33 and the writing charges are given by",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Digit",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ],
+              "rows": [
+                [
+                  "Charges",
+                  "3",
+                  "10",
+                  "12",
+                  "4",
+                  "9",
+                  "9",
+                  "13",
+                  "5",
+                  "15",
+                  "8"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "7300000000",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "$B$ = 62 and the writing charges are given by",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Digit",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ],
+              "rows": [
+                [
+                  "Charges",
+                  "9",
+                  "12",
+                  "8",
+                  "9",
+                  "10",
+                  "13",
+                  "17",
+                  "23",
+                  "80",
+                  "75"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "5322222",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "$B$ = 72 and the writing charges are given by",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Digit",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ],
+              "rows": [
+                [
+                  "Charges",
+                  "9",
+                  "9",
+                  "20",
+                  "15",
+                  "8",
+                  "23",
+                  "7",
+                  "83",
+                  "50",
+                  "9"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "9666666666",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Siruseri Metro Corporation Limited has a new shunting yard. The yard has an incoming track and an outgoing track as indicated in the figure below. In each step, the yard manager instructs whether to let the next incoming train Enter the yard or allow a train to Leave the yard. Observe that the design of the yard means that the trains leave the yard in a last-in-first-out manner. The instruction Enter is allowed only when there is at least one train on the incoming track, and the instruction Leave is allowed only when there is at least one train in the yard. The yard is long enough to accommodate as many trains as needed."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2015-p2-yard.png",
+          "alt": "Diagram of a shunting yard: an incoming track on the left, a stack-like yard in the middle and an outgoing track on the right.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Initially, there are $N$ trains numbered 1, 2$, . . . , N$ , waiting to enter the yard, in that order and the yard is empty. The job of the yard manager is to choose some sequence of instructions to transfer all the trains to the outgoing track (through the yard). The order in which the trains appear on the outgoing track is determined by the instructions issued by the manager. For instance, if $N$ = 2, following the instruction sequence Enter,Leave,Enter,Leave leads to the arrangement 1, 2 on the output track. On the other hand, the instruction sequence Enter,Enter,Leave,Leave results in the arrangment 2, 1 on the output track."
+        },
+        {
+          "type": "paragraph",
+          "text": "It turns out that railway rules require that there can be at most $K$ instructions between the time that any train Enters the yard and the time it Leaves the yard. We say that a sequence of instructions is legal if it meets this requirement. For example, consider the case of 2 trains with $K$ = 0. The sequence Enter,Leave,Enter,Leave is legal while Enter,Enter,Leave,Leave is not. Thus, there is only one possible output arrangment (1, 2) (using legal sequences). The same is true when $K$ = 1. But if $K$ = 2 then both the instruction sequences listed in the previous paragraph are legal and thus there are two possible output arrangements (using legal sequences)."
+        },
+        {
+          "type": "paragraph",
+          "text": "The yard manager wants to know, for a given $N$ and $K$, the number of possible output arrangements that he can produce using legal instruction sequences. Recall that all $N$ trains must be moved from the incoming track to the outgoing track. Your task is to solve this problem for the following instances:"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "$N$ = 6 and $K$ = 8.",
+          "answerType": "integer",
+          "officialAnswer": "90",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "$N$ = 8 and $K$ = 4.",
+          "answerType": "integer",
+          "officialAnswer": "146",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "$N$ = 10 and $K$ = 4.",
+          "answerType": "integer",
+          "officialAnswer": "585",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Siruseri Inc. has launched its next blockbuster single player game. It is a rather simple, yet challenging, game. On pressing the start button, you find a list of $N$ numbers on the screen. Moreover, each number appears in a particular colour. For instance, the the sequence might look like:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Position",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "rows": [
+            [
+              "Number",
+              "1",
+              "-2",
+              "3",
+              "1",
+              "2"
+            ],
+            [
+              "Colour",
+              "R",
+              "G",
+              "R",
+              "B",
+              "R"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "The player must select a subset of the positions. Then the value at each position changes as follows:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "If a position is not selected its value is set to 0.",
+            "The value of the leftmost selected position is multiplied by 3.",
+            "For any other selected position, if the closest selected position on the left has the same colour then the value is left unchanged.",
+            "Otherwise, i.e. any selected position for which the closest selected position on the left has a different colour, the value is multiplied by 3."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The score obtained is the sum of the new values of all the positions and the aim of the player is to maximize this score."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the example above, if the player picks positions 1, 3 and 5 then the new values are as follows:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Position",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "rows": [
+            [
+              "Number",
+              "3",
+              "0",
+              "3",
+              "0",
+              "2"
+            ],
+            [
+              "Colour",
+              "R",
+              "G",
+              "R",
+              "B",
+              "R"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "This yields a score of 8. If the player selects positions 1, 2, 3, 4, 5 then the new values are as follows:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Position",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "rows": [
+            [
+              "Number",
+              "3",
+              "-6",
+              "9",
+              "3",
+              "6"
+            ],
+            [
+              "Colour",
+              "R",
+              "G",
+              "R",
+              "B",
+              "R"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "This yields a score of 15. The best option is to pick positions 3, 4 and 5. This leads the following values and a score of 18."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Position",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "rows": [
+            [
+              "Number",
+              "0",
+              "0",
+              "9",
+              "3",
+              "6"
+            ],
+            [
+              "Colour",
+              "R",
+              "G",
+              "R",
+              "B",
+              "R"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Report the maximum possible score for the following three inputs."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Position",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ],
+              "rows": [
+                [
+                  "Number",
+                  "5",
+                  "8",
+                  "20",
+                  "-2",
+                  "10",
+                  "-8",
+                  "-2",
+                  "13",
+                  "-8"
+                ],
+                [
+                  "Colour",
+                  "R",
+                  "R",
+                  "R",
+                  "G",
+                  "R",
+                  "B",
+                  "B",
+                  "B",
+                  "R"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "123",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Position",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13"
+              ],
+              "rows": [
+                [
+                  "Number",
+                  "8",
+                  "9",
+                  "-5",
+                  "2",
+                  "4",
+                  "-6",
+                  "2",
+                  "1",
+                  "-3",
+                  "-3",
+                  "7",
+                  "9",
+                  "1"
+                ],
+                [
+                  "Colour",
+                  "R",
+                  "R",
+                  "R",
+                  "R",
+                  "B",
+                  "B",
+                  "B",
+                  "B",
+                  "G",
+                  "G",
+                  "B",
+                  "B",
+                  "B"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "72",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": [
+                "Position",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14"
+              ],
+              "rows": [
+                [
+                  "Number",
+                  "-1",
+                  "-3",
+                  "4",
+                  "-5",
+                  "7",
+                  "10",
+                  "-8",
+                  "6",
+                  "7",
+                  "4",
+                  "-3",
+                  "2",
+                  "9",
+                  "-4"
+                ],
+                [
+                  "Colour",
+                  "G",
+                  "G",
+                  "B",
+                  "R",
+                  "G",
+                  "B",
+                  "B",
+                  "B",
+                  "B",
+                  "B",
+                  "R",
+                  "R",
+                  "R",
+                  "G"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "107",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "ScamJet Inc is one of the largest airlines operating in Siruseri. There are 5 airports in Siruseri and ScamJet operates flights out of all of these airports. ScamJet has classified its flights into three types: $a$, $b$ and $c$. The following figure describes the airports and all the flights operated by ScamJet. An arrow with label $a$ from airport $i$ to $j$ means that there is a type $a$ flight from airport $i$ to airport $j$ and so on. Note that there are some flights that originate and terminate at the same airport (for those who want to take joy-rides)."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2015-p4-graph.png",
+          "alt": "Directed graph on airports 0 to 4 whose edges are labelled with flight types a, b and c. Airport 0 has a c-loop; airport 2 is the double-circled destination.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "ScamJet sells the ScamPass multi-trip pass. Any travel with the ScamPass must originate at airport 0 and terminate at airport 2. The pass specifies a sequence of flight types, for example, $acbabb$. The types of the flights taken during the travel must match the sequence given in the pass, except that one is allowed to skip some elements of the sequence. For instance, using a pass with the sequence $acbabb$ one can fly from 0 back to 0 by flight of type $c$ (after skipping the first $a$), then take a $b$ type flight from 0 to 4, then take a type $a$ flight to 1, take a flight of type $b$ back to 4 and then take a type $b$ flight and arrive at 2 as required. This route uses 5 out of the 6 possible flights allowed by the ScamPass. We could also have skipped the first two elements and directly taken a flight of type $b$ from 0 to 4, skipped the next element and then taken another flight of type $b$ from 4 to 2 and then skipped the last element. The second route uses only 2 of the 6 possible flights. You can verify that any route allowed by a pass with the sequence $acbabb$ can use at most 5 flights."
+        },
+        {
+          "type": "paragraph",
+          "text": "To make the best possible use of your ScamPass, you want to take as many flights as possible (that is, skip as few as possible). For each of the following three ScamPass sequences, find the maximum number of flights you may possibly take."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "$cacbcbbbbaaacba$",
+          "answerType": "integer",
+          "officialAnswer": "10",
+          "acceptedAnswers": [
+            "8"
+          ],
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "$aaacaabcccbabac$",
+          "answerType": "integer",
+          "officialAnswer": "9",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "$aababccbcacaaca$",
+          "answerType": "integer",
+          "officialAnswer": "12",
+          "acceptedAnswers": [
+            "10"
+          ],
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2018",
+  "year": 2018,
+  "title": "ZIO 2018",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2018/zio2018/zio2018-question-paper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2018/zio2018/zio2018-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio18001-editorial/48592"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio18002-editorial/52155"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio18003-editorial/52675"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio18004-editorial/58063"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": null,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The question paper carries 80 marks, broken up into four problems of 20 marks each. Each problem has three Test Cases. If you solve all three Test Cases correctly, you get 20 marks for that problem. Otherwise, you get 5 marks for each Test Case that you solve correctly.",
+      "All the 4 × 3 = 12 Test Cases appear as separate Ques-tions in the right panel (“Question Palette”). The first three Questions correspond to the three Test Cases of Problem 1, the next three correspond to the three Test Cases of Problem 2 and so on. A question icon turning green in the Question Palette, does not mean that it is correct. It just denotes that you have attempted it. All the questions will be evaluated later.",
+      "Attempt all questions. There are no optional questions.",
+      "There are no negative marks.",
+      "All expected answers are integers. Type in only the in-teger. So, if your answer is “162”, enter only “162”. Not “0162”, or “162.0”, etc.",
+      "Remember to save each answer. Only your final saved answers will be considered.",
+      "Near the top-right corner, you should be able to see a calculator icon. Clicking it pops up a calculator which you may use."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You are given a list with N distinct positive integers: $A$[1]$, A$[2]$, . . . , A$[$N$ ]. A subset of these is said to be Good if all their indices have different remainders when divided by 5. In other words, consider a subset {$A$[$i_{1}$]$, A$[$i_{2}$]$, . . . , A$[$i_{k}$]}. This is Good, if there are no $x$ and $y$ such that $A$[$x$] and $A$[$y$] have been selected to be in the subset, and the remainder when you divide $x$ by 5 is the same as the remainder you get when you divide $y$ by 5."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, if the list has 30 elements $A$[1] to $A$[30], a Good subset cannot include both $A$[9] and $A$[24] because both 9 and 24 have remainder 4 when divided by 5. The Score of a subset is the sum of the values in it. You are given an integer $K$, and you should find a Good subset of size at most $K$ whose Score is maximized. Compute the maximum Score for the following instances."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "$N$ = 21, $K$ = 6,\n$A$ = [3, 8, 21, 13, 15, 4, 10, 17, 6, 12, 1, 11, 20, 14, 16, 5, 18, 19, 7, 9, 2]\n—i.e., $A$[1] = 3, $A$[2] = 8, . . . , $A$[21] = 2",
+          "answerType": "integer",
+          "officialAnswer": "74",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "$N$ = 23, $K$ = 4,\n$A$ = [4, 23, 15, 7, 9, 3, 20, 19, 8, 10, 1, 22, 16, 6, 14, 5, 21, 17, 11, 12, 2, 18, 13]\n—i.e., $A$[1] = 4, $A$[2] = 23, . . . , $A$[23] = 13.",
+          "answerType": "integer",
+          "officialAnswer": "67",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "$N$ = 23, $K$ = 4,\n$A$ = [17, 5, 21, 12, 1, 11, 10, 19, 9, 6, 18, 8, 23, 14, 2, 15, 3, 22, 13, 4, 16, 7, 20]\n—i.e., $A$[1] = 17, $A$[2] = 5, . . . , $A$[23] = 20.",
+          "answerType": "integer",
+          "officialAnswer": "65",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You have many balls. Each ball has a colour. The colours are numbered from 1 to 12. You are given a list with 12 integers: $A$[1]$, A$[2]$, . . . , A$[12]. You have a total of $A$[1] balls of Colour 1, $A$[2] balls of colour 2, . . . , $A$[12] balls of Colour 12. You also have $B$ boxes, and you want to put these balls in the boxes."
+        },
+        {
+          "type": "paragraph",
+          "text": "You don’t like boxes which have balls of different colours. You call such boxes Impure. And if a box has only balls of a single colour, you call it Pure. Each box can hold at most 10 balls. Sometimes, you are not able to fill all the balls such that all the boxes are Pure. So you want to minimize the number of Impure boxes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Given $B$, and $A$[1]$, A$[2]$, . . . , A$[12], you want to find the minimum number of Impure boxes you will have in the optimal strategy."
+        },
+        {
+          "type": "paragraph",
+          "text": "You are guaranteed that you will be able to fit in all the balls into $B$ boxes. That is, $A$[1] + $A$[2] + ... + $A$[12] ≤ 10 · $B$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compute the minimum number Impure boxes for the following instances."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "$B$ = 11, $A$ = [8, 22, 4, 4, 9, 18, 8, 7, 1, 5, 7, 5]\n—i.e., $A$[1] = 8, $A$[2] = 22, . . . , $A$[12] = 5",
+          "answerType": "integer",
+          "officialAnswer": "3",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "$B$ = 13, $A$ = [9, 14, 11, 9, 9, 6, 7, 5, 6, 7, 16, 14]\n—i.e., $A$[1] = 9, $A$[2] = 14, . . . , $A$[12] = 14",
+          "answerType": "integer",
+          "officialAnswer": "2",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "$B$ = 13, $A$ = [15, 9, 7, 22, 7, 21, 6, 4, 11, 8, 7, 5]\n—i.e., $A$[1] = 15, $A$[2] = 9, . . . , $A$[12] = 5",
+          "answerType": "integer",
+          "officialAnswer": "4",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You are given a list of 0’s and 1’s: $B$[1]$, B$[2]$, . . . , B$[$N$ ]. A sublist of this list is any contiguous segment of elements—i.e., $A$[$i$]$, A$[$i$ + 1]$, . . . , A$[$j$], for some $i$ and $j$. A sublist is said to be Heavy, if the number of 1’s in it is at least as much as the number of 0’s in it."
+        },
+        {
+          "type": "paragraph",
+          "text": "We want to partition the entire list into Heavy sublists. That is, a valid partition is a collection of Heavy sublists, such that each of the $N$ elements is part of exactly one of the sublists. We want to find the number of ways of doing so."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose $N$ was 3 and $B$ = [1, 0, 1]. Then all the sublists in this are Heavy, except for the sublist which contains only the second element ([0]). The various valid partitions are as follows:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "( [1, 0, 1] )",
+            "( [1, 0], [1] )",
+            "( [1], [0, 1] )"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Since there are 3 ways to do this, the answer for this would be 3."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compute the number of ways of partitioning the given list into Heavy sublists for the following instances."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "$N$ = 8, $B$ = [0, 1, 1, 0, 0, 1, 1, 1]—i.e., $B$[1] = 0$, B$[1] = 1$, . . . , B$[8] = 1",
+          "answerType": "integer",
+          "officialAnswer": "20",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "$N$ = 9, $B$ = 1, 1, 0, 0, 1, 0, 0, 1, 1—i.e., $B$[1] = 1$, B$[1] = 1$, . . . , B$[9] = 1",
+          "answerType": "integer",
+          "officialAnswer": "16",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "$N$ = 9, $B$ = 1, 0, 1, 0, 1, 1, 0, 1, 1—i.e., $B$[1] = 1$, B$[1] = 0$, . . . , B$[9] = 1",
+          "answerType": "integer",
+          "officialAnswer": "96",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You are given numbers $N$ and $K$. Consider the set $S$ = {1, 2, 3$, . . . , N$ }. An ordered tuple is a sequence of integers from this set. For example, (2, 4, 1) is a tuple, and it is different from (1, 2, 4). You need to partition the integers {1, 2, 3$, . . . , N$ } into ordered tuples such that each tuple has at most $K$ integers. That is, you need to get a set of tuples, such that each element of $S$ is in exactly one tuple, and each tuple has at most $K$ elements. Find the number of ways to do so."
+        },
+        {
+          "type": "paragraph",
+          "text": "Note that elements inside a single tuple cannot be reordered. But tuples can be reordered as a whole. For instance, if $N$ = 3—i.e., $S$ = {1, 2, 3}— then { (2, 3), (1) } and { (1), (2, 3) } are considered the same partitions. But { (3, 2), (1) } is a different partition."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, if $N$ = 2 and $K$ = 2, there are exactly 3 valid ways to partition $S$, as given below:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "{ (1), (2) }",
+            "{ (1, 2) }",
+            "{ (2, 1) }"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Compute the number of ways to partition {1, 2, 3$, . . . , N$ } into ordered tuples of size at most $K$ for the following instances."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "$N$ = 4, $K$ = 3",
+          "answerType": "integer",
+          "officialAnswer": "49",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "$N$ = 5, $K$ = 3",
+          "answerType": "integer",
+          "officialAnswer": "261",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "$N$ = 6, $K$ = 3",
+          "answerType": "integer",
+          "officialAnswer": "1531",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

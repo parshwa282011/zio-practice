@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2011",
+  "year": 2011,
+  "title": "ZIO 2011",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2011/zio2011/zio2011-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2011/zio2011/zio2011-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio11001-editorial/53955"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio11002-editorial/44938"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio11003-editorial/55404"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio11004-editorial/51048"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "Calculators, log tables and other aids are not permitted.",
+      "The question paper carries 80 marks, broken up into four questions of 20 marks each. Each question has three parts. If you solve all three parts correctly, you get 20 marks for that question. Otherwise, you get 5 marks for each part that you solve correctly.",
+      "Attempt all questions. There are no optional questions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the Answer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A new IT Park has $N$ north-south roads and $N$ east-west roads laid out in an $N$ × $N$ grid. A security guard who is posted at the intersection of two roads can observe all activity along the length of both roads."
+        },
+        {
+          "type": "paragraph",
+          "text": "There are $N$ guards. Initially, the guards are placed haphazardly at some of the intersections. The guards have to be moved into new positions so that each road is under observation by at least one guard. While moving the guards around, we also have to ensure that we never have two guards at the same intersection."
+        },
+        {
+          "type": "paragraph",
+          "text": "The aim is to do this in such a way as to minimize the total distance travelled by the guards. We count the distance travelled by guards in steps: in one step, a guard can shift to an adjacent intersection."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, suppose there are 4 roads in each direction and 4 guards placed as shown in Figure 1. Here, for instance, the rightmost north-south road and the bottom east-west road are not observed by any of the guards."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2011-p1-fig1.png",
+          "alt": "Figure 1: a 4 × 4 grid of intersections showing the initial positions of the four guards (marked G).",
+          "caption": "Figure 1",
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "We can move the guard at (3,2) down and across to (4,4) in three steps to get a solution, as shown in Figure 2."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2011-p1-fig2.png",
+          "alt": "Figure 2: the 4 × 4 grid after the guard at (3,2) is moved down and across to (4,4) in three steps.",
+          "caption": "Figure 2",
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Another possibility is to move the guard at (3,3) to (3,4) and then move the guard at (3,2) to (4,3). This also takes three steps."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2011-p1-fig3.png",
+          "alt": "Figure 3: the 4 × 4 grid after the guard at (3,3) moves to (3,4) and the guard at (3,2) moves to (4,3).",
+          "caption": "Figure 3",
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, you are given the intial positions of the $N$ guards on an $N$ × $N$ grid of roads. You have to compute the minimum number of steps required to move the guards into new positions so that all roads are under observation. In the example above, it can be shown that the minimum number of steps required is 3."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2011-p1a.png",
+              "alt": "Case (a): a 9 × 9 grid of roads with the guards marked G.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "17",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2011-p1b.png",
+              "alt": "Case (b): a 13 × 13 grid of roads with the guards marked G.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "51",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "figure",
+              "src": "figures/zio2011-p1c.png",
+              "alt": "Case (c): a 16 × 16 grid of roads with the guards marked G.",
+              "caption": null,
+              "source": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "48",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Given a number $N$ between 2 and 9, consider the integers that can be formed using each digit in the set {1, 2$, . . . , N$} exactly once. For instance, if $N$ is 3, the integers we can form are 123, 231, 312, 132, 321 and 213. If we arrange these in increasing order, we get the list {123, 132, 213, 231, 312, 321}. The fourth number in this list is 231."
+        },
+        {
+          "type": "paragraph",
+          "text": "In general, given two numbers $N$ and $K$, the task is to compute the number at position $K$ when all integers formed using the digits {1, 2$, . . . , N$} exactly once are arranged in ascending order. For instance, the example worked out above corresponds to $N$ = 3 and $K$ = 4."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compute the answer for the following values of $N$ and $K$."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "$N$ = 5, $K$ = 76",
+          "answerType": "integer",
+          "officialAnswer": "41352",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "$N$ = 7, $K$ = 4197",
+          "answerType": "integer",
+          "officialAnswer": "6574213",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "$N$ = 9, $K$ = 191082",
+          "answerType": "integer",
+          "officialAnswer": "579326841",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A cable TV operator is trying to save money by running cables directly at roof level between pairs of buildings on the same side of the street. A cable can be connected between the rooftops of two buildings $A$ and $B$ if no building between them is strictly taller than either $A$ or $B$."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, suppose there are five buildings on the street with the following heights (in feet): 160, 145, 153, 170, 180. Let us label the five buildings $A$, $B$, $C$, $D$ and $E$. In this case, six pairs of buildings can be connected by a TV cable at roof level: ($A, B$), ($C, D$), ($A, C$), ($B, C$), ($D, E$), ($A, D$)."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, you are given the heights of the buildings on the street and you have to compute the number of pairs of buildings that can be directly connected by a TV cable at roof level. In the example above, the answer is 6."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "168, 92, 120, 147, 73, 160, 156, 108, 145, 157, 71, 71, 109, 157, 152, 214, 191, 78, 154, 186",
+          "answerType": "integer",
+          "officialAnswer": "37",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "230, 142, 176, 225, 111, 163, 175, 241, 72, 76, 99, 145, 146, 82, 153, 118, 158, 239, 86, 246, 156, 98, 154, 83, 205",
+          "answerType": "integer",
+          "officialAnswer": "45",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "196, 98, 134, 169, 73, 185, 289, 168, 262, 291, 72, 71, 120, 181, 122, 162, 147, 75, 124, 144, 106, 100, 224, 139, 229, 134, 87, 156, 251, 150",
+          "answerType": "integer",
+          "officialAnswer": "54",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Consider a sequence $b_{1}b_{2} . . . b_{N}$ of $N$ binary digits. Given such a sequence, we rotate it by one digit to the left $N$−1 times to generate a block of $N$ sequences arranged in an $N$ × $N$ array of 0’s and 1’s, as follows."
+        },
+        {
+          "type": "math",
+          "tex": "\\begin{array}{ccccc} b_1 & b_2 & \\cdots & b_{N-1} & b_N \\\\ b_2 & b_3 & \\cdots & b_N & b_1 \\\\ \\vdots & \\vdots & & \\vdots & \\vdots \\\\ b_{N-1} & b_N & \\cdots & b_{N-3} & b_{N-2} \\\\ b_N & b_1 & \\cdots & b_{N-2} & b_{N-1} \\end{array}",
+          "fallback": "Rows: b1 b2 … b(N−1) bN; b2 b3 … bN b1; … ; b(N−1) bN … b(N−3) b(N−2); bN b1 … b(N−2) b(N−1)"
+        },
+        {
+          "type": "paragraph",
+          "text": "We then sort these sequences in lexicographic order—that is, regard each row of the array as a binary number and rearrange the rows in ascending order."
+        },
+        {
+          "type": "paragraph",
+          "text": "After this rearrangement, we extract the last column of the new $N$ × $N$ array. The goal is to work backwards from this column and compute the top row of the $N$ × $N$ sorted array that created it."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, consider the binary sequence 0 0 1 1 0. After sorting the rows of the 5 × 5 array that this sequence generates, the last column reads 1 0 0 1 0 from top to bottom. Given this last column, the task is to determine the first row of the sorted array, which is 0 0 0 1 1. The example is illustrated below."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2011-p4-example.png",
+          "alt": "Example: initial array rows 00110, 01100, 11000, 10001, 00011; sorted array rows 00011, 00110, 01100, 10001, 11000; rightmost column 1, 0, 0, 1, 0.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Each of the inputs below describes the rightmost column of a sorted array, from top bottom. Your task is to compute the first row of the corresponding sorted array for each of these inputs. In all three cases, the answer is unique."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "1 0 1 1 1 1 0 0",
+          "answerType": "integer",
+          "officialAnswer": "00110111",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "1 0 1 1 0 1 1 1 0 0 1 0",
+          "answerType": "integer",
+          "officialAnswer": "000111011011",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "1 1 1 1 0 1 1 0 1 0 1 1 0 1 0",
+          "answerType": "integer",
+          "officialAnswer": "001111011101011",
+          "comparison": "compact",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

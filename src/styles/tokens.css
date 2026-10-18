@@ -1,0 +1,57 @@
+/* Design tokens. Both themes define the same set; components only use these variables. */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f5f4ef;
+  --bg-sunken: #ebe9e1;
+  --panel: #ffffff;
+  --panel-2: #faf9f6;
+  --text: #1b2030;
+  --text-muted: #566074;
+  --border: #d9d5ca;
+  --border-strong: #b9b4a6;
+  --accent: #2f4aa8;
+  --accent-hover: #263c8a;
+  --accent-contrast: #ffffff;
+  --accent-soft: #e5eaf9;
+  --focus: #1f6feb;
+  --ok: #17663f;
+  --ok-soft: #dff3e8;
+  --warn: #8a4b00;
+  --warn-soft: #fbecd0;
+  --bad: #a3261f;
+  --bad-soft: #fbe3e0;
+  --info-soft: #e5eaf9;
+  --shadow: 0 1px 2px rgb(20 24 40 / 6%), 0 6px 18px rgb(20 24 40 / 6%);
+  --figure-bg: #ffffff;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #11141b;
+  --bg-sunken: #0c0f14;
+  --panel: #1a1f2b;
+  --panel-2: #161a24;
+  --text: #e8ebf2;
+  --text-muted: #a3adc0;
+  --border: #2d3446;
+  --border-strong: #46506a;
+  --accent: #93aaff;
+  --accent-hover: #b0c0ff;
+  --accent-contrast: #0e1426;
+  --accent-soft: #252d4a;
+  --focus: #7fb0ff;
+  --ok: #6fd69a;
+  --ok-soft: #173326;
+  --warn: #f0b862;
+  --warn-soft: #3a2b12;
+  --bad: #ff8f86;
+  --bad-soft: #3b1b19;
+  --info-soft: #252d4a;
+  --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 6px 18px rgb(0 0 0 / 30%);
+  --figure-bg: #ffffff; /* diagrams keep a light background so they stay readable */
+}

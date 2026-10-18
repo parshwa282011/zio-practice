@@ -1,0 +1,875 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2009",
+  "year": 2009,
+  "title": "ZIO 2009",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2009/zio2009/zio2009-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2009/zio2009/zio2009-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio09001-editorial/51698"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio09002-editorial/52659"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio09003-editorial/66075"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio09004-editorial/70296"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "Calculators, log tables and other aids are not permit-ted.",
+      "The question paper carries 80 marks, broken up into four questions of 20 marks each. Each question has three parts. If you solve all three parts correctly, you get 20 marks for that question. Otherwise, you get 5 marks for each part that you solve correctly.",
+      "Attempt all questions. There are no optional ques-tions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the An-swer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "You have to tile a room that is two units wide and $N$ units long. You have with you two types of tiles: a rectangle that is one unit wide and two units long, and an L-shaped tile covering three square units. Here are pictures of the two types of tiles."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2009-p1-tiles.png",
+          "alt": "The two tile types: a 1 × 2 rectangle and an L-shaped tile covering three squares.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "You are allowed to rotate the tiles when you lay them. You have an infinite supply of both types of tiles. However, your architect is from Nauru and is a believer in the Polynesian system of tiling called Batlar Guntu which forbids any corner where four tiles meet."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, here are some ways to tile a 2 × 4 room. The first three are consistent with the Batlar Guntu system while the fourth tiling is not."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2009-p1-ways.png",
+          "alt": "Four ways to tile a 2 × 4 room. The first three obey the Batlar Guntu rule; the fourth has four tiles meeting at a corner and does not.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Your task is to calculate the number of different ways a room can be tiled without violating the principles of Batlar Guntu. For instance, a 2 × 3 room can be tiled in 5 different ways, as follows:"
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2009-p1-ways3.png",
+          "alt": "The five ways to tile a 2 × 3 room.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Calculate the number of different ways of tiling rooms of the following sizes."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "2 × 8",
+          "answerType": "integer",
+          "officialAnswer": "227",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "2 × 10",
+          "answerType": "integer",
+          "officialAnswer": "1071",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "2 × 12",
+          "answerType": "integer",
+          "officialAnswer": "5038",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "ZIngO is ZIO Solitaire for the New Generation, played on an $N$ × $N$ square grid of numbers. You start by placing a token on any square of the grid. Then, in each turn, you move the token either one square to the right or one square down. The game ends when you move the token off the edge of the board."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each square of the grid contains a number. You start with a score of zero. Whenever the token lands on a square, including the square you begin with, you add its value to your current score. The object of the game is to score as many points as possible."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, given the grid below, you can score 5 − 2 + 4 + 7 − 3 + 4 = 15 points by placing the token initially on the 5 in the first column, and then moving right, down, right, right, down, down. This is the maximum score possible for this game."
+        },
+        {
+          "type": "figure",
+          "src": "figures/zio2009-p2-example.png",
+          "alt": "A 5 × 5 grid of numbers with the path 5, −2, 4, 7, −3, 4 marked by arrows.",
+          "caption": null,
+          "source": null
+        },
+        {
+          "type": "paragraph",
+          "text": "Compute the maximum possible ZIngO score for each of the following grids."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "-2",
+                  "1",
+                  "-3",
+                  "4",
+                  "-4"
+                ],
+                [
+                  "12",
+                  "-16",
+                  "10",
+                  "-12",
+                  "6"
+                ],
+                [
+                  "-16",
+                  "13",
+                  "-14",
+                  "7",
+                  "-4"
+                ],
+                [
+                  "7",
+                  "-4",
+                  "16",
+                  "-15",
+                  "10"
+                ],
+                [
+                  "-7",
+                  "16",
+                  "-9",
+                  "13",
+                  "-16"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "29",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "-4",
+                  "4",
+                  "-6",
+                  "5",
+                  "-7"
+                ],
+                [
+                  "5",
+                  "-6",
+                  "5",
+                  "-5",
+                  "5"
+                ],
+                [
+                  "-7",
+                  "5",
+                  "-4",
+                  "7",
+                  "-7"
+                ],
+                [
+                  "6",
+                  "-4",
+                  "6",
+                  "-5",
+                  "5"
+                ],
+                [
+                  "-5",
+                  "6",
+                  "-5",
+                  "6",
+                  "-4"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "9",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "-6",
+                  "5",
+                  "-4",
+                  "7",
+                  "-5",
+                  "11"
+                ],
+                [
+                  "7",
+                  "-6",
+                  "7",
+                  "-10",
+                  "10",
+                  "-4"
+                ],
+                [
+                  "-6",
+                  "10",
+                  "-5",
+                  "4",
+                  "-6",
+                  "7"
+                ],
+                [
+                  "8",
+                  "-7",
+                  "10",
+                  "-5",
+                  "5",
+                  "-10"
+                ],
+                [
+                  "-9",
+                  "11",
+                  "-7",
+                  "11",
+                  "-7",
+                  "4"
+                ],
+                [
+                  "8",
+                  "-10",
+                  "5",
+                  "-9",
+                  "5",
+                  "-6"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "20",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Crazyman has decided to tile the floor of his lab in Siruseri with red and green square tiles. He is a very organized person and wants the tiling to be symmetric. His lab floor requires $M$ tiles from north to south and 2$N$ tiles from east to west. He has decided to use $M$ · $N$ red tiles to tile the western half of his lab and $M$ · $N$ green tiles to tile the eastern half."
+        },
+        {
+          "type": "paragraph",
+          "text": "The workers had tiled the lab to perfection, but when Crazyman went out to have lunch, a mischievous person came in, noticed that the cement had not yet set, and swapped some red and green tiles."
+        },
+        {
+          "type": "paragraph",
+          "text": "When Crazyman came back from lunch, he was heartbroken. He decided to fix the problem himself. Being crazy, however, he decided to restore the symmetry by a sequence of swaps, each involving only adjacent tiles."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, suppose the tiles have been rearranged as follows, where R denotes a red tile and G a green tile. In this case, Crazyman needs 12 swaps of adjacent tiles to restore the tiles to their original arrangement."
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "R",
+              "G",
+              "R",
+              "R",
+              "G",
+              "G",
+              "G",
+              "G"
+            ],
+            [
+              "R",
+              "G",
+              "R",
+              "R",
+              "G",
+              "G",
+              "G",
+              "G"
+            ],
+            [
+              "R",
+              "R",
+              "R",
+              "R",
+              "G",
+              "R",
+              "G",
+              "G"
+            ],
+            [
+              "R",
+              "R",
+              "R",
+              "R",
+              "G",
+              "R",
+              "G",
+              "G"
+            ]
+          ],
+          "caption": "West ← → East"
+        },
+        {
+          "type": "paragraph",
+          "text": "West East"
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, find the minimum number of adjacent pairs of tiles that Crazyman has to swap to restore the symmetry."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "R",
+                  "G",
+                  "R",
+                  "R",
+                  "G",
+                  "G",
+                  "R",
+                  "G"
+                ],
+                [
+                  "R",
+                  "G",
+                  "R",
+                  "R",
+                  "G",
+                  "G",
+                  "G",
+                  "G"
+                ],
+                [
+                  "G",
+                  "G",
+                  "R",
+                  "R",
+                  "G",
+                  "R",
+                  "G",
+                  "G"
+                ],
+                [
+                  "R",
+                  "R",
+                  "R",
+                  "R",
+                  "G",
+                  "R",
+                  "R",
+                  "G"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "22",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "R",
+                  "G",
+                  "R",
+                  "R",
+                  "G",
+                  "G",
+                  "G",
+                  "R",
+                  "R",
+                  "G"
+                ],
+                [
+                  "R",
+                  "R",
+                  "G",
+                  "R",
+                  "R",
+                  "R",
+                  "G",
+                  "G",
+                  "G",
+                  "R"
+                ],
+                [
+                  "G",
+                  "G",
+                  "R",
+                  "G",
+                  "G",
+                  "G",
+                  "R",
+                  "G",
+                  "G",
+                  "G"
+                ],
+                [
+                  "R",
+                  "R",
+                  "G",
+                  "G",
+                  "R",
+                  "R",
+                  "R",
+                  "R",
+                  "G",
+                  "R"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "45",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "G",
+                  "G",
+                  "R",
+                  "R",
+                  "G",
+                  "G",
+                  "R",
+                  "R"
+                ],
+                [
+                  "G",
+                  "G",
+                  "R",
+                  "R",
+                  "G",
+                  "G",
+                  "G",
+                  "G"
+                ],
+                [
+                  "G",
+                  "G",
+                  "R",
+                  "R",
+                  "G",
+                  "R",
+                  "G",
+                  "G"
+                ],
+                [
+                  "R",
+                  "R",
+                  "R",
+                  "R",
+                  "G",
+                  "R",
+                  "R",
+                  "R"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "38",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Akash has inherited an open field. He wants to build a wall to enclose a rectangular portion in the northwest (top left) corner. He has surveyed his field and divided it into squares. The four walls he plans to build will each be one square thick."
+        },
+        {
+          "type": "paragraph",
+          "text": "For some of the squares on his field, Akash will make a profit if builds a wall through it because he can sell off the timber from the trees he will cut down. For other squares, he will make a loss because he has to do some levelling."
+        },
+        {
+          "type": "paragraph",
+          "text": "Akash is not very particular about the total area that is enclosed by the walls he builds—it could even be zero!—but he would like to ensure that it has four distinct sides, so each side of the rectangle he chooses should be least two squares long. And, of course, his aim is to maximize the profit (or minimize the loss) that he makes by building his walled enclosure."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, suppose his field is as follows, where the number in each square represents the profit (if it is positive) or loss (if it is negative) if he builds a wall through it."
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "−1",
+              "2",
+              "−3",
+              "4",
+              "−5"
+            ],
+            [
+              "2",
+              "−3",
+              "4",
+              "−5",
+              "6"
+            ],
+            [
+              "−3",
+              "−4",
+              "5",
+              "6",
+              "−7"
+            ],
+            [
+              "4",
+              "−5",
+              "6",
+              "−7",
+              "8"
+            ]
+          ],
+          "caption": null
+        },
+        {
+          "type": "paragraph",
+          "text": "If he builds a wall along the outer boundary of squares, his net profit is −1 + 2 − 3 + 4 − 5 + 6 − 7 + 8 − 7 + 6 − 5 + 4 − 3 + 2 = 1. On the other hand, if he encloses the first three rows from the top and the first three columns from the left, his net profit is −1 + 2 − 3 + 4 + 5 − 4 − 3 + 2 = 2. Remember that his enclosure must be at the northwest corner of the field, so it must include the top left corner square. He cannot, for instance, choose the bottom right corner and build a wall in the last two rows and three columns, even though it would give him a profit of 5 + 6 + −7 + 8 − 7 + 6 = 11. For each of the fields below, calculate the best profit (or minimum loss) that Akash can achieve while building his rectangular enclosure in the northwest corner."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "−1",
+                  "1",
+                  "−7",
+                  "6",
+                  "−1",
+                  "5"
+                ],
+                [
+                  "3",
+                  "−2",
+                  "4",
+                  "−4",
+                  "1",
+                  "−7"
+                ],
+                [
+                  "−2",
+                  "4",
+                  "−3",
+                  "7",
+                  "−1",
+                  "1"
+                ],
+                [
+                  "1",
+                  "−3",
+                  "6",
+                  "−1",
+                  "2",
+                  "−1"
+                ],
+                [
+                  "−3",
+                  "1",
+                  "−1",
+                  "2",
+                  "−2",
+                  "1"
+                ],
+                [
+                  "5",
+                  "−3",
+                  "1",
+                  "−4",
+                  "1",
+                  "−1"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "7",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "−4",
+                  "7",
+                  "−5",
+                  "7",
+                  "−6",
+                  "7"
+                ],
+                [
+                  "3",
+                  "−4",
+                  "3",
+                  "−4",
+                  "7",
+                  "−2"
+                ],
+                [
+                  "−7",
+                  "7",
+                  "−4",
+                  "5",
+                  "−4",
+                  "6"
+                ],
+                [
+                  "2",
+                  "−7",
+                  "6",
+                  "−3",
+                  "3",
+                  "−5"
+                ],
+                [
+                  "−3",
+                  "3",
+                  "−2",
+                  "5",
+                  "−3",
+                  "7"
+                ],
+                [
+                  "6",
+                  "−6",
+                  "5",
+                  "−3",
+                  "5",
+                  "−3"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "11",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "",
+          "content": [
+            {
+              "type": "table",
+              "headers": null,
+              "rows": [
+                [
+                  "−12",
+                  "1",
+                  "−7",
+                  "9",
+                  "−5",
+                  "5"
+                ],
+                [
+                  "2",
+                  "−9",
+                  "3",
+                  "−6",
+                  "11",
+                  "−7"
+                ],
+                [
+                  "−4",
+                  "12",
+                  "−10",
+                  "12",
+                  "−11",
+                  "5"
+                ],
+                [
+                  "3",
+                  "−1",
+                  "3",
+                  "−1",
+                  "12",
+                  "−9"
+                ],
+                [
+                  "−8",
+                  "1",
+                  "−11",
+                  "3",
+                  "−3",
+                  "5"
+                ],
+                [
+                  "7",
+                  "−3",
+                  "9",
+                  "−5",
+                  "11",
+                  "−5"
+                ]
+              ],
+              "caption": null
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": "7",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

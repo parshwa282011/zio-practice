@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2021",
+  "year": 2021,
+  "title": "ZIO 2021",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2021/zio2021/zio2021-question-paper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2021/zio2021/zio2021-solutions.pdf",
+  "editorialUrls": [],
+  "metadata": {
+    "durationMinutes": null,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The question paper carries 80 marks, broken up into four problems of 20 marks each. Each problem has three Test Cases. If you solve all three Test Cases correctly, you get 20 marks for that problem. Otherwise, you get 5 marks for each Test Case that you solve correctly.",
+      "All the 4 × 3 = 12 Test Cases appear as separate Ques-tions in the right panel (“Question Palette”). The first three Questions correspond to the three Test Cases of Problem 1, the next three correspond to the three Test Cases of Problem 2 and so on. A question icon turning green in the Question Palette, does not mean that it is correct. It just denotes that you have attempted it. All the questions will be evaluated later.",
+      "Attempt all questions. There are no optional questions.",
+      "There are no negative marks.",
+      "All expected answers are integers. Type in only the in-teger. So, if your answer is “162”, enter only “162”. Not “0162”, or “162.0”, etc.",
+      "Remember to save each answer. Only your final saved answers will be considered.",
+      "Near the top-right corner, you should be able to see a calculator icon. Clicking it pops up a calculator which you may use."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A $k$-bounded list of length $n$ is a sequence [$x_{1}, x_{2}, . . . , x_{n}$] where each $x_{j}$ is an integer between 0 and $k$, inclusive. A good list is one that does not contain three consecutive values 0, 1, 0. For example, for $n$ = 4 and $k$ = 2, [2, 0, 0, 1] and [1, 0, 0, 1] are good lists while [0, 1, 0, 2] and [0, 0, 1, 0] are not."
+        },
+        {
+          "type": "paragraph",
+          "text": "Let good($n, k$) be the number of good $k$-bounded lists of length $n$. For instance, the good 1-bounded lists of length 2 are {[0, 0], [0, 1], [1, 0], [1, 1]}, so good(2, 1) = 4. Similarly, you can check that good(4, 1) = 12 and good(3, 2) = 26."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your task is to compute good($n, k$) for the following values of $n$ and $k$."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "good(7, 1)",
+          "answerType": "integer",
+          "officialAnswer": "65",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "good(7, 3)",
+          "answerType": "integer",
+          "officialAnswer": "15163",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "good(20, 1)",
+          "answerType": "integer",
+          "officialAnswer": "97229",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Given a list [$x_{1}, x_{2}, . . . , x_{n}$] of integers, a prefix of length $j$, for 1 ≤ $j$ ≤ $n$, is the list [$x_{1}, x_{2}, . . . , x_{j}$ ], and the corresponding prefix sum is $x_{1}$ + $x_{2}$ + · · · + $x_{j}$ . The integers in the list may be negative, so a prefix sum could be negative."
+        },
+        {
+          "type": "paragraph",
+          "text": "A list of length $n$ has $n$ prefixes and $n$ corresponding prefix sums. Our goal is to ensure that no prefix sum is negative. To achieve this, we can flip the signs of some of the negative values in the list. For instance, one way to ensure that all prefix sums are non-negative is to flip the sign of each negative number, making all values non-negative."
+        },
+        {
+          "type": "paragraph",
+          "text": "Our goal is to identify the minimum number of values in the list whose sign needs to be flipped so that no prefix sum is negative. For example, if the list is [3, −3, −2, −1, 0], we can flip the sign of just one value, −2, to get [3, −3, 2, −1, 0]. The prefix sums of this new list are (3, 0, 2, 1, 1), which are all non-negative."
+        },
+        {
+          "type": "paragraph",
+          "text": "For each of the following lists, find the minimum number of values whose signs need to be flipped to ensure that all prefix-sums are non-negative."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "[3, −2, 3, −1, −2, −2, −4]",
+          "answerType": "integer",
+          "officialAnswer": "2",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "[−15, −12, −10, −13, −2, −3, −17, −19, −5, −9]",
+          "answerType": "integer",
+          "officialAnswer": "4",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "[−12, −2, −16, −19, −9, −3, −7, −11, −17, −3, −15, −10, −10, −15, −8]",
+          "answerType": "integer",
+          "officialAnswer": "5",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        2
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We call an integer solid if it is positive and we do not need to use the digit 0 to write it down in base 10. For example, 115 is solid, but 10 and 1205 are not. The $10^{\\text{th}}$ solid integer is 11 because the first 10 solid integers are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. For each of the following values of $n$, you have to compute the $n^{\\text{th}}$ solid integer."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "$n$ = 100",
+          "answerType": "integer",
+          "officialAnswer": "121",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "$n$ = 2000",
+          "answerType": "integer",
+          "officialAnswer": "2662",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "$n$ = 100000",
+          "answerType": "integer",
+          "officialAnswer": "162151",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "We are given two positive integers $x$ and $y$. We want to update $x$ in a sequence of steps to make it equal to $y$. A single update to $x$ consists of one of the following steps, where $k$ is a fixed positive integer."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Multiply $x$ by $k$",
+            "Subtract 1 from $x$"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, if $x$ = 2, $y$ = 7 and $k$ = 2, we can convert $x$ to $y$ in 3 steps, as follows."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Multiply $x$ by $k$ to get 4",
+            "Multiply $x$ by $k$ to get 8",
+            "Subtract 1 from $x$ to get 7"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Let convert($x, y, k$) be the minimum number of steps needed to convert $x$ to $y$ using $k$. We can check that convert(2, 7, 2) = 3, because we cannot do better than the steps described above."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compute convert($x, y, k$) for the following values of $x$, $y$ and $k$:"
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "convert(3, 10, 2)",
+          "answerType": "integer",
+          "officialAnswer": "3",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "convert(4, 92, 3)",
+          "answerType": "integer",
+          "officialAnswer": "7",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "convert(11, 104250, 2)",
+          "answerType": "integer",
+          "officialAnswer": "24",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

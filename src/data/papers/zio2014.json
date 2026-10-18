@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "id": "zio-2014",
+  "year": 2014,
+  "title": "ZIO 2014",
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "questionPaperUrl": "https://www.iarcs.org.in/inoi/2014/zio2014/zio2014-qpaper.pdf",
+  "answerKeyUrl": "https://www.iarcs.org.in/inoi/2014/zio2014/zio2014-solutions.pdf",
+  "editorialUrls": [
+    {
+      "problem": 1,
+      "url": "https://discuss.codechef.com/t/zio14001-editorial/44935"
+    },
+    {
+      "problem": 2,
+      "url": "https://discuss.codechef.com/t/zio14002-editorial/57399"
+    },
+    {
+      "problem": 3,
+      "url": "https://discuss.codechef.com/t/zio14003-editorial/52664"
+    },
+    {
+      "problem": 4,
+      "url": "https://discuss.codechef.com/t/zio14004-editorial/48905"
+    }
+  ],
+  "metadata": {
+    "durationMinutes": 180,
+    "maximumMarks": 80,
+    "markingSchemeVerified": true,
+    "scoring": {
+      "perPart": 5,
+      "allCorrect": 20
+    },
+    "instructions": [
+      "The duration of the examination is 3 hours.",
+      "Calculators, log tables and other aids are not permitted.",
+      "The question paper carries 80 marks, broken up into four questions of 20 marks each. Each question has three parts. If you solve all three parts correctly, you get 20 marks for that question. Otherwise, you get 5 marks for each part that you solve correctly.",
+      "Attempt all questions. There are no optional questions.",
+      "There is a separate Answer Sheet. To get full credit, you must write the final answer in the space provided on the Answer Sheet.",
+      "Write only your final answers on the Answer Sheet. Do not use the Answer Sheet for rough work. Submit all rough work on separate sheets.",
+      "Make sure you fill out your contact details on the Answer Sheet as completely and accurately as possible. We will use this information to contact you in case you qualify for the second round."
+    ],
+    "notes": [],
+    "attribution": "Question paper and answer key © their authors (IARCS). Source: https://www.iarcs.org.in/ via the CodeChef ZIO archive."
+  },
+  "verification": {
+    "questionsReviewed": true,
+    "answersReviewed": true,
+    "reviewedOn": "2026-10-18",
+    "reviewNotes": "Question text compared word-for-word with the PDF (scripts/verify-papers.mjs); figures and tables compared by eye against the rendered PDF page; answers compared with the official key."
+  },
+  "problems": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Problem 1",
+      "sourcePages": [
+        3
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "In Gutenberg’s printing press, each line of text is assembled by placing individual metal letters in a rack, applying ink to the letters and then pressing them onto paper."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gutenberg needs to print $N$ words using his printing press, one word at a time. The printing press allows the following operations:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Add a letter to the end of the word currently in the rack.",
+            "Remove the last letter from the word currently in the rack.",
+            "Print the word currently in the rack."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Initially, the rack is empty; it contains no metal letters. At the end of printing, Gutenberg is allowed to leave letters in the rack. Also, he is allowed to print the words in any order that he likes. As each operation requires time, he wants to minimize the total number of operations."
+        },
+        {
+          "type": "paragraph",
+          "text": "For instance, if Gutenberg is supposed to print out three words, {print, the, poem}, he could do it using 20 operations:"
+        },
+        {
+          "type": "paragraph",
+          "text": "add t, add h, add e, print, remove last letter (three times), add p, add o,"
+        },
+        {
+          "type": "paragraph",
+          "text": "add e, add m, print, remove last letter (three times), add r, add i, add n,"
+        },
+        {
+          "type": "paragraph",
+          "text": "add t, print."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, determine the minimum number of operations required to print out all the words in the set, in any order, one word at a time."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p1a",
+          "label": "a",
+          "prompt": "{ there, theirs, her, shore, three, tree, rest, hence, thorium,\ntherefore, threshold }",
+          "answerType": "integer",
+          "officialAnswer": "88",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1b",
+          "label": "b",
+          "prompt": "{ problem, emblem, printer, pradeep, poland, holland, private, patrick, trick, roller, pin }",
+          "answerType": "integer",
+          "officialAnswer": "120",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p1c",
+          "label": "c",
+          "prompt": "{ dimension, division, divide, deviation, envelope, distance,\ndirection, direct, derive, development }",
+          "answerType": "integer",
+          "officialAnswer": "115",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Problem 2",
+      "sourcePages": [
+        3,
+        4,
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A travelling salesman visits a number of cities on work. He spends a day in each city and then takes either a bus, train or plane to the next city. Which city he visits next is determined uniquely by the mode of travel he chooses. For instance, we could have the following table describing his possible movements."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Current city",
+            "by bus",
+            "by train",
+            "by plane"
+          ],
+          "rows": [
+            [
+              "Bangalore",
+              "Mumbai",
+              "Chennai",
+              "Kolkata"
+            ],
+            [
+              "Chennai",
+              "Bangalore",
+              "Bangalore",
+              "Mumbai"
+            ],
+            [
+              "Delhi",
+              "Kolkata",
+              "Mumbai",
+              "Chennai"
+            ],
+            [
+              "Kolkata",
+              "Delhi",
+              "Delhi",
+              "Mumbai"
+            ],
+            [
+              "Mumbai",
+              "Bangalore",
+              "Delhi",
+              "Bangalore"
+            ]
+          ],
+          "caption": "Next city, by mode of travel"
+        },
+        {
+          "type": "paragraph",
+          "text": "Suppose he starts in Chennai and travels only by plane. Then, after 5 journeys, he would be in Bangalore, having followed the route $\\text{Chennai} \\xrightarrow{\\text{plane}} \\text{Mumbai} \\xrightarrow{\\text{plane}} \\text{Bangalore} \\xrightarrow{\\text{plane}} \\text{Kolkata} \\xrightarrow{\\text{plane}} \\text{Mumbai} \\xrightarrow{\\text{plane}} \\text{Bangalore}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "If he starts in Delhi and travels through cycles of [train, bus, train, plane], then after 9 journeys he would be in Bangalore, having followed the route $\\text{Delhi} \\xrightarrow{\\text{train}} \\text{Mumbai} \\xrightarrow{\\text{bus}} \\text{Bangalore} \\xrightarrow{\\text{train}} \\text{Chennai} \\xrightarrow{\\text{plane}} \\text{Mumbai} \\xrightarrow{\\text{train}} \\text{Delhi} \\xrightarrow{\\text{bus}} \\text{Kolkata} \\xrightarrow{\\text{train}} \\text{Delhi} \\xrightarrow{\\text{plane}} \\text{Chennai} \\xrightarrow{\\text{train}} \\text{Bangalore}$."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suppose we have 12 cities numbered {0, 1, 2, . . . , 11}, with the salesman’s movements given by the table below, and the salesman travels through cycles of [bus, train, plane, plane, plane, bus, train]. (Note that some journeys take him back to the same city, such as $4 \\xrightarrow{\\text{bus}} 4$ and $8 \\xrightarrow{\\text{train}} 8$.)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Current city",
+            "by bus",
+            "by train",
+            "by plane"
+          ],
+          "rows": [
+            [
+              "0",
+              "2",
+              "0",
+              "7"
+            ],
+            [
+              "1",
+              "5",
+              "4",
+              "10"
+            ],
+            [
+              "2",
+              "7",
+              "2",
+              "0"
+            ],
+            [
+              "3",
+              "9",
+              "7",
+              "2"
+            ],
+            [
+              "4",
+              "4",
+              "10",
+              "5"
+            ],
+            [
+              "5",
+              "1",
+              "6",
+              "6"
+            ],
+            [
+              "6",
+              "6",
+              "5",
+              "1"
+            ],
+            [
+              "7",
+              "0",
+              "3",
+              "8"
+            ],
+            [
+              "8",
+              "3",
+              "8",
+              "11"
+            ],
+            [
+              "9",
+              "11",
+              "9",
+              "3"
+            ],
+            [
+              "10",
+              "10",
+              "1",
+              "4"
+            ],
+            [
+              "11",
+              "8",
+              "11",
+              "9"
+            ]
+          ],
+          "caption": "Next city, by mode of travel"
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, you are given the number of journeys in the salesman’s tour and two starting cities. You have to identify the city that he reaches at the end of his tour from each of the starting cities, assuming that his moves are given by the preceding table and that he chooses his mode of transport in cycles of [bus, train, plane, plane, plane, bus, train]."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p2a",
+          "label": "a",
+          "prompt": "103 journeys, starting from 2 and from 6.",
+          "fields": [
+            {
+              "id": "first",
+              "label": "Final city from the first starting city"
+            },
+            {
+              "id": "second",
+              "label": "Final city from the second starting city"
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": {
+            "first": "7",
+            "second": "1"
+          },
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2b",
+          "label": "b",
+          "prompt": "159 journeys, starting from 0 and from 10.",
+          "fields": [
+            {
+              "id": "first",
+              "label": "Final city from the first starting city"
+            },
+            {
+              "id": "second",
+              "label": "Final city from the second starting city"
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": {
+            "first": "11",
+            "second": "1"
+          },
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p2c",
+          "label": "c",
+          "prompt": "207 journeys, starting from 4 and from 7.",
+          "fields": [
+            {
+              "id": "first",
+              "label": "Final city from the first starting city"
+            },
+            {
+              "id": "second",
+              "label": "Final city from the second starting city"
+            }
+          ],
+          "answerType": "integer",
+          "officialAnswer": {
+            "first": "4",
+            "second": "11"
+          },
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Problem 3",
+      "sourcePages": [
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "J. Bond has to break into the headquarters of an evil organization and steal important documents. The documents are in a safe that can only be opened by entering the correct code into the keypad, which is a 3 × 3 grid as shown on the right."
+        },
+        {
+          "type": "table",
+          "headers": null,
+          "rows": [
+            [
+              "1",
+              "2",
+              "3"
+            ],
+            [
+              "4",
+              "5",
+              "6"
+            ],
+            [
+              "7",
+              "8",
+              "9"
+            ]
+          ],
+          "caption": "The keypad (shown to the right of the text in the original paper)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bond has been told that every two consecutive digits in the code will always be adjacent keys on the keypad. For example, the digit 1 will only be followed by a 2 or 4, the digit 5 will only be followed by a 2, 4, 6 or 8, and so on. So 3252 and 12369 are valid codes, but 1234 is not (3 is not adjacent to 4 on the keypad) and 55 is not (5 is not adjacent to 5 on the keypad)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bond also knows the first digit of the code and the length of the code. From this, he would like to compute the number of possible codes he has to try. For instance, if the first digit is 4 and the length of the code is 3, then there are 8 possible codes, namely {412, 414, 452, 454, 456, 458, 474, 478}."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, given the first digit of the code and the number of digits in the code, help Bond compute the total number of possible secret codes. Report your answer modulo 100—that is, only report the last two digits of the final answer. If the second last digit is 0, you can omit it. For instance, if the last two digits are 08, both 08 and 8 will be accepted as valid answers."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p3a",
+          "label": "a",
+          "prompt": "First digit 2, number of digits 8.",
+          "answerType": "integer",
+          "officialAnswer": "36",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3b",
+          "label": "b",
+          "prompt": "First digit 5, number of digits 10.",
+          "answerType": "integer",
+          "officialAnswer": "84",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p3c",
+          "label": "c",
+          "prompt": "First digit 9, number of digits 13.",
+          "answerType": "integer",
+          "officialAnswer": "08",
+          "acceptedAnswers": [
+            "8"
+          ],
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "number": 4,
+      "title": "Problem 4",
+      "sourcePages": [
+        5
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A subsequence of a word is obtained by dropping some letters from it. The letters that are dropped need not be consecutive. For instance, ba, bna and banaa are all subsequences of the word banana."
+        },
+        {
+          "type": "paragraph",
+          "text": "We are interested in counting the number of distinct subsequences of a fixed length of a given word. For example, the word banana has 11 different subsequences of length 3: {aaa, aan, ana, ann, baa, ban, bna, bnn, naa, nan, nna}."
+        },
+        {
+          "type": "paragraph",
+          "text": "Observe that the number of subsequences of length $k$ of abcbbcaacaab that end in a ‘c’ is the same as the number of subsequences of length $k$−1 of abcbbcaa."
+        },
+        {
+          "type": "paragraph",
+          "text": "In each of the following cases, you are given a word and a number $N$ . You have to compute the number of different subsequences of length $N$ of the given word."
+        }
+      ],
+      "parts": [
+        {
+          "id": "p4a",
+          "label": "a",
+          "prompt": "tinnitus, 3",
+          "answerType": "integer",
+          "officialAnswer": "34",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4b",
+          "label": "b",
+          "prompt": "gobbledygook, 4",
+          "answerType": "integer",
+          "officialAnswer": "281",
+          "marks": null,
+          "explanation": null
+        },
+        {
+          "id": "p4c",
+          "label": "c",
+          "prompt": "gargantuan, 5",
+          "answerType": "integer",
+          "officialAnswer": "212",
+          "marks": null,
+          "explanation": null
+        }
+      ]
+    }
+  ]
+}

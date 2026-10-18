@@ -1,0 +1,20 @@
+// Dev helper: open a paper in exam mode and screenshot it.  node scripts/shot-exam.mjs <year> <out.png> [width] [height] [theme] [problemIndex] [drawer]
+import { chromium } from 'playwright-core';
+const [year, out, w = '1280', hgt = '900', theme = 'light', prob = '0', drawer = ''] = process.argv.slice(2);
+const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' });
+const ctx = await browser.newContext({ viewport: { width: Number(w), height: Number(hgt) }, colorScheme: theme });
+const page = await ctx.newPage();
+const errors = [];
+page.on('pageerror', (e) => errors.push('pageerror: ' + e.message));
+page.on('console', (m) => { if (m.type() === 'error') errors.push('console: ' + m.text()); });
+await page.goto(`http://localhost:4173/#/paper/${year}`);
+await page.waitForSelector('.start-card');
+await page.check('input[value="untimed"]');
+await page.click('#start-btn');
+await page.waitForSelector('.exam');
+if (prob !== '0') await page.click(`.problem-tab >> nth=${prob}`);
+if (drawer) await page.click('.drawer-toggle');
+await page.waitForTimeout(600);
+await page.screenshot({ path: out, fullPage: false });
+console.log(errors.length ? errors.join('\n') : 'no errors');
+await browser.close();

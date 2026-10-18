@@ -1,0 +1,704 @@
+{
+  "schemaVersion": 1,
+  "sourcePage": "https://www.codechef.com/ioi/zio",
+  "checkedOn": "2026-10-18",
+  "papers": [
+    {
+      "id": "zio-2023",
+      "year": 2023,
+      "title": "ZIO 2023",
+      "file": "zio2023.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": null,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2023/zio2023/zio2023-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2023/zio2023/zio2023-solutions.pdf",
+      "editorialUrls": []
+    },
+    {
+      "id": "zio-2022",
+      "year": 2022,
+      "title": "ZIO 2022",
+      "file": "zio2022.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": null,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2022/zio2022/zio2022-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2022/zio2022/zio2022-solutions.pdf",
+      "editorialUrls": []
+    },
+    {
+      "id": "zio-2021",
+      "year": 2021,
+      "title": "ZIO 2021",
+      "file": "zio2021.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": null,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2021/zio2021/zio2021-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2021/zio2021/zio2021-solutions.pdf",
+      "editorialUrls": []
+    },
+    {
+      "id": "zio-2020",
+      "year": 2020,
+      "title": "ZIO 2020",
+      "file": "zio2020.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": null,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2020/zio2020/zio2020-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2020/zio2020/zio2020-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio20001-editorial/50329"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio20002-editorial/50910"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio20003-editorial/50815"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio20004-editorial/65539"
+        }
+      ]
+    },
+    {
+      "id": "zio-2019",
+      "year": 2019,
+      "title": "ZIO 2019",
+      "file": "zio2019.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": null,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2019/zio2019/zio2019-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2019/zio2019/zio2019-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio19001-editorial/52940"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio19002-editorial/52931"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio19003-editorial/52938"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio19004-editorial/44728"
+        }
+      ]
+    },
+    {
+      "id": "zio-2018",
+      "year": 2018,
+      "title": "ZIO 2018",
+      "file": "zio2018.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": null,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2018/zio2018/zio2018-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2018/zio2018/zio2018-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio18001-editorial/48592"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio18002-editorial/52155"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio18003-editorial/52675"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio18004-editorial/58063"
+        }
+      ]
+    },
+    {
+      "id": "zio-2017",
+      "year": 2017,
+      "title": "ZIO 2017",
+      "file": "zio2017.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": null,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2017/zio2017/zio2017-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2017/zio2017/zio2017-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio17001-editorial/49071"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio17002-editorial/52156"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio17003-editorial/48993"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio17004-editorial/48901"
+        }
+      ]
+    },
+    {
+      "id": "zio-2016",
+      "year": 2016,
+      "title": "ZIO 2016",
+      "file": "zio2016.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": null,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2016/zio2016/zio2016-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2016/zio2016/zio2016-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio16001-editorial/48583"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio16002-editorial/52117"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio16003-editorial/48661"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio16004-editorial/52120"
+        }
+      ]
+    },
+    {
+      "id": "zio-2015",
+      "year": 2015,
+      "title": "ZIO 2015",
+      "file": "zio2015.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": 180,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2015/zio2015/zio2015-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2015/zio2015/zio2015-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio15001-editorial/48576"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio15002-editorial/48582"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio15003-editorial/57527"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio15004-editorial/64521"
+        }
+      ]
+    },
+    {
+      "id": "zio-2014",
+      "year": 2014,
+      "title": "ZIO 2014",
+      "file": "zio2014.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": 180,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2014/zio2014/zio2014-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2014/zio2014/zio2014-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio14001-editorial/44935"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio14002-editorial/57399"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio14003-editorial/52664"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio14004-editorial/48905"
+        }
+      ]
+    },
+    {
+      "id": "zio-2013",
+      "year": 2013,
+      "title": "ZIO 2013",
+      "file": "zio2013.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": 180,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2013/zio2013/zio2013-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2013/zio2013/zio2013-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio13001-editorial/45592"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio13002-editorial/50614"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio13003-editorial/59463"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio13004-editorial/54374"
+        }
+      ]
+    },
+    {
+      "id": "zio-2012",
+      "year": 2012,
+      "title": "ZIO 2012",
+      "file": "zio2012.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": 180,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2012/zio2012/zio2012-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2012/zio2012/zio2012-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio12001-editorial/59761"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio12002-editorial/60185"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio12003-editorial/58840"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio12004-editorial/58074"
+        }
+      ]
+    },
+    {
+      "id": "zio-2011",
+      "year": 2011,
+      "title": "ZIO 2011",
+      "file": "zio2011.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": 180,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2011/zio2011/zio2011-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2011/zio2011/zio2011-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio11001-editorial/53955"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio11002-editorial/44938"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio11003-editorial/55404"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio11004-editorial/51048"
+        }
+      ]
+    },
+    {
+      "id": "zio-2010",
+      "year": 2010,
+      "title": "ZIO 2010",
+      "file": "zio2010.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": 180,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2010/zio2010/zio2010-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2010/zio2010/zio2010-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio10001-editorial/65581"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio10002-editorial/46104"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio10003-editorial/51165"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio10004-editorial/51653"
+        }
+      ]
+    },
+    {
+      "id": "zio-2009",
+      "year": 2009,
+      "title": "ZIO 2009",
+      "file": "zio2009.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": 180,
+      "maximumMarks": 80,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2009/zio2009/zio2009-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2009/zio2009/zio2009-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio09001-editorial/51698"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio09002-editorial/52659"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio09003-editorial/66075"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio09004-editorial/70296"
+        }
+      ]
+    },
+    {
+      "id": "zio-2008",
+      "year": 2008,
+      "title": "ZIO 2008",
+      "file": "zio2008.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 16,
+      "durationMinutes": 180,
+      "maximumMarks": 100,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2008/zio2008/zio2008-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2008/zio2008/zio2008-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio08001-editorial/66364"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio08002-editorial/54375"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio08003-editorial/55171"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio08004-editorial/59804"
+        }
+      ]
+    },
+    {
+      "id": "zio-2007",
+      "year": 2007,
+      "title": "ZIO 2007",
+      "file": "zio2007.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 5,
+      "parts": 15,
+      "durationMinutes": 180,
+      "maximumMarks": 100,
+      "markingSchemeVerified": true,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2007/zio2007/zio2007-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2007/zio2007/zio2007-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio07001-editorial/44805"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio07002-editorial/44814"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio07003-editorial/69707"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio07004-editorial/64538"
+        },
+        {
+          "problem": 5,
+          "url": "https://discuss.codechef.com/t/zio07005-editorial/66708"
+        }
+      ]
+    },
+    {
+      "id": "zio-2006",
+      "year": 2006,
+      "title": "ZIO 2006",
+      "file": "zio2006.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 4,
+      "parts": 12,
+      "durationMinutes": 120,
+      "maximumMarks": 60,
+      "markingSchemeVerified": false,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2006/zio2006/zio2006-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2006/zio2006/zio2006-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio06001-editorial/45588"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio06002-editorial/52108"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio06003-editorial/48956"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio06004-editorial/65779"
+        }
+      ]
+    },
+    {
+      "id": "zio-2005",
+      "year": 2005,
+      "title": "ZIO 2005",
+      "file": "zio2005.json",
+      "status": "ready",
+      "mode": "auto",
+      "problems": 5,
+      "parts": 15,
+      "durationMinutes": 180,
+      "maximumMarks": 75,
+      "markingSchemeVerified": false,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2005/zio2005/zio2005-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2005/zio2005/zio2005-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio05001-editorial/45048"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio05002-editorial/49168"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio05003-editorial/65753"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio05004-editorial/47822"
+        },
+        {
+          "problem": 5,
+          "url": "https://discuss.codechef.com/t/zio05005-editorial/52589"
+        }
+      ]
+    },
+    {
+      "id": "zio-2004",
+      "year": 2004,
+      "title": "ZIO 2004",
+      "file": "zio2004.json",
+      "status": "ready",
+      "mode": "mixed",
+      "problems": 5,
+      "parts": 15,
+      "durationMinutes": 180,
+      "maximumMarks": 75,
+      "markingSchemeVerified": false,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2004/zio2004/zio2004-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2004/zio2004/zio2004-solutions.pdf",
+      "editorialUrls": [
+        {
+          "problem": 1,
+          "url": "https://discuss.codechef.com/t/zio04001-editorial/47611"
+        },
+        {
+          "problem": 2,
+          "url": "https://discuss.codechef.com/t/zio04002-editorial/44591"
+        },
+        {
+          "problem": 3,
+          "url": "https://discuss.codechef.com/t/zio04003-editorial/44808"
+        },
+        {
+          "problem": 4,
+          "url": "https://discuss.codechef.com/t/zio04004-editorial/67044"
+        },
+        {
+          "problem": 5,
+          "url": "https://discuss.codechef.com/t/zio04005-editorial/45785"
+        }
+      ]
+    },
+    {
+      "id": "zio-2003",
+      "year": 2003,
+      "title": "ZIO 2003",
+      "file": "zio2003.json",
+      "status": "ready",
+      "mode": "mixed",
+      "problems": 5,
+      "parts": 11,
+      "durationMinutes": 150,
+      "maximumMarks": 75,
+      "markingSchemeVerified": false,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2003/zio2003/zio2003-question-paper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2003/zio2003/zio2003-solutions.pdf",
+      "editorialUrls": []
+    },
+    {
+      "id": "zio-2002",
+      "year": 2002,
+      "title": "ZIO 2002",
+      "file": "zio2002.json",
+      "status": "ready",
+      "mode": "self-check",
+      "problems": 6,
+      "parts": 11,
+      "durationMinutes": 180,
+      "maximumMarks": null,
+      "markingSchemeVerified": false,
+      "questionsReviewed": true,
+      "answersReviewed": true,
+      "questionPaperUrl": "https://www.iarcs.org.in/inoi/2002/zio2002/part-a-qpaper.pdf",
+      "answerKeyUrl": "https://www.iarcs.org.in/inoi/2002/zio2002/part-a-solutions.txt",
+      "editorialUrls": []
+    }
+  ]
+}

@@ -1,0 +1,1283 @@
+{
+  "2023": [
+    {
+      "id": "p3-example",
+      "problem": 3,
+      "page": 4,
+      "from": 612,
+      "to": 554,
+      "left": 90,
+      "right": 300,
+      "src": "figures/zio2023-p3-example.png",
+      "alt": "Triangular table for N = 3. Rows l = 1..3, columns r = 1..3: row 1 reads 1 2 2, row 2 reads 2 2, row 3 reads 3."
+    },
+    {
+      "id": "p3a",
+      "problem": 3,
+      "page": 5,
+      "from": 695,
+      "to": 623,
+      "left": 90,
+      "right": 300,
+      "src": "figures/zio2023-p3a.png",
+      "alt": "Triangular table for N = 4."
+    },
+    {
+      "id": "p3b",
+      "problem": 3,
+      "page": 5,
+      "from": 591,
+      "to": 461,
+      "left": 90,
+      "right": 350,
+      "src": "figures/zio2023-p3b.png",
+      "alt": "Triangular table for N = 8."
+    },
+    {
+      "id": "p3c",
+      "problem": 3,
+      "page": 5,
+      "from": 430,
+      "to": 198,
+      "left": 90,
+      "right": 500,
+      "src": "figures/zio2023-p3c.png",
+      "alt": "Triangular table for N = 15."
+    }
+  ],
+  "2022": [
+    {
+      "id": "p3-example",
+      "problem": 3,
+      "page": 3,
+      "from": 640,
+      "to": 420,
+      "cropTop": 640,
+      "cropBottom": 420,
+      "src": "figures/zio2022-p3-example.png",
+      "alt": "Example road network with six cities. Roads: 4-1 length 9, 2-1 length 3, 3-1 length 7, 5-3 length 4, 6-3 length 11."
+    },
+    {
+      "id": "p3a",
+      "problem": 3,
+      "page": 4,
+      "from": 750,
+      "to": 600,
+      "cropTop": 764,
+      "cropBottom": 600,
+      "src": "figures/zio2022-p3a.png",
+      "alt": "Road network (a): city 1 in the centre joined to cities 2, 3, 4, 5, 6, 7 and 8.",
+      "left": 150
+    },
+    {
+      "id": "p3b",
+      "problem": 3,
+      "page": 4,
+      "from": 568,
+      "to": 395,
+      "cropTop": 582,
+      "cropBottom": 425,
+      "src": "figures/zio2022-p3b.png",
+      "alt": "Road network (b): a path of cities 8-7-6-5-4-3-2-1.",
+      "left": 150
+    },
+    {
+      "id": "p3c",
+      "problem": 3,
+      "page": 4,
+      "from": 383,
+      "to": 215,
+      "cropTop": 383,
+      "cropBottom": 215,
+      "src": "figures/zio2022-p3c.png",
+      "alt": "Road network (c): a tree with 14 cities."
+    }
+  ],
+  "2016": [
+    {
+      "id": "p2-example",
+      "problem": 2,
+      "page": 3,
+      "table": true,
+      "from": 709,
+      "to": 665
+    },
+    {
+      "id": "p2a",
+      "problem": 2,
+      "page": 3,
+      "table": true,
+      "from": 382,
+      "to": 338,
+      "skip": [
+        "(a)"
+      ],
+      "markerY": 359
+    },
+    {
+      "id": "p2b",
+      "problem": 2,
+      "page": 3,
+      "table": true,
+      "from": 299,
+      "to": 255,
+      "skip": [
+        "(b)"
+      ],
+      "markerY": 276
+    },
+    {
+      "id": "p2c",
+      "problem": 2,
+      "page": 3,
+      "table": true,
+      "from": 216,
+      "to": 172,
+      "skip": [
+        "(c)"
+      ],
+      "markerY": 193
+    }
+  ],
+  "2015": [
+    {
+      "id": "p1-example",
+      "problem": 1,
+      "page": 3,
+      "table": true,
+      "from": 451,
+      "to": 436
+    },
+    {
+      "id": "p1a",
+      "problem": 1,
+      "page": 3,
+      "table": true,
+      "from": 285,
+      "to": 270
+    },
+    {
+      "id": "p1b",
+      "problem": 1,
+      "page": 3,
+      "table": true,
+      "from": 234,
+      "to": 219
+    },
+    {
+      "id": "p1c",
+      "problem": 1,
+      "page": 3,
+      "table": true,
+      "from": 182,
+      "to": 167
+    },
+    {
+      "id": "p2-yard",
+      "problem": 2,
+      "page": 4,
+      "from": 577,
+      "to": 492,
+      "cropTop": 592,
+      "cropBottom": 478,
+      "src": "figures/zio2015-p2-yard.png",
+      "alt": "Diagram of a shunting yard: an incoming track on the left, a stack-like yard in the middle and an outgoing track on the right."
+    },
+    {
+      "id": "p3-ex1",
+      "problem": 3,
+      "page": 5,
+      "table": true,
+      "from": 590,
+      "to": 560
+    },
+    {
+      "id": "p3-ex2",
+      "problem": 3,
+      "page": 5,
+      "table": true,
+      "from": 300,
+      "to": 270
+    },
+    {
+      "id": "p3-ex3",
+      "problem": 3,
+      "page": 5,
+      "table": true,
+      "from": 195,
+      "to": 165
+    },
+    {
+      "id": "p3-ex4",
+      "problem": 3,
+      "page": 6,
+      "table": true,
+      "from": 709,
+      "to": 680
+    },
+    {
+      "id": "p3a",
+      "problem": 3,
+      "page": 6,
+      "table": true,
+      "from": 621,
+      "to": 591,
+      "label": "a"
+    },
+    {
+      "id": "p3b",
+      "problem": 3,
+      "page": 6,
+      "table": true,
+      "from": 570,
+      "to": 540,
+      "label": "b"
+    },
+    {
+      "id": "p3c",
+      "problem": 3,
+      "page": 6,
+      "table": true,
+      "from": 521,
+      "to": 490,
+      "label": "c"
+    },
+    {
+      "id": "p4-graph",
+      "problem": 4,
+      "page": 6,
+      "from": 350,
+      "to": 160,
+      "cropTop": 365,
+      "cropBottom": 150,
+      "src": "figures/zio2015-p4-graph.png",
+      "alt": "Directed graph on airports 0 to 4 whose edges are labelled with flight types a, b and c. Airport 0 has a c-loop; airport 2 is the double-circled destination."
+    }
+  ],
+  "2013": [
+    {
+      "id": "p1a",
+      "problem": 1,
+      "page": 3,
+      "table": true,
+      "from": 332,
+      "to": 318,
+      "skip": [
+        "(a) K = 7,"
+      ],
+      "markerY": 324
+    },
+    {
+      "id": "p1b",
+      "problem": 1,
+      "page": 3,
+      "table": true,
+      "from": 290,
+      "to": 275,
+      "skip": [
+        "(b) K = 7,"
+      ],
+      "markerY": 282
+    },
+    {
+      "id": "p1c",
+      "problem": 1,
+      "page": 3,
+      "table": true,
+      "from": 248,
+      "to": 233,
+      "skip": [
+        "(c) K = 6,"
+      ],
+      "markerY": 240
+    },
+    {
+      "id": "p4a",
+      "problem": 4,
+      "page": 5,
+      "table": true,
+      "from": 558,
+      "to": 544,
+      "skip": [
+        "(a)"
+      ],
+      "markerY": 550
+    },
+    {
+      "id": "p4b",
+      "problem": 4,
+      "page": 5,
+      "table": true,
+      "from": 512,
+      "to": 497,
+      "skip": [
+        "(b)"
+      ],
+      "markerY": 504
+    },
+    {
+      "id": "p4c",
+      "problem": 4,
+      "page": 5,
+      "table": true,
+      "from": 466,
+      "to": 451,
+      "skip": [
+        "(c)"
+      ],
+      "markerY": 457
+    }
+  ],
+  "2012": [
+    {
+      "id": "p1-tree",
+      "problem": 1,
+      "page": 2,
+      "from": 447,
+      "to": 277,
+      "src": "figures/zio2012-p1-tree.png",
+      "alt": "Game tree starting from {2 black, 2 white}. Pick 1 black, 1 white leads to {1 black, 2 white}; Pick 2 black leads to {2 black, 0 white}... shown with arrows: from {2 black, 2 white}: pick 1 black 1 white -> {1 black, 2 white}; pick 2 black -> {1 black, 2 white}; pick 2 white -> {2 black, 0 white}. From {1 black, 2 white}: pick 1 black 1 white -> {0 black, 2 white}; pick 2 white -> {1 black, 0 white}. From {2 black, 0 white}: pick 2 black -> {1 black, 0 white}. From {0 black, 2 white}: pick 2 white -> {0 black, 0 white}."
+    },
+    {
+      "id": "p3-example",
+      "problem": 3,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "from": 610,
+      "to": 582
+    },
+    {
+      "id": "p3a",
+      "problem": 3,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "from": 496,
+      "to": 395,
+      "label": "a",
+      "keep": true,
+      "xMax": 300
+    },
+    {
+      "id": "p3b",
+      "problem": 3,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "from": 496,
+      "to": 395,
+      "label": "b",
+      "labelX": 305,
+      "xMin": 300
+    },
+    {
+      "id": "p3c",
+      "problem": 3,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "from": 368,
+      "to": 253,
+      "label": "c"
+    },
+    {
+      "id": "p4-notebook",
+      "problem": 4,
+      "page": 5,
+      "from": 443,
+      "to": 200,
+      "cropTop": 456,
+      "cropBottom": 188,
+      "src": "figures/zio2012-p4-notebook.png",
+      "alt": "Table of events (32 arrives, 43 arrives, 21 arrives, 65 arrives, 54 arrives, 11 arrives) with the shelf contents and notebook entries after each event. After the final event the shelves read: 11 43 54 / 21 65 / 32 and the notebook reads: 1 2 4 / 3 5 / 6."
+    },
+    {
+      "id": "p4a",
+      "problem": 4,
+      "page": 6,
+      "from": 575,
+      "to": 490,
+      "cropTop": 575,
+      "cropBottom": 478,
+      "label": "a",
+      "labelX": 194,
+      "src": "figures/zio2012-p4a.png",
+      "alt": "Case (a): final shelf contents 8 11 86 / 12 95 / 22 / 47; final notebook entry 1 3 5 / 2 7 / 4 / 6."
+    },
+    {
+      "id": "p4b",
+      "problem": 4,
+      "page": 6,
+      "from": 478,
+      "to": 417,
+      "cropTop": 478,
+      "cropBottom": 405,
+      "label": "b",
+      "labelX": 194,
+      "src": "figures/zio2012-p4b.png",
+      "alt": "Case (b): final shelf contents 6 34 52 66 / 39 63 / 50 98 / 54; final notebook entry 1 4 5 6 / 2 8 / 3 9 / 7."
+    },
+    {
+      "id": "p4c",
+      "problem": 4,
+      "page": 6,
+      "from": 405,
+      "to": 331,
+      "cropTop": 405,
+      "cropBottom": 318,
+      "label": "c",
+      "labelX": 194,
+      "src": "figures/zio2012-p4c.png",
+      "alt": "Case (c): final shelf contents 8 22 47 78 / 11 33 86 / 12 95 / 28 / 40; final notebook entry 1 3 6 7 / 2 4 8 / 5 11 / 9 / 10."
+    }
+  ],
+  "2011": [
+    {
+      "id": "p1-fig1",
+      "problem": 1,
+      "page": 3,
+      "crop": true,
+      "cropTop": 722,
+      "cropBottom": 580,
+      "left": 352,
+      "right": 540,
+      "src": "figures/zio2011-p1-fig1.png",
+      "alt": "Figure 1: a 4 \u00d7 4 grid of intersections showing the initial positions of the four guards (marked G)."
+    },
+    {
+      "id": "p1-fig2",
+      "problem": 1,
+      "page": 3,
+      "crop": true,
+      "cropTop": 558,
+      "cropBottom": 424,
+      "left": 352,
+      "right": 540,
+      "src": "figures/zio2011-p1-fig2.png",
+      "alt": "Figure 2: the 4 \u00d7 4 grid after the guard at (3,2) is moved down and across to (4,4) in three steps."
+    },
+    {
+      "id": "p1-fig3",
+      "problem": 1,
+      "page": 3,
+      "crop": true,
+      "cropTop": 400,
+      "cropBottom": 294,
+      "left": 352,
+      "right": 540,
+      "src": "figures/zio2011-p1-fig3.png",
+      "alt": "Figure 3: the 4 \u00d7 4 grid after the guard at (3,3) moves to (3,4) and the guard at (3,2) moves to (4,3)."
+    },
+    {
+      "id": "p1a",
+      "problem": 1,
+      "page": 4,
+      "from": 752,
+      "to": 540,
+      "label": "a",
+      "labelX": 107,
+      "keep": true,
+      "cropTop": 742,
+      "cropBottom": 600,
+      "left": 100,
+      "right": 292,
+      "src": "figures/zio2011-p1a.png",
+      "alt": "Case (a): a 9 \u00d7 9 grid of roads with the guards marked G."
+    },
+    {
+      "id": "p1b",
+      "problem": 1,
+      "page": 4,
+      "from": 751,
+      "to": 540,
+      "label": "b",
+      "labelX": 300,
+      "cropTop": 742,
+      "cropBottom": 538,
+      "left": 295,
+      "right": 545,
+      "src": "figures/zio2011-p1b.png",
+      "alt": "Case (b): a 13 \u00d7 13 grid of roads with the guards marked G."
+    },
+    {
+      "id": "p1c",
+      "problem": 1,
+      "page": 4,
+      "from": 535,
+      "to": 285,
+      "label": "c",
+      "labelX": 107,
+      "cropTop": 525,
+      "cropBottom": 282,
+      "left": 100,
+      "right": 420,
+      "src": "figures/zio2011-p1c.png",
+      "alt": "Case (c): a 16 \u00d7 16 grid of roads with the guards marked G.",
+      "mask": [
+        [
+          95,
+          518,
+          125,
+          540
+        ]
+      ]
+    },
+    {
+      "id": "p4-example",
+      "problem": 4,
+      "page": 6,
+      "from": 712,
+      "to": 635,
+      "cropTop": 722,
+      "cropBottom": 625,
+      "src": "figures/zio2011-p4-example.png",
+      "alt": "Example: initial array rows 00110, 01100, 11000, 10001, 00011; sorted array rows 00011, 00110, 01100, 10001, 11000; rightmost column 1, 0, 0, 1, 0."
+    }
+  ],
+  "2010": [
+    {
+      "id": "p1-example",
+      "problem": 1,
+      "page": 3,
+      "from": 546,
+      "to": 490,
+      "cropTop": 558,
+      "cropBottom": 482,
+      "src": "figures/zio2010-p1-example.png",
+      "alt": "Organisation chart: employees 2 and 3 report to employee 1; employee 4 reports to employee 3. Arrows point from an employee to his or her boss."
+    },
+    {
+      "id": "p1a",
+      "problem": 1,
+      "page": 3,
+      "from": 375,
+      "to": 205,
+      "keep": true,
+      "label": "a",
+      "labelX": 101,
+      "cropTop": 367,
+      "cropBottom": 205,
+      "left": 100,
+      "right": 322,
+      "mask": [
+        [
+          95,
+          355,
+          125,
+          380
+        ]
+      ],
+      "src": "figures/zio2010-p1a.png",
+      "alt": "Organisation chart (a) with 14 employees. Arrows point from each employee to his or her boss; employee 1 is the president."
+    },
+    {
+      "id": "p1b",
+      "problem": 1,
+      "page": 3,
+      "from": 375,
+      "to": 205,
+      "label": "b",
+      "labelX": 330,
+      "cropTop": 367,
+      "cropBottom": 205,
+      "left": 325,
+      "right": 545,
+      "mask": [
+        [
+          326,
+          355,
+          350,
+          380
+        ]
+      ],
+      "src": "figures/zio2010-p1b.png",
+      "alt": "Organisation chart (b) with 16 employees. Arrows point from each employee to his or her boss; employee 1 is the president."
+    },
+    {
+      "id": "p1c",
+      "problem": 1,
+      "page": 4,
+      "from": 758,
+      "to": 644,
+      "label": "c",
+      "labelX": 101,
+      "cropTop": 765,
+      "cropBottom": 636,
+      "left": 105,
+      "right": 340,
+      "mask": [
+        [
+          95,
+          752,
+          125,
+          768
+        ]
+      ],
+      "src": "figures/zio2010-p1c.png",
+      "alt": "Organisation chart (c) with 16 employees. Arrows point from each employee to his or her boss; employee 1 is the president."
+    },
+    {
+      "id": "p2-example",
+      "problem": 2,
+      "page": 4,
+      "from": 418,
+      "to": 404,
+      "cropTop": 430,
+      "cropBottom": 396,
+      "src": "figures/zio2010-p2-example.png",
+      "alt": "Four tiles: Tile 1 shows 1 and 2 (2 circled), Tile 2 shows 1 and 3, Tile 3 shows 1 and \u22121 (1 circled), Tile 4 shows \u22122 and \u22123."
+    },
+    {
+      "id": "p2a",
+      "problem": 2,
+      "page": 4,
+      "from": 290,
+      "to": 242,
+      "label": "a",
+      "labelX": 106,
+      "cropTop": 306,
+      "cropBottom": 238,
+      "left": 124,
+      "right": 450,
+      "src": "figures/zio2010-p2a.png",
+      "alt": "Ten tiles, each labelled with two numbers. Tile 1: 2 \u22122; Tile 2: \u22123 \u22122; Tile 3: \u22123 \u22121; Tile 4: 1 2; Tile 5: 1 \u22125; Tile 6: 4 \u22122; Tile 7: \u22124 \u22125; Tile 8: 4 \u22125; Tile 9: \u22122 \u22125; Tile 10: 5 4."
+    },
+    {
+      "id": "p2b",
+      "problem": 2,
+      "page": 4,
+      "from": 213,
+      "to": 166,
+      "label": "b",
+      "labelX": 106,
+      "cropTop": 227,
+      "cropBottom": 160,
+      "left": 124,
+      "right": 450,
+      "src": "figures/zio2010-p2b.png",
+      "alt": "Twelve tiles, each labelled with two numbers. Tile 1: 1 \u22121; Tile 2: \u22123 1; Tile 3: 4 \u22121; Tile 4: \u22123 4; Tile 5: 1 2; Tile 6: 4 3; Tile 7: 3 \u22124; Tile 8: 4 1; Tile 9: 4 2; Tile 10: \u22121 1; Tile 11: \u22122 \u22121; Tile 12: \u22123 \u22124."
+    },
+    {
+      "id": "p2c",
+      "problem": 2,
+      "page": 5,
+      "from": 760,
+      "to": 712,
+      "label": "c",
+      "labelX": 107,
+      "cropTop": 772,
+      "cropBottom": 703,
+      "left": 124,
+      "right": 545,
+      "src": "figures/zio2010-p2c.png",
+      "alt": "Fourteen tiles, each labelled with two numbers. Tile 1: \u22121 \u22125; Tile 2: 1 \u22121; Tile 3: \u22123 5; Tile 4: \u22125 2; Tile 5: \u22122 \u22124; Tile 6: 4 \u22124; Tile 7: \u22122 5; Tile 8: \u22123 \u22122; Tile 9: \u22123 4; Tile 10: 3 \u22125; Tile 11: 3 \u22125; Tile 12: \u22121 5; Tile 13: 1 \u22121; Tile 14: 3 4."
+    },
+    {
+      "id": "p4-table",
+      "problem": 4,
+      "page": 5,
+      "table": true,
+      "header": false,
+      "from": 171,
+      "to": 156
+    },
+    {
+      "id": "p4-line",
+      "problem": 4,
+      "page": 6,
+      "from": 692,
+      "to": 672,
+      "cropTop": 705,
+      "cropBottom": 660,
+      "src": "figures/zio2010-p4-line.png",
+      "alt": "Number line with offices A, B, C, D and E marked. Offices A and B are joined by a cable, and C and D are joined by a cable."
+    },
+    {
+      "id": "p4a",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "from": 530,
+      "to": 515
+    },
+    {
+      "id": "p4b",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "from": 453,
+      "to": 400
+    },
+    {
+      "id": "p4c",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "from": 338,
+      "to": 285
+    }
+  ],
+  "2009": [
+    {
+      "id": "p1-tiles",
+      "problem": 1,
+      "page": 3,
+      "crop": true,
+      "from": 600,
+      "to": 560,
+      "cropTop": 612,
+      "cropBottom": 572,
+      "src": "figures/zio2009-p1-tiles.png",
+      "alt": "The two tile types: a 1 \u00d7 2 rectangle and an L-shaped tile covering three squares."
+    },
+    {
+      "id": "p1-ways",
+      "problem": 1,
+      "page": 3,
+      "crop": true,
+      "from": 440,
+      "to": 400,
+      "cropTop": 464,
+      "cropBottom": 404,
+      "src": "figures/zio2009-p1-ways.png",
+      "alt": "Four ways to tile a 2 \u00d7 4 room. The first three obey the Batlar Guntu rule; the fourth has four tiles meeting at a corner and does not."
+    },
+    {
+      "id": "p1-ways3",
+      "problem": 1,
+      "page": 3,
+      "crop": true,
+      "from": 350,
+      "to": 300,
+      "cropTop": 356,
+      "cropBottom": 300,
+      "src": "figures/zio2009-p1-ways3.png",
+      "alt": "The five ways to tile a 2 \u00d7 3 room."
+    },
+    {
+      "id": "p2-example",
+      "problem": 2,
+      "page": 4,
+      "from": 646,
+      "to": 587,
+      "cropTop": 656,
+      "cropBottom": 580,
+      "left": 225,
+      "right": 430,
+      "src": "figures/zio2009-p2-example.png",
+      "alt": "A 5 \u00d7 5 grid of numbers with the path 5, \u22122, 4, 7, \u22123, 4 marked by arrows."
+    },
+    {
+      "id": "p2a",
+      "problem": 2,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "label": "a",
+      "from": 528,
+      "to": 470,
+      "keep": true,
+      "xMax": 320
+    },
+    {
+      "id": "p2b",
+      "problem": 2,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "label": "b",
+      "labelX": 327,
+      "from": 528,
+      "to": 470,
+      "xMin": 320
+    },
+    {
+      "id": "p2c",
+      "problem": 2,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "label": "c",
+      "from": 438,
+      "to": 366
+    },
+    {
+      "id": "p3-example",
+      "problem": 3,
+      "page": 5,
+      "table": true,
+      "header": false,
+      "from": 710,
+      "to": 667,
+      "skip": [
+        "West East"
+      ],
+      "caption": "West \u2190 \u2192 East"
+    },
+    {
+      "id": "p3a",
+      "problem": 3,
+      "page": 5,
+      "table": true,
+      "header": false,
+      "label": "a",
+      "from": 589,
+      "to": 546,
+      "keep": true,
+      "xMax": 320
+    },
+    {
+      "id": "p3b",
+      "problem": 3,
+      "page": 5,
+      "table": true,
+      "header": false,
+      "label": "b",
+      "labelX": 330,
+      "from": 589,
+      "to": 546,
+      "xMin": 320
+    },
+    {
+      "id": "p3c",
+      "problem": 3,
+      "page": 5,
+      "table": true,
+      "header": false,
+      "label": "c",
+      "from": 525,
+      "to": 482
+    },
+    {
+      "id": "p4-example",
+      "problem": 4,
+      "page": 5,
+      "table": true,
+      "header": false,
+      "from": 240,
+      "to": 196
+    },
+    {
+      "id": "p4a",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "a",
+      "from": 628,
+      "to": 556,
+      "keep": true,
+      "xMax": 320
+    },
+    {
+      "id": "p4b",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "b",
+      "labelX": 327,
+      "from": 628,
+      "to": 556,
+      "xMin": 320
+    },
+    {
+      "id": "p4c",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "c",
+      "from": 524,
+      "to": 452
+    }
+  ],
+  "2008": [
+    {
+      "id": "p4-seg1",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "from": 727,
+      "to": 683,
+      "keep": true,
+      "xMax": 330,
+      "caption": "First option"
+    },
+    {
+      "id": "p4-seg2",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "from": 727,
+      "to": 683,
+      "xMin": 330,
+      "caption": "Second option"
+    },
+    {
+      "id": "p4a",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "a",
+      "from": 584,
+      "to": 497,
+      "keep": true,
+      "xMax": 330
+    },
+    {
+      "id": "p4b",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "b",
+      "labelX": 333,
+      "from": 584,
+      "to": 497,
+      "xMin": 330
+    },
+    {
+      "id": "p4c",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "c",
+      "from": 477,
+      "to": 390,
+      "keep": true,
+      "xMax": 330
+    },
+    {
+      "id": "p4d",
+      "problem": 4,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "d",
+      "labelX": 333,
+      "from": 477,
+      "to": 390,
+      "xMin": 330
+    }
+  ],
+  "2007": [
+    {
+      "id": "p1-folds",
+      "problem": 1,
+      "page": 3,
+      "from": 548,
+      "to": 500,
+      "cropTop": 550,
+      "cropBottom": 497,
+      "src": "figures/zio2007-p1-folds.png",
+      "alt": "Four sketches of a folded paper strip, captioned: One fold; One fold, unfolded (a single valley crease); Two folds; Two folds, unfolded (three creases)."
+    },
+    {
+      "id": "p4-siding",
+      "problem": 4,
+      "page": 5,
+      "from": 585,
+      "to": 505,
+      "cropTop": 592,
+      "cropBottom": 495,
+      "src": "figures/zio2007-p4-siding.png",
+      "alt": "A train of carriages 1, 2, 3, \u2026, n on a track with a short siding branching off it."
+    },
+    {
+      "id": "p5-example",
+      "problem": 5,
+      "page": 6,
+      "from": 413,
+      "to": 384,
+      "cropTop": 424,
+      "cropBottom": 376,
+      "left": 160,
+      "right": 520,
+      "src": "figures/zio2007-p5-example.png",
+      "alt": "Left: the 3 \u00d7 5 grid 1 8 2 1 1 / 2 1 1 7 8 / 1 5 7 9 5. Right: the same grid with the minimum path boxed: 1, 2, 1, 1 along the top and 8 and 5 on the right, totalling 22."
+    },
+    {
+      "id": "p5a",
+      "problem": 5,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "a",
+      "from": 285,
+      "to": 227,
+      "keep": true,
+      "xMax": 330
+    },
+    {
+      "id": "p5b",
+      "problem": 5,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "b",
+      "labelX": 333,
+      "from": 285,
+      "to": 227,
+      "xMin": 330
+    },
+    {
+      "id": "p5c",
+      "problem": 5,
+      "page": 6,
+      "table": true,
+      "header": false,
+      "label": "c",
+      "from": 190,
+      "to": 132
+    }
+  ],
+  "2006": [
+    {
+      "id": "p3-tiles",
+      "problem": 3,
+      "page": 3,
+      "from": 295,
+      "to": 250,
+      "cropTop": 298,
+      "cropBottom": 256,
+      "src": "figures/zio2006-p3-tiles.png",
+      "alt": "The two tile types: a 1 \u00d7 2 rectangle and an L-shaped tile covering three squares."
+    },
+    {
+      "id": "p3-ways",
+      "problem": 3,
+      "page": 3,
+      "from": 180,
+      "to": 135,
+      "cropTop": 182,
+      "cropBottom": 135,
+      "src": "figures/zio2006-p3-ways.png",
+      "alt": "The five ways to tile a 2 \u00d7 3 room."
+    },
+    {
+      "id": "p3-example",
+      "problem": 3,
+      "page": 4,
+      "from": 738,
+      "to": 672,
+      "cropTop": 738,
+      "cropBottom": 676,
+      "src": "figures/zio2006-p3-example.png",
+      "alt": "A tiling of a 2 \u00d7 4 room using both an L-shaped tile and rectangular tiles.",
+      "left": 250,
+      "right": 360
+    }
+  ],
+  "2004": [
+    {
+      "id": "p3-ex1",
+      "problem": 3,
+      "page": 3,
+      "crop": true,
+      "cropTop": 492,
+      "cropBottom": 438,
+      "left": 372,
+      "right": 548,
+      "src": "figures/zio2004-p3-ex1.png",
+      "alt": "A road network on five cities A to E. Roads: A\u2013B length 6, A\u2013C 5, A\u2013D 4, B\u2013D 7, B\u2013E 10, C\u2013D 8, D\u2013E 9."
+    },
+    {
+      "id": "p3-ex2",
+      "problem": 3,
+      "page": 3,
+      "crop": true,
+      "cropTop": 438,
+      "cropBottom": 394,
+      "left": 372,
+      "right": 548,
+      "src": "figures/zio2004-p3-ex2.png",
+      "alt": "The shortest collection of roads to upgrade in the example network: A\u2013B, A\u2013C, A\u2013D, D\u2013E."
+    },
+    {
+      "id": "p3a",
+      "problem": 3,
+      "page": 3,
+      "from": 340,
+      "to": 99,
+      "label": "a",
+      "labelX": 101,
+      "cropTop": 346,
+      "cropBottom": 212,
+      "left": 95,
+      "right": 306,
+      "mask": [
+        [
+          95,
+          336,
+          125,
+          352
+        ]
+      ],
+      "src": "figures/zio2004-p3a.png",
+      "alt": "Network (a): cities A to F with roads and their lengths."
+    },
+    {
+      "id": "p3b",
+      "problem": 3,
+      "page": 3,
+      "from": 204,
+      "to": 204,
+      "label": "b",
+      "labelX": 101,
+      "markerY": 204,
+      "cropTop": 206,
+      "cropBottom": 116,
+      "left": 95,
+      "right": 306,
+      "mask": [
+        [
+          95,
+          196,
+          125,
+          214
+        ]
+      ],
+      "src": "figures/zio2004-p3b.png",
+      "alt": "Network (b): cities A to H with roads and their lengths."
+    },
+    {
+      "id": "p3c",
+      "problem": 3,
+      "page": 3,
+      "from": 203,
+      "to": 203,
+      "label": "c",
+      "labelX": 313,
+      "markerY": 203,
+      "cropTop": 338,
+      "cropBottom": 104,
+      "left": 308,
+      "right": 560,
+      "mask": [
+        [
+          308,
+          322,
+          335,
+          340
+        ]
+      ],
+      "src": "figures/zio2004-p3c.png",
+      "alt": "Network (c): cities A to K with roads and their lengths."
+    },
+    {
+      "id": "p4-example",
+      "problem": 4,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "from": 574,
+      "to": 574
+    },
+    {
+      "id": "p4a",
+      "problem": 4,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "label": "a",
+      "from": 416,
+      "to": 402
+    },
+    {
+      "id": "p4b",
+      "problem": 4,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "label": "b",
+      "from": 381,
+      "to": 367
+    },
+    {
+      "id": "p4c",
+      "problem": 4,
+      "page": 4,
+      "table": true,
+      "header": false,
+      "label": "c",
+      "from": 347,
+      "to": 318
+    },
+    {
+      "id": "s1",
+      "doc": "s",
+      "problem": 1,
+      "page": 1,
+      "crop": true,
+      "cropTop": 722,
+      "cropBottom": 600,
+      "left": 70,
+      "right": 560,
+      "src": "figures/zio2004-s1.png",
+      "alt": "Official solution to problem 1 (several equally long sequences are valid)."
+    },
+    {
+      "id": "s3",
+      "doc": "s",
+      "problem": 3,
+      "page": 1,
+      "crop": true,
+      "cropTop": 570,
+      "cropBottom": 130,
+      "left": 70,
+      "right": 560,
+      "src": "figures/zio2004-s3.png",
+      "alt": "Official solution to problem 3: the shortest collections of roads for networks (a), (b) and (c)."
+    },
+    {
+      "id": "s4",
+      "doc": "s",
+      "problem": 4,
+      "page": 2,
+      "crop": true,
+      "cropTop": 765,
+      "cropBottom": 315,
+      "left": 70,
+      "right": 560,
+      "src": "figures/zio2004-s4.png",
+      "alt": "Official solution to problem 4: the stacking diagrams and valid packings for (a), (b) and (c)."
+    },
+    {
+      "id": "s5",
+      "doc": "s",
+      "problem": 5,
+      "page": 2,
+      "crop": true,
+      "cropTop": 310,
+      "cropBottom": 130,
+      "left": 70,
+      "right": 560,
+      "src": "figures/zio2004-s5.png",
+      "alt": "Official solution to problem 5: a consistent mode setting for each case."
+    }
+  ],
+  "2003": [
+    {
+      "id": "p5-map",
+      "problem": 5,
+      "page": 4,
+      "from": 420,
+      "to": 125,
+      "cropTop": 430,
+      "cropBottom": 118,
+      "left": 100,
+      "right": 470,
+      "src": "figures/zio2003-p5-map.png",
+      "alt": "Map of the city: a grid of one-way roads with arrows showing the allowed direction. The homes of Komal (K), Narain (N) and Robert (R) and the office (O) are marked; O is at the bottom right."
+    }
+  ]
+}
